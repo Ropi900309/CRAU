@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CRAU", "CRAU\CRAU.vbproj", "{E0CDF5B8-6373-423C-920D-947CB69CB882}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0CDF5B8-6373-423C-920D-947CB69CB882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0CDF5B8-6373-423C-920D-947CB69CB882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0CDF5B8-6373-423C-920D-947CB69CB882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0CDF5B8-6373-423C-920D-947CB69CB882}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82EC5253-6650-4BA1-AC68-EE23CF6C5939}
+	EndGlobalSection
+EndGlobal
