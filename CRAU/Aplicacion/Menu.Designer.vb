@@ -212,7 +212,7 @@ Partial Class Menu
         'OrdenServicioToolStripMenuItem
         '
         Me.OrdenServicioToolStripMenuItem.Name = "OrdenServicioToolStripMenuItem"
-        Me.OrdenServicioToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
+        Me.OrdenServicioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.OrdenServicioToolStripMenuItem.Text = "Orden Servicio"
         '
         'ConfiguraciónToolStripMenuItem
@@ -225,13 +225,13 @@ Partial Class Menu
         'DepartamentosToolStripMenuItem
         '
         Me.DepartamentosToolStripMenuItem.Name = "DepartamentosToolStripMenuItem"
-        Me.DepartamentosToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.DepartamentosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DepartamentosToolStripMenuItem.Text = "Departamentos"
         '
         'UsuarioToolStripMenuItem
         '
         Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.UsuarioToolStripMenuItem.Text = "Usuario"
         '
         'SalirToolStripMenuItem1
