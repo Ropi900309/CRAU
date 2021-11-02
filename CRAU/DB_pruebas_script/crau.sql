@@ -1,17 +1,17 @@
 /*
 Navicat SQL Server Data Transfer
 
-Source Server         : crau
-Source Server Version : 150000
+Source Server         : SQL_SERV
+Source Server Version : 140000
 Source Host           : localhost:1433
-Source Database       : crau
+Source Database       : CRAU
 Source Schema         : dbo
 
 Target Server Type    : SQL Server
-Target Server Version : 150000
+Target Server Version : 140000
 File Encoding         : 65001
 
-Date: 2021-10-28 13:18:21
+Date: 2021-11-02 17:45:46
 */
 
 
@@ -561,6 +561,9 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[productos] ON
 GO
+INSERT INTO [dbo].[productos] ([id], [no_parte], [descripcion], [precio_compra], [precio_venta], [costo_promedio], [medida], [categoria], [marca], [familia], [eliminado]) VALUES (N'1', N'1', N'Intel i9 3200 MHZ', N'7000', N'10000', N'7200', N'1', N'1', N'1', N'1', N'0')
+GO
+GO
 SET IDENTITY_INSERT [dbo].[productos] OFF
 GO
 
@@ -583,7 +586,35 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[productos_categoria] ON
 GO
+INSERT INTO [dbo].[productos_categoria] ([id], [categoria], [eliminado]) VALUES (N'1', N'procesador', N'0')
+GO
+GO
 SET IDENTITY_INSERT [dbo].[productos_categoria] OFF
+GO
+
+-- ----------------------------
+-- Table structure for productos_familia
+-- ----------------------------
+DROP TABLE [dbo].[productos_familia]
+GO
+CREATE TABLE [dbo].[productos_familia] (
+[id] int NOT NULL IDENTITY(1,1) ,
+[familia] varchar(50) NULL ,
+[eliminado] tinyint NULL 
+)
+
+
+GO
+
+-- ----------------------------
+-- Records of productos_familia
+-- ----------------------------
+SET IDENTITY_INSERT [dbo].[productos_familia] ON
+GO
+INSERT INTO [dbo].[productos_familia] ([id], [familia], [eliminado]) VALUES (N'1', N'Accesorios para computadora', N'0')
+GO
+GO
+SET IDENTITY_INSERT [dbo].[productos_familia] OFF
 GO
 
 -- ----------------------------
@@ -624,6 +655,9 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[productos_inventario] ON
 GO
+INSERT INTO [dbo].[productos_inventario] ([id], [stock], [alerta_min_stock], [alerta_max_stock], [producto]) VALUES (N'1', N'0', N'0', N'0', N'1')
+GO
+GO
 SET IDENTITY_INSERT [dbo].[productos_inventario] OFF
 GO
 
@@ -645,6 +679,9 @@ GO
 -- Records of productos_marca
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[productos_marca] ON
+GO
+INSERT INTO [dbo].[productos_marca] ([id], [marca], [eliminado]) VALUES (N'1', N'intell', N'0')
+GO
 GO
 SET IDENTITY_INSERT [dbo].[productos_marca] OFF
 GO
@@ -668,29 +705,10 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[productos_umedida] ON
 GO
+INSERT INTO [dbo].[productos_umedida] ([id], [unidad], [eliminado]) VALUES (N'1', N'pieza', N'0')
+GO
+GO
 SET IDENTITY_INSERT [dbo].[productos_umedida] OFF
-GO
-
--- ----------------------------
--- Table structure for profuctos_familia
--- ----------------------------
-DROP TABLE [dbo].[profuctos_familia]
-GO
-CREATE TABLE [dbo].[profuctos_familia] (
-[id] int NOT NULL IDENTITY(1,1) ,
-[familia] varchar(50) NULL ,
-[eliminado] tinyint NULL 
-)
-
-
-GO
-
--- ----------------------------
--- Records of profuctos_familia
--- ----------------------------
-SET IDENTITY_INSERT [dbo].[profuctos_familia] ON
-GO
-SET IDENTITY_INSERT [dbo].[profuctos_familia] OFF
 GO
 
 -- ----------------------------
@@ -807,6 +825,9 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[vehiculo_marca] ON
 GO
+INSERT INTO [dbo].[vehiculo_marca] ([id], [marca]) VALUES (N'1', N'NISSAN')
+GO
+GO
 SET IDENTITY_INSERT [dbo].[vehiculo_marca] OFF
 GO
 
@@ -827,6 +848,9 @@ GO
 -- Records of vehiculo_tipo
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[vehiculo_tipo] ON
+GO
+INSERT INTO [dbo].[vehiculo_tipo] ([id], [tipo]) VALUES (N'1', N'TORTON')
+GO
 GO
 SET IDENTITY_INSERT [dbo].[vehiculo_tipo] OFF
 GO
@@ -854,7 +878,41 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[vehiculos] ON
 GO
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie]) VALUES (N'1', N'01010101', N'xw8009a', N'2021', N'1', N'1', N'01010101p')
+GO
+GO
 SET IDENTITY_INSERT [dbo].[vehiculos] OFF
+GO
+
+-- ----------------------------
+-- View structure for listado_productos
+-- ----------------------------
+DROP VIEW [dbo].[listado_productos]
+GO
+CREATE VIEW [dbo].[listado_productos] AS 
+(
+
+SELECT pro.*,pun.unidad as des_unidad,pca.categoria as des_categoria,pmar.marca as des_marca,pfa.familia as des_familia,pin.stock,pin.alerta_min_stock,pin.alerta_max_stock from productos pro 
+INNER JOIN productos_inventario pin on pin.producto=pro.id
+INNER JOIN productos_umedida pun on pun.id=pro.medida
+INNER JOIN productos_categoria pca on pca.id=pro.categoria
+INNER JOIN productos_marca pmar on pmar.id =pro.marca
+INNER JOIN productos_familia pfa on pfa.id=pro.familia
+where pro.eliminado = 0
+
+)
+GO
+
+-- ----------------------------
+-- View structure for listado_vehiculos
+-- ----------------------------
+DROP VIEW [dbo].[listado_vehiculos]
+GO
+CREATE VIEW [dbo].[listado_vehiculos] AS 
+s(
+select vh.*, vhp.tipo as des_tipo , vhm.marca as des_marca from vehiculos vh
+INNER JOIN vehiculo_tipo vhp on vhp.id = vh.tipo
+INNER JOIN vehiculo_marca vhm on vhm.id = vh.marca)
 GO
 
 -- ----------------------------
@@ -1107,6 +1165,27 @@ ALTER TABLE [dbo].[productos] ADD UNIQUE ([no_parte] ASC)
 GO
 
 -- ----------------------------
+-- Triggers structure for table productos
+-- ----------------------------
+DROP TRIGGER [dbo].[producto_inventario_new]
+GO
+CREATE TRIGGER [dbo].[producto_inventario_new]
+ON [dbo].[productos]
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @producto INT
+		
+		SET @producto = (SELECT id from Inserted)
+
+		INSERT INTO productos_inventario VALUES (0,0,0,@producto)
+   
+END
+
+
+GO
+
+-- ----------------------------
 -- Indexes structure for table productos_categoria
 -- ----------------------------
 
@@ -1114,6 +1193,16 @@ GO
 -- Primary Key structure for table productos_categoria
 -- ----------------------------
 ALTER TABLE [dbo].[productos_categoria] ADD PRIMARY KEY ([id])
+GO
+
+-- ----------------------------
+-- Indexes structure for table productos_familia
+-- ----------------------------
+
+-- ----------------------------
+-- Primary Key structure for table productos_familia
+-- ----------------------------
+ALTER TABLE [dbo].[productos_familia] ADD PRIMARY KEY ([id])
 GO
 
 -- ----------------------------
@@ -1154,16 +1243,6 @@ GO
 -- Primary Key structure for table productos_umedida
 -- ----------------------------
 ALTER TABLE [dbo].[productos_umedida] ADD PRIMARY KEY ([id])
-GO
-
--- ----------------------------
--- Indexes structure for table profuctos_familia
--- ----------------------------
-
--- ----------------------------
--- Primary Key structure for table profuctos_familia
--- ----------------------------
-ALTER TABLE [dbo].[profuctos_familia] ADD PRIMARY KEY ([id])
 GO
 
 -- ----------------------------
