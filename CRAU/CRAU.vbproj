@@ -112,6 +112,18 @@
     <Compile Include="Aplicacion\Productos\Productos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VehiculoCRUB.Designer.vb">
+      <DependentUpon>VehiculoCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VehiculoCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\Vehiculos.Designer.vb">
+      <DependentUpon>Vehiculos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\Vehiculos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Conexion\Cnx.vb" />
     <Compile Include="Aplicacion\Login.vb">
       <SubType>Form</SubType>
@@ -126,6 +138,9 @@
     <Compile Include="DAO\Productos\DAOMarca.vb" />
     <Compile Include="DAO\Productos\DAOMedida.vb" />
     <Compile Include="DAO\Productos\DAOProducto.vb" />
+    <Compile Include="DAO\Vehiculos\DAOVehiculo.vb" />
+    <Compile Include="DAO\Vehiculos\DAOVmarca.vb" />
+    <Compile Include="DAO\Vehiculos\DAOVtipo.vb" />
     <Compile Include="Interfaces\GripMethod.vb" />
     <Compile Include="Interfaces\OpSql.vb" />
     <Compile Include="Modelos\Productos\Categoria.vb" />
@@ -139,6 +154,9 @@
     <Compile Include="Modelos\Usuarios\Puesto.vb" />
     <Compile Include="Modelos\Usuarios\Rol.vb" />
     <Compile Include="Modelos\Usuarios\Usuario.vb" />
+    <Compile Include="Modelos\Vehiculos\Vmarca.vb" />
+    <Compile Include="Modelos\Vehiculos\Vtipo.vb" />
+    <Compile Include="Modelos\Vehiculos\Vehiculo.vb" />
     <Compile Include="Modulos\Active.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -170,6 +188,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Productos\Productos.resx">
       <DependentUpon>Productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Vehiculos\VehiculoCRUB.resx">
+      <DependentUpon>VehiculoCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Vehiculos\Vehiculos.resx">
+      <DependentUpon>Vehiculos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

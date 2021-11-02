@@ -38,4 +38,8 @@ Public Class Menu
     Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem.Click
         OpenChildForm(Productos)
     End Sub
+
+    Private Sub VehiculosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VehiculosToolStripMenuItem.Click
+        OpenChildForm(Vehiculos)
+    End Sub
 End Class
