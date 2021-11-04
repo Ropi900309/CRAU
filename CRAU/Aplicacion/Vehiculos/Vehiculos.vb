@@ -8,13 +8,13 @@
             .Rows.Clear()
 
             'PROPIEDADES DEL GRID
-            .DefaultCellStyle.Font = New Font("OCR A", 9)
-            .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .RowsDefaultCellStyle.BackColor = Color.White
-            .DefaultCellStyle.SelectionBackColor = Color.OrangeRed
-            .DefaultCellStyle.SelectionForeColor = Color.White
-            .RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .AlternatingRowsDefaultCellStyle.BackColor = Color.White
+            '.DefaultCellStyle.Font = New Font("OCR A", 9)
+            '.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.RowsDefaultCellStyle.BackColor = Color.White
+            '.DefaultCellStyle.SelectionBackColor = Color.OrangeRed
+            '.DefaultCellStyle.SelectionForeColor = Color.White
+            '.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.AlternatingRowsDefaultCellStyle.BackColor = Color.White
             'NUMERO DE COLUMNAS 
             .ColumnCount = 9
 
@@ -24,12 +24,10 @@
             .Columns(2).HeaderText = "Placas"
             .Columns(3).HeaderText = "Modelo"
             .Columns(4).HeaderText = "Marca"
-            .Columns(5).HeaderText = "tipo"
-            .Columns(6).HeaderText = "serie"
-            .Columns(7).HeaderText = "idmarca"
-            .Columns(8).HeaderText = "idtipo"
-
-
+            .Columns(5).HeaderText = "Tipo"
+            .Columns(6).HeaderText = "Serie"
+            .Columns(7).HeaderText = "Des_marca"
+            .Columns(8).HeaderText = "Des_tipo"
 
             'DEFINE EL ANCHO DE LAS COLUMNAS 
             .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
@@ -45,7 +43,7 @@
 
 
             'OCULTAR COLUMNAS
-            '.Columns(0).Visible = False
+            .Columns(0).Visible = False
 
             'SOLO LECTURA PARA COLUMNAS 
             .Columns(0).ReadOnly = True
@@ -62,9 +60,9 @@
     End Sub
 
     Public Sub LlenarGrid() Implements GripMethod.LlenarGrid
-        Dim pro As New DAOVehiculo
+        Dim veh As New DAOVehiculo
 
-        Dim resultado As List(Of Vehiculo) = pro.ListarTodos()
+        Dim resultado As List(Of Vehiculo) = veh.ListarTodos()
 
         Dim i As Integer = 0
         Dim a As Integer = 0
@@ -91,18 +89,14 @@
         End With
     End Sub
 
-    Private Sub Vehiculos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CrearGrid()
-        LlenarGrid()
-    End Sub
-
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
             Dim veh As New Vehiculo
             With ListProductos
-                veh.Id = .Item(1, .CurrentRow.Index).Value
+                veh.Id = .Item(0, .CurrentRow.Index).Value
 
+                veh = listaVehiculos(0)
                 VehiculoCRUB.veh = veh
                 VehiculoCRUB.recibView = Me
                 VehiculoCRUB.ShowDialog()
@@ -112,14 +106,13 @@
         End Try
 
     End Sub
-
-
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Try
             Dim veh As New Vehiculo
             With ListProductos
                 veh.Id = .Item(1, .CurrentRow.Index).Value
 
+                veh = listaVehiculos(0)
                 VehiculoCRUB.veh = veh
                 VehiculoCRUB.recibView = Me
                 VehiculoCRUB.ShowDialog()
@@ -128,4 +121,11 @@
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
     End Sub
+
+    Private Sub Vehiculos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CrearGrid()
+        LlenarGrid()
+    End Sub
+
+
 End Class

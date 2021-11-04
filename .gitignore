@@ -235,3 +235,4 @@ packages/Microsoft.SqlServer.Types.14.0.314.76/tools/install.ps1
 packages/Microsoft.SqlServer.Types.14.0.314.76/tools/uninstall.ps1
 CRAU/obj/Debug/CRAU.VehiculoCRUB.resources
 CRAU/obj/Debug/CRAU.Vehiculos.resources
+CRAU/obj/Debug/CRAU.vbprojAssemblyReference.cache

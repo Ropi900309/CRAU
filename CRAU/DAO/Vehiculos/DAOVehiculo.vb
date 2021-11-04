@@ -6,19 +6,17 @@ Public Class DAOVehiculo
     Dim conn As SqlConnection
     Dim sql As New SqlCommand
 
-
     Public Sub Guardar() Implements OpSql.Guardar
         conn = Cnx.GetConection
         Me.sql.CommandText = "INSERT INTO vehiculos values ('" & Registro_vehicular & "','" & Placas & "'," & Modelo & "," & Marca.Id & "," & Tipo.Id & "," & Serie & ")"
         Me.sql.Connection = conn
         MsgBox(Me.sql.CommandText)
         Me.sql.ExecuteNonQuery()
-
     End Sub
 
     Public Sub Actualizar() Implements OpSql.Actualizar
         conn = Cnx.GetConection
-        Me.sql.CommandText = "UPDATE vehiculos Set registro_vehicular='" & Registro_vehicular & "',placas='" & Placas & "',marca=" & Marca.Id & ", tipo = " & Tipo.Id & ", serie = " & Serie & " where id=" & Id & ""
+        Me.sql.CommandText = "update vehiculos Set registro_vehicular='" & Registro_vehicular & "', placas='" & Placas & "' , modelo=" & Modelo & " , marca=" & Marca.Id & ", tipo=" & Tipo.Id & ", serie=" & Serie & " where id=" & Id & ""
         Me.sql.Connection = conn
         Me.sql.ExecuteNonQuery()
     End Sub
@@ -39,10 +37,7 @@ Public Class DAOVehiculo
         conn = Cnx.GetConection
         ' If  IsNot Nothing Then
         Me.sql.CommandText = "select * from listado_vehiculos"
-
-
         Me.sql.Connection = conn
-
         r = Me.sql.ExecuteReader()
 
         If r.HasRows Then
@@ -63,13 +58,9 @@ Public Class DAOVehiculo
                 i += 1
             End While
         End If
-
         r.Close()
         'End If
-
         Return consulta
-
-
     End Function
 
     Public Function Buscar() As Object Implements OpSql.Buscar
