@@ -42,4 +42,8 @@ Public Class Menu
     Private Sub VehiculosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VehiculosToolStripMenuItem.Click
         OpenChildForm(Vehiculos)
     End Sub
+
+    Private Sub SalirToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem1.Click
+        End
+    End Sub
 End Class

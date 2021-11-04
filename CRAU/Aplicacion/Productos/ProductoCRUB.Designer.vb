@@ -22,12 +22,9 @@ Partial Class ProductoCRUB
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProductoCRUB))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -43,283 +40,366 @@ Partial Class ProductoCRUB
         Me.btnSave = New FontAwesome.Sharp.IconButton()
         Me.btnErase = New FontAwesome.Sharp.IconButton()
         Me.textExistencia = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.textAlertMax = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.textAlertMin = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.btnSalir = New FontAwesome.Sharp.IconButton()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(28, 30)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "# Parte"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 244)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Descripcion"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(429, 81)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(250, 140)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(68, 13)
+        Me.Label3.Size = New System.Drawing.Size(117, 20)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Precio Venta"
+        Me.Label3.Text = "Precio Venta:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(429, 135)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(230, 179)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 13)
+        Me.Label4.Size = New System.Drawing.Size(137, 18)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Costo Promedio"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(33, 135)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(37, 13)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Marca"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(28, 81)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(42, 13)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Medida"
+        Me.Label4.Text = "Costo Promedio:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(203, 81)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(576, 142)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(52, 13)
+        Me.Label7.Size = New System.Drawing.Size(86, 18)
         Me.Label7.TabIndex = 6
-        Me.Label7.Text = "Categoria"
+        Me.Label7.Text = "Categoria:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(203, 135)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(594, 211)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(39, 13)
+        Me.Label8.Size = New System.Drawing.Size(60, 18)
         Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Familia"
+        Me.Label8.Text = "Marca:"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(429, 30)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(240, 105)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(76, 13)
+        Me.Label10.Size = New System.Drawing.Size(127, 18)
         Me.Label10.TabIndex = 9
-        Me.Label10.Text = "Precio Compra"
+        Me.Label10.Text = "Precio Compra:"
         '
         'textParte
         '
-        Me.textParte.Location = New System.Drawing.Point(76, 27)
+        Me.textParte.Location = New System.Drawing.Point(373, 70)
         Me.textParte.Name = "textParte"
-        Me.textParte.Size = New System.Drawing.Size(306, 20)
-        Me.textParte.TabIndex = 10
+        Me.textParte.Size = New System.Drawing.Size(135, 20)
+        Me.textParte.TabIndex = 1
         '
         'textDescripcion
         '
-        Me.textDescripcion.Location = New System.Drawing.Point(36, 272)
+        Me.textDescripcion.Location = New System.Drawing.Point(360, 279)
         Me.textDescripcion.Multiline = True
         Me.textDescripcion.Name = "textDescripcion"
-        Me.textDescripcion.Size = New System.Drawing.Size(694, 110)
-        Me.textDescripcion.TabIndex = 11
+        Me.textDescripcion.Size = New System.Drawing.Size(449, 59)
+        Me.textDescripcion.TabIndex = 6
         '
         'textPPromedio
         '
-        Me.textPPromedio.Location = New System.Drawing.Point(529, 132)
+        Me.textPPromedio.Location = New System.Drawing.Point(373, 175)
         Me.textPPromedio.Name = "textPPromedio"
-        Me.textPPromedio.Size = New System.Drawing.Size(201, 20)
-        Me.textPPromedio.TabIndex = 12
+        Me.textPPromedio.Size = New System.Drawing.Size(135, 20)
+        Me.textPPromedio.TabIndex = 4
         '
         'textPCompra
         '
-        Me.textPCompra.Location = New System.Drawing.Point(529, 27)
+        Me.textPCompra.Location = New System.Drawing.Point(373, 106)
         Me.textPCompra.Name = "textPCompra"
-        Me.textPCompra.Size = New System.Drawing.Size(201, 20)
-        Me.textPCompra.TabIndex = 13
+        Me.textPCompra.Size = New System.Drawing.Size(135, 20)
+        Me.textPCompra.TabIndex = 2
         '
         'textPVenta
         '
-        Me.textPVenta.Location = New System.Drawing.Point(529, 78)
+        Me.textPVenta.Location = New System.Drawing.Point(373, 142)
         Me.textPVenta.Name = "textPVenta"
-        Me.textPVenta.Size = New System.Drawing.Size(201, 20)
-        Me.textPVenta.TabIndex = 17
+        Me.textPVenta.Size = New System.Drawing.Size(135, 20)
+        Me.textPVenta.TabIndex = 3
         '
         'comboMarca
         '
         Me.comboMarca.FormattingEnabled = True
-        Me.comboMarca.Location = New System.Drawing.Point(76, 132)
+        Me.comboMarca.Location = New System.Drawing.Point(668, 210)
         Me.comboMarca.Name = "comboMarca"
-        Me.comboMarca.Size = New System.Drawing.Size(121, 21)
-        Me.comboMarca.TabIndex = 18
+        Me.comboMarca.Size = New System.Drawing.Size(135, 21)
+        Me.comboMarca.TabIndex = 11
         '
         'comboMedida
         '
         Me.comboMedida.FormattingEnabled = True
-        Me.comboMedida.Location = New System.Drawing.Point(76, 78)
+        Me.comboMedida.Location = New System.Drawing.Point(668, 175)
         Me.comboMedida.Name = "comboMedida"
-        Me.comboMedida.Size = New System.Drawing.Size(121, 21)
-        Me.comboMedida.TabIndex = 19
+        Me.comboMedida.Size = New System.Drawing.Size(135, 21)
+        Me.comboMedida.TabIndex = 10
         '
         'comboCategoria
         '
         Me.comboCategoria.FormattingEnabled = True
-        Me.comboCategoria.Location = New System.Drawing.Point(261, 78)
+        Me.comboCategoria.Location = New System.Drawing.Point(668, 139)
         Me.comboCategoria.Name = "comboCategoria"
-        Me.comboCategoria.Size = New System.Drawing.Size(121, 21)
-        Me.comboCategoria.TabIndex = 20
+        Me.comboCategoria.Size = New System.Drawing.Size(135, 21)
+        Me.comboCategoria.TabIndex = 9
         '
         'comboFamilia
         '
         Me.comboFamilia.FormattingEnabled = True
-        Me.comboFamilia.Location = New System.Drawing.Point(261, 132)
+        Me.comboFamilia.Location = New System.Drawing.Point(668, 243)
         Me.comboFamilia.Name = "comboFamilia"
-        Me.comboFamilia.Size = New System.Drawing.Size(121, 21)
-        Me.comboFamilia.TabIndex = 21
+        Me.comboFamilia.Size = New System.Drawing.Size(135, 21)
+        Me.comboFamilia.TabIndex = 12
         '
         'btnSave
         '
+        Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.ForeColor = System.Drawing.Color.White
         Me.btnSave.IconChar = FontAwesome.Sharp.IconChar.Save
-        Me.btnSave.IconColor = System.Drawing.Color.Black
+        Me.btnSave.IconColor = System.Drawing.Color.White
         Me.btnSave.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSave.IconSize = 25
-        Me.btnSave.Location = New System.Drawing.Point(544, 389)
+        Me.btnSave.Location = New System.Drawing.Point(484, 343)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(75, 38)
-        Me.btnSave.TabIndex = 22
-        Me.btnSave.UseVisualStyleBackColor = True
+        Me.btnSave.Size = New System.Drawing.Size(105, 38)
+        Me.btnSave.TabIndex = 13
+        Me.btnSave.Text = "Guardar"
+        Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'btnErase
         '
+        Me.btnErase.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnErase.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnErase.ForeColor = System.Drawing.Color.White
         Me.btnErase.IconChar = FontAwesome.Sharp.IconChar.Eraser
-        Me.btnErase.IconColor = System.Drawing.Color.Black
+        Me.btnErase.IconColor = System.Drawing.Color.White
         Me.btnErase.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnErase.IconSize = 25
-        Me.btnErase.Location = New System.Drawing.Point(655, 389)
+        Me.btnErase.Location = New System.Drawing.Point(597, 343)
         Me.btnErase.Name = "btnErase"
-        Me.btnErase.Size = New System.Drawing.Size(75, 38)
-        Me.btnErase.TabIndex = 23
-        Me.btnErase.UseVisualStyleBackColor = True
+        Me.btnErase.Size = New System.Drawing.Size(107, 38)
+        Me.btnErase.TabIndex = 14
+        Me.btnErase.Text = "Eliminar"
+        Me.btnErase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnErase.UseVisualStyleBackColor = False
         '
         'textExistencia
         '
         Me.textExistencia.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.textExistencia.Location = New System.Drawing.Point(94, 190)
+        Me.textExistencia.Location = New System.Drawing.Point(373, 212)
         Me.textExistencia.Name = "textExistencia"
         Me.textExistencia.ReadOnly = True
-        Me.textExistencia.Size = New System.Drawing.Size(148, 20)
-        Me.textExistencia.TabIndex = 25
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(33, 193)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(55, 13)
-        Me.Label9.TabIndex = 24
-        Me.Label9.Text = "Existencia"
+        Me.textExistencia.Size = New System.Drawing.Size(135, 20)
+        Me.textExistencia.TabIndex = 5
         '
         'textAlertMax
         '
-        Me.textAlertMax.Location = New System.Drawing.Point(339, 190)
+        Me.textAlertMax.Location = New System.Drawing.Point(668, 103)
         Me.textAlertMax.Name = "textAlertMax"
-        Me.textAlertMax.Size = New System.Drawing.Size(148, 20)
-        Me.textAlertMax.TabIndex = 27
+        Me.textAlertMax.Size = New System.Drawing.Size(135, 20)
+        Me.textAlertMax.TabIndex = 8
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(255, 193)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(527, 105)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(78, 13)
+        Me.Label11.Size = New System.Drawing.Size(126, 18)
         Me.Label11.TabIndex = 26
-        Me.Label11.Text = "Existencia Max"
+        Me.Label11.Text = "Existencia Max:"
         '
         'textAlertMin
         '
-        Me.textAlertMin.Location = New System.Drawing.Point(582, 190)
+        Me.textAlertMin.Location = New System.Drawing.Point(668, 66)
         Me.textAlertMin.Name = "textAlertMin"
-        Me.textAlertMin.Size = New System.Drawing.Size(148, 20)
-        Me.textAlertMin.TabIndex = 29
+        Me.textAlertMin.Size = New System.Drawing.Size(135, 20)
+        Me.textAlertMin.TabIndex = 7
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(497, 193)
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(535, 66)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(75, 13)
+        Me.Label12.Size = New System.Drawing.Size(122, 18)
         Me.Label12.TabIndex = 28
-        Me.Label12.Text = "Existencia Min"
+        Me.Label12.Text = "Existencia Min:"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(367, 396)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 31
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(21, 139)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(203, 117)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 32
+        Me.PictureBox2.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(228, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(342, 42)
+        Me.Label2.TabIndex = 33
+        Me.Label2.Text = "Datos Del Producto"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(300, 72)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(67, 18)
+        Me.Label1.TabIndex = 34
+        Me.Label1.Text = "# Parte:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(277, 214)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(90, 18)
+        Me.Label5.TabIndex = 35
+        Me.Label5.Text = "Existencia:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(589, 179)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(67, 18)
+        Me.Label6.TabIndex = 36
+        Me.Label6.Text = "Medida:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(587, 246)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(67, 18)
+        Me.Label9.TabIndex = 37
+        Me.Label9.Text = "Familia:"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(251, 278)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(103, 18)
+        Me.Label13.TabIndex = 38
+        Me.Label13.Text = "Descripción:"
+        '
+        'btnSalir
+        '
+        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
+        Me.btnSalir.IconChar = FontAwesome.Sharp.IconChar.WindowClose
+        Me.btnSalir.IconColor = System.Drawing.Color.White
+        Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSalir.IconSize = 25
+        Me.btnSalir.Location = New System.Drawing.Point(710, 343)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(99, 38)
+        Me.btnSalir.TabIndex = 15
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSalir.UseVisualStyleBackColor = False
         '
         'ProductoCRUB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(763, 440)
-        Me.Controls.Add(Me.textAlertMin)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.textAlertMax)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.textExistencia)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(824, 396)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.btnErase)
-        Me.Controls.Add(Me.btnSave)
-        Me.Controls.Add(Me.comboFamilia)
-        Me.Controls.Add(Me.comboCategoria)
-        Me.Controls.Add(Me.comboMedida)
-        Me.Controls.Add(Me.comboMarca)
-        Me.Controls.Add(Me.textPVenta)
-        Me.Controls.Add(Me.textPCompra)
-        Me.Controls.Add(Me.textPPromedio)
-        Me.Controls.Add(Me.textDescripcion)
-        Me.Controls.Add(Me.textParte)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.textParte)
+        Me.Controls.Add(Me.textExistencia)
+        Me.Controls.Add(Me.comboMarca)
+        Me.Controls.Add(Me.comboMedida)
+        Me.Controls.Add(Me.textPCompra)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.textDescripcion)
+        Me.Controls.Add(Me.textAlertMin)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.btnErase)
+        Me.Controls.Add(Me.textAlertMax)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.textPVenta)
+        Me.Controls.Add(Me.textPPromedio)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.comboCategoria)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.comboFamilia)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "ProductoCRUB"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ProductoCRUB"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label10 As Label
@@ -335,9 +415,17 @@ Partial Class ProductoCRUB
     Friend WithEvents btnSave As FontAwesome.Sharp.IconButton
     Friend WithEvents btnErase As FontAwesome.Sharp.IconButton
     Friend WithEvents textExistencia As TextBox
-    Friend WithEvents Label9 As Label
     Friend WithEvents textAlertMax As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents textAlertMin As TextBox
     Friend WithEvents Label12 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
 End Class

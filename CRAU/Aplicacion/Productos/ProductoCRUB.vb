@@ -64,7 +64,7 @@
         Dim ma As Object = mar.getRecords
 
         With comboMarca
-            .Items.Clear()
+            '.Items.Clear()
             .DataSource = ma
             .DisplayMember = "Marca"
             .ValueMember = "Id"
@@ -79,7 +79,7 @@
         Dim cat As Object = cate.getRecords
 
         With comboCategoria
-            .Items.Clear()
+            '.Items.Clear()
             .DataSource = cat
             .DisplayMember = "Categoria"
             .ValueMember = "Id"
@@ -129,5 +129,9 @@
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
+    End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Close()
     End Sub
 End Class

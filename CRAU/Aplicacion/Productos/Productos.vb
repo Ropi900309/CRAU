@@ -7,13 +7,13 @@
             .Rows.Clear()
 
             'PROPIEDADES DEL GRID
-            .DefaultCellStyle.Font = New Font("OCR A", 9)
-            .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .RowsDefaultCellStyle.BackColor = Color.White
-            .DefaultCellStyle.SelectionBackColor = Color.OrangeRed
-            .DefaultCellStyle.SelectionForeColor = Color.White
-            .RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            .AlternatingRowsDefaultCellStyle.BackColor = Color.White
+            '.DefaultCellStyle.Font = New Font("OCR A", 9)
+            '.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.RowsDefaultCellStyle.BackColor = Color.White
+            '.DefaultCellStyle.SelectionBackColor = Color.OrangeRed
+            '.DefaultCellStyle.SelectionForeColor = Color.White
+            '.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            '.AlternatingRowsDefaultCellStyle.BackColor = Color.White
             'NUMERO DE COLUMNAS 
             .ColumnCount = 18
 
@@ -79,8 +79,6 @@
             .Columns(14).ReadOnly = True
             .Columns(15).ReadOnly = True
             .Columns(16).ReadOnly = True
-
-
         End With
     End Sub
 
