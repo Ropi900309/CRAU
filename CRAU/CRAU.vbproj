@@ -200,6 +200,7 @@
     </Compile>
     <Compile Include="Utilerias\Metodos.vb" />
     <Compile Include="Utilerias\SoloNumeros.vb" />
+    <Compile Include="Utilerias\Stylo.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Aplicacion\Login.resx">
