@@ -236,3 +236,7 @@ packages/Microsoft.SqlServer.Types.14.0.314.76/tools/uninstall.ps1
 CRAU/obj/Debug/CRAU.VehiculoCRUB.resources
 CRAU/obj/Debug/CRAU.Vehiculos.resources
 CRAU/obj/Debug/CRAU.vbprojAssemblyReference.cache
+CRAU/obj/Debug/CRAU.CategoriaCRUB.resources
+CRAU/obj/Debug/CRAU.FamiliaCRUB.resources
+CRAU/obj/Debug/CRAU.MarcaCRUB.resources
+CRAU/obj/Debug/CRAU.MedidasCRUB.resources

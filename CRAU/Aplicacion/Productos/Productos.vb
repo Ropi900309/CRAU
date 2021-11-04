@@ -7,19 +7,23 @@
             .Rows.Clear()
 
             'PROPIEDADES DEL GRID
+
             '.DefaultCellStyle.Font = New Font("OCR A", 9)
             '.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.RowsDefaultCellStyle.BackColor = Color.White
+            .RowsDefaultCellStyle.BackColor = Color.White
+            .RowsDefaultCellStyle.ForeColor = Color.Black
             '.DefaultCellStyle.SelectionBackColor = Color.OrangeRed
             '.DefaultCellStyle.SelectionForeColor = Color.White
             '.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.AlternatingRowsDefaultCellStyle.BackColor = Color.White
+            .AlternatingRowsDefaultCellStyle.BackColor = Color.White
+            .AlternatingRowsDefaultCellStyle.ForeColor = Color.Black
+
             'NUMERO DE COLUMNAS 
             .ColumnCount = 18
 
             'DEFINICION DE COLUMNAS 
-            .Columns(0).HeaderText = "id"
-            .Columns(1).HeaderText = "#"
+            .Columns(0).HeaderText = "#"
+            .Columns(1).HeaderText = "Parte"
             .Columns(2).HeaderText = "Descripcion"
             .Columns(3).HeaderText = "Precio.Comp"
             .Columns(4).HeaderText = "Precio.Vent"
@@ -39,11 +43,15 @@
 
 
             'DEFINE EL ANCHO DE LAS COLUMNAS 
+            .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-            .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns(11).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns(12).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns(13).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns(14).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
             .Columns(1).ValueType = Type.GetType("System.Int32")
 
@@ -54,12 +62,17 @@
 
 
             'OCULTAR COLUMNAS
-            .Columns(0).Visible = False
+            '.Columns(0).Visible = False
+            .Columns(3).Visible = False
+            .Columns(4).Visible = False
+            .Columns(5).Visible = False
             .Columns(6).Visible = False
             .Columns(8).Visible = False
             .Columns(7).Visible = False
             .Columns(9).Visible = False
-
+            .Columns(16).Visible = False
+            .Columns(17).Visible = False
+            .Columns(10).Visible = False
 
             'SOLO LECTURA PARA COLUMNAS 
             .Columns(0).ReadOnly = True
@@ -129,14 +142,11 @@
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
             Dim pro As New Producto
-            With ListProductos
-                pro.Id = .Item(1, .CurrentRow.Index).Value
 
-                pro = listaProducttos(0)
-                ProductoCRUB.pro = pro
-                ProductoCRUB.recibView = Me
-                ProductoCRUB.ShowDialog()
-            End With
+            ProductoCRUB.pro = pro
+            ProductoCRUB.recibView = Me
+            ProductoCRUB.ShowDialog()
+
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
@@ -147,9 +157,9 @@
         Try
             Dim pro As New Producto
             With ListProductos
-                pro.Id = .Item(1, .CurrentRow.Index).Value
-
-                pro = listaProducttos(0)
+                pro.Id = .Item(0, .CurrentRow.Index).Value
+                'MsgBox(BuscarProductoLista(pro.Id))
+                pro = listaProducttos(BuscarProductoLista(pro.Id))
                 ProductoCRUB.pro = pro
                 ProductoCRUB.recibView = Me
                 ProductoCRUB.ShowDialog()
@@ -168,4 +178,22 @@
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Metodos.Buscar(textBuscar.Text, ListProductos, 1, 2)
     End Sub
+
+    Private Function BuscarProductoLista(id As Integer) As Integer
+        Dim indice As Integer = 0
+
+        For Each item As Producto In listaProducttos
+            indice += 1
+            If (item.Id = id) Then
+                If (indice = 1) Then
+                    indice = 0
+                Else
+                    indice = indice - 1
+                End If
+                Exit For
+            End If
+        Next
+
+        Return indice
+    End Function
 End Class

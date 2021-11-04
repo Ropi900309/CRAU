@@ -100,6 +100,30 @@
     <Compile Include="Aplicacion\Menu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Aplicacion\Productos\CategoriaCRUB.designer.vb">
+      <DependentUpon>CategoriaCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\CategoriaCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\FamiliaCRUB.Designer.vb">
+      <DependentUpon>FamiliaCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\FamiliaCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\MarcaCRUB.Designer.vb">
+      <DependentUpon>MarcaCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\MarcaCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\MedidasCRUB.Designer.vb">
+      <DependentUpon>MedidasCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\MedidasCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Aplicacion\Productos\ProductoCRUB.Designer.vb">
       <DependentUpon>ProductoCRUB.vb</DependentUpon>
     </Compile>
@@ -175,6 +199,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Utilerias\Metodos.vb" />
+    <Compile Include="Utilerias\SoloNumeros.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Aplicacion\Login.resx">
@@ -182,6 +207,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Productos\CategoriaCRUB.resx">
+      <DependentUpon>CategoriaCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Productos\FamiliaCRUB.resx">
+      <DependentUpon>FamiliaCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Productos\MarcaCRUB.resx">
+      <DependentUpon>MarcaCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Productos\MedidasCRUB.resx">
+      <DependentUpon>MedidasCRUB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Productos\ProductoCRUB.resx">
       <DependentUpon>ProductoCRUB.vb</DependentUpon>
