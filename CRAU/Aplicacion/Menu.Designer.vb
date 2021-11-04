@@ -69,37 +69,37 @@ Partial Class Menu
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
         'ServiciosToolStripMenuItem
         '
         Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
-        Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
+        Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.ServiciosToolStripMenuItem.Text = "Servicios"
         '
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'VehiculosToolStripMenuItem
         '
         Me.VehiculosToolStripMenuItem.Name = "VehiculosToolStripMenuItem"
-        Me.VehiculosToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
+        Me.VehiculosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.VehiculosToolStripMenuItem.Text = "Vehiculos"
         '
         'mstMenu

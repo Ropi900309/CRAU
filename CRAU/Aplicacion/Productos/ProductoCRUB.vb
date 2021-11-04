@@ -4,25 +4,23 @@
     Private dao As New DAOProducto
 
     Private Sub ProductoCRUB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
         LlenarMarcas()
         LlenarCategoria()
         LlenarFamilia()
         LlenarUnidad()
 
-        If pro.Id > 0 Then
-            textParte.Text = pro.No_parte
-            comboMarca.SelectedValue = pro.Marca.Id
-            comboCategoria.SelectedValue = pro.Categoria.Id
-            comboFamilia.SelectedValue = pro.Familia.Id
-            comboMedida.SelectedValue = pro.Medida.Id
-            textPCompra.Text = pro.Precio_compra
-            textPVenta.Text = pro.Precio_venta
-            textPPromedio.Text = pro.Costo_promedio
-            textDescripcion.Text = pro.Descripcion
-            textAlertMax.Text = pro.Stock.Alerta_max_stock
-            textAlertMin.Text = pro.Stock.ALerta_min_stock
-            textExistencia.Text = pro.Stock.Stock
+
+        'MsgBox(pro.id)
+
+        If pro.Id = 0 Then
+            LimpiarForm()
+        Else
+
+            RecibirData()
         End If
+
     End Sub
 
     Private Sub DataMap()
@@ -32,13 +30,43 @@
         dao.Categoria.Id = comboCategoria.SelectedValue
         dao.Familia.Id = comboFamilia.SelectedValue
         dao.Medida.Id = comboMedida.SelectedValue
-        dao.Precio_compra = textPCompra.Text
-        dao.Precio_venta = textPVenta.Text
-        dao.Costo_promedio = textPPromedio.Text
+        dao.Precio_compra = SoloNumeros.formatoNumero(textPCompra.Text)
+        dao.Precio_venta = SoloNumeros.formatoNumero(textPVenta.Text)
+        dao.Costo_promedio = SoloNumeros.formatoNumero(textPPromedio.Text)
         dao.Descripcion = textDescripcion.Text
         dao.Stock.Alerta_max_stock = textAlertMax.Text
         dao.Stock.ALerta_min_stock = textAlertMin.Text
         dao.Stock.Stock = textExistencia.Text
+    End Sub
+
+    Private Sub RecibirData()
+        textParte.Text = pro.No_parte
+        comboMarca.SelectedValue = pro.Marca.Id
+        comboCategoria.SelectedValue = pro.Categoria.Id
+        comboFamilia.SelectedValue = pro.Familia.Id
+        comboMedida.SelectedValue = pro.Medida.Id
+        textPCompra.Text = SoloNumeros.formatoMoneda(pro.Precio_compra)
+        textPVenta.Text = SoloNumeros.formatoMoneda(pro.Precio_venta)
+        textPPromedio.Text = SoloNumeros.formatoMoneda(pro.Costo_promedio)
+        textDescripcion.Text = pro.Descripcion
+        textAlertMax.Text = pro.Stock.Alerta_max_stock
+        textAlertMin.Text = pro.Stock.ALerta_min_stock
+        textExistencia.Text = pro.Stock.Stock
+    End Sub
+
+    Private Sub LimpiarForm()
+        textParte.Text = "0"
+        comboMarca.SelectedValue = 0
+        comboCategoria.SelectedValue = 0
+        comboFamilia.SelectedValue = 0
+        comboMedida.SelectedValue = 0
+        textPCompra.Text = "0"
+        textPVenta.Text = "0"
+        textPPromedio.Text = "0"
+        textDescripcion.Text = "0"
+        textAlertMax.Text = "0"
+        textAlertMin.Text = "0"
+        textExistencia.Text = "0"
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -58,10 +86,10 @@
         End Try
     End Sub
 
-    Private Sub LlenarMarcas()
+    Public Sub LlenarMarcas()
         Dim mar As New DAOMarca
         mar.Eliminado = 0
-        Dim ma As Object = mar.getRecords
+        Dim ma As Object = mar.ListarTodos
 
         With comboMarca
             '.Items.Clear()
@@ -73,10 +101,10 @@
 
     End Sub
 
-    Private Sub LlenarCategoria()
+    Public Sub LlenarCategoria()
         Dim cate As New DAOCategoria
         cate.Eliminado = 0
-        Dim cat As Object = cate.getRecords
+        Dim cat As Object = cate.ListarTodos
 
         With comboCategoria
             '.Items.Clear()
@@ -87,13 +115,13 @@
         End With
     End Sub
 
-    Private Sub LlenarUnidad()
+    Public Sub LlenarUnidad()
         Dim tur As New DAOMedida
-
-        Dim turList As Object = tur.getRecords
+        tur.Eliminado = 0
+        Dim turList As Object = tur.ListarTodos
 
         With comboMedida
-            .Items.Clear()
+            '.Items.Clear()
             .DataSource = turList
             .DisplayMember = "Medida"
             .ValueMember = "Id"
@@ -101,13 +129,13 @@
         End With
     End Sub
 
-    Private Sub LlenarFamilia()
+    Public Sub LlenarFamilia()
         Dim tur As New DAOFamilia
-
-        Dim turList As Object = tur.getRecords
+        tur.Eliminado = 0
+        Dim turList As Object = tur.ListarTodos
 
         With comboFamilia
-            .Items.Clear()
+            '.Items.Clear()
             .DataSource = turList
             .DisplayMember = "Familia"
             .ValueMember = "Id"
@@ -131,7 +159,48 @@
         End Try
     End Sub
 
+    Private Sub Close_login(sender As Object, e As EventArgs) Handles Me.Closed
+        Me.Dispose()
+    End Sub
+
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
+        Me.Dispose()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        CategoriaCRUB.recibview = Me
+        CategoriaCRUB.ShowDialog()
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        MedidasCRUB.recibview = Me
+        MedidasCRUB.ShowDialog()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        MarcaCRUB.recibview = Me
+        MarcaCRUB.ShowDialog()
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        FamiliaCRUB.recibview = Me
+        FamiliaCRUB.ShowDialog()
+    End Sub
+
+    Private Sub textPCompra_LostFocus(sender As Object, e As EventArgs) Handles textPCompra.LostFocus
+        textPCompra.Text = SoloNumeros.formatoMoneda(textPCompra.Text)
+    End Sub
+
+    Private Sub textPVenta_TextChanged(sender As Object, e As EventArgs) Handles textPVenta.LostFocus
+        textPVenta.Text = SoloNumeros.formatoMoneda(textPVenta.Text)
+    End Sub
+
+    Private Sub textPPromedio_TextChanged(sender As Object, e As EventArgs) Handles textPPromedio.LostFocus
+        textPPromedio.Text = SoloNumeros.formatoMoneda(textPPromedio.Text)
+    End Sub
+
+
 End Class

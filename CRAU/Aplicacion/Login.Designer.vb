@@ -61,7 +61,7 @@ Partial Class Login
         Me.btnConfirm.BackColor = System.Drawing.Color.DarkBlue
         Me.btnConfirm.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirm.ForeColor = System.Drawing.Color.White
-        Me.btnConfirm.Location = New System.Drawing.Point(152, 234)
+        Me.btnConfirm.Location = New System.Drawing.Point(152, 240)
         Me.btnConfirm.Margin = New System.Windows.Forms.Padding(2)
         Me.btnConfirm.Name = "btnConfirm"
         Me.btnConfirm.Size = New System.Drawing.Size(239, 37)
@@ -81,9 +81,9 @@ Partial Class Login
         Me.btnPassword.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnPassword.IconSize = 25
         Me.btnPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPassword.Location = New System.Drawing.Point(5, 196)
+        Me.btnPassword.Location = New System.Drawing.Point(26, 195)
         Me.btnPassword.Name = "btnPassword"
-        Me.btnPassword.Size = New System.Drawing.Size(147, 28)
+        Me.btnPassword.Size = New System.Drawing.Size(148, 28)
         Me.btnPassword.TabIndex = 18
         Me.btnPassword.Text = "Contraseña"
         Me.btnPassword.UseVisualStyleBackColor = False
@@ -100,7 +100,7 @@ Partial Class Login
         Me.btnUser.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnUser.IconSize = 25
         Me.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUser.Location = New System.Drawing.Point(5, 138)
+        Me.btnUser.Location = New System.Drawing.Point(26, 138)
         Me.btnUser.Name = "btnUser"
         Me.btnUser.Size = New System.Drawing.Size(121, 32)
         Me.btnUser.TabIndex = 17
@@ -123,11 +123,11 @@ Partial Class Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(416, 297)
+        Me.Controls.Add(Me.textPasswprd)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnPassword)
         Me.Controls.Add(Me.btnUser)
         Me.Controls.Add(Me.btnConfirm)
-        Me.Controls.Add(Me.textPasswprd)
         Me.Controls.Add(Me.textUser)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False

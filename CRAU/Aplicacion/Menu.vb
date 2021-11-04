@@ -44,6 +44,14 @@ Public Class Menu
     End Sub
 
     Private Sub SalirToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem1.Click
-        End
+        Me.Close()
+    End Sub
+    Private Sub colorMenu()
+        Stylo.cambiarColor(mstMenu)
+        mstMenu.Renderer = New Stylo
+    End Sub
+
+    Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        colorMenu()
     End Sub
 End Class
