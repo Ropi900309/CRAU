@@ -54,4 +54,28 @@ Public Class Menu
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         colorMenu()
     End Sub
+
+    Private Sub EmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadosToolStripMenuItem.Click
+        OpenChildForm(Empleados)
+    End Sub
+
+    Private Sub UsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuarioToolStripMenuItem.Click
+        OpenChildForm(Usuarios)
+    End Sub
+
+    Private Sub RecepciónDeMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecepciónDeMaterialToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub GarantiaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GarantiaToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub InventarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InventarioToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub OrdenDeCompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenDeCompraToolStripMenuItem.Click
+
+    End Sub
 End Class

@@ -136,6 +136,48 @@
     <Compile Include="Aplicacion\Productos\Productos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Aplicacion\Usuarios\DepartamentosCRUB.Designer.vb">
+      <DependentUpon>DepartamentosCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\DepartamentosCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\Empleados.Designer.vb">
+      <DependentUpon>Empleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\Empleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\EmpleadosCRUB.Designer.vb">
+      <DependentUpon>EmpleadosCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\EmpleadosCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\PermisosUsuariosCRUB.Designer.vb">
+      <DependentUpon>PermisosUsuariosCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\PermisosUsuariosCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\PuestosCRUB.Designer.vb">
+      <DependentUpon>PuestosCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\PuestosCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\Usuarios.Designer.vb">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\Usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\UsuariosCRUB.Designer.vb">
+      <DependentUpon>UsuariosCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\UsuariosCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Aplicacion\Vehiculos\VehiculoCRUB.Designer.vb">
       <DependentUpon>VehiculoCRUB.vb</DependentUpon>
     </Compile>
@@ -168,12 +210,16 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DAO\DAOUsuario.vb" />
+    <Compile Include="DAO\Usuarios\DAODepartamento.vb" />
+    <Compile Include="DAO\Usuarios\DAOEmpleado.vb" />
+    <Compile Include="DAO\Usuarios\DAOUsuario.vb" />
     <Compile Include="DAO\Productos\DAOCategoria.vb" />
     <Compile Include="DAO\Productos\DAOFamilia.vb" />
     <Compile Include="DAO\Productos\DAOMarca.vb" />
     <Compile Include="DAO\Productos\DAOMedida.vb" />
     <Compile Include="DAO\Productos\DAOProducto.vb" />
+    <Compile Include="DAO\Usuarios\DAOPuesto.vb" />
+    <Compile Include="DAO\Usuarios\DAORol.vb" />
     <Compile Include="DAO\Vehiculos\DAOVehiculo.vb" />
     <Compile Include="DAO\Vehiculos\DAOVmarca.vb" />
     <Compile Include="DAO\Vehiculos\DAOVtipo.vb" />
@@ -210,6 +256,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utilerias\ConversionFecha.vb" />
     <Compile Include="Utilerias\Metodos.vb" />
     <Compile Include="Utilerias\SoloNumeros.vb" />
     <Compile Include="Utilerias\Stylo.vb" />
@@ -238,6 +285,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Productos\Productos.resx">
       <DependentUpon>Productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\DepartamentosCRUB.resx">
+      <DependentUpon>DepartamentosCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\Empleados.resx">
+      <DependentUpon>Empleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\EmpleadosCRUB.resx">
+      <DependentUpon>EmpleadosCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\PermisosUsuariosCRUB.resx">
+      <DependentUpon>PermisosUsuariosCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\PuestosCRUB.resx">
+      <DependentUpon>PuestosCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\Usuarios.resx">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\UsuariosCRUB.resx">
+      <DependentUpon>UsuariosCRUB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Vehiculos\VehiculoCRUB.resx">
       <DependentUpon>VehiculoCRUB.vb</DependentUpon>

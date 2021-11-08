@@ -46,14 +46,13 @@ Partial Class Menu
         Me.TallerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrdenServicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguraciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DepartamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitterIzq = New System.Windows.Forms.Splitter()
         Me.Panel = New System.Windows.Forms.Panel()
         Me.lblFecha = New System.Windows.Forms.Label()
         Me.PanelInf = New System.Windows.Forms.Panel()
-        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mstMenu.SuspendLayout()
         Me.Panel.SuspendLayout()
         Me.PanelInf.SuspendLayout()
@@ -212,21 +211,21 @@ Partial Class Menu
         '
         'ConfiguraciónToolStripMenuItem
         '
-        Me.ConfiguraciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentosToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.UsuarioToolStripMenuItem})
+        Me.ConfiguraciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem, Me.UsuarioToolStripMenuItem})
         Me.ConfiguraciónToolStripMenuItem.Name = "ConfiguraciónToolStripMenuItem"
-        Me.ConfiguraciónToolStripMenuItem.Size = New System.Drawing.Size(126, 23)
-        Me.ConfiguraciónToolStripMenuItem.Text = "Administrador"
+        Me.ConfiguraciónToolStripMenuItem.Size = New System.Drawing.Size(106, 23)
+        Me.ConfiguraciónToolStripMenuItem.Text = "Administrar"
         '
-        'DepartamentosToolStripMenuItem
+        'EmpleadosToolStripMenuItem
         '
-        Me.DepartamentosToolStripMenuItem.Name = "DepartamentosToolStripMenuItem"
-        Me.DepartamentosToolStripMenuItem.Size = New System.Drawing.Size(192, 24)
-        Me.DepartamentosToolStripMenuItem.Text = "Departamentos"
+        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'UsuarioToolStripMenuItem
         '
         Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(192, 24)
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.UsuarioToolStripMenuItem.Text = "Usuario"
         '
         'SalirToolStripMenuItem1
@@ -275,12 +274,6 @@ Partial Class Menu
         Me.PanelInf.Size = New System.Drawing.Size(1028, 28)
         Me.PanelInf.TabIndex = 78
         '
-        'EmpleadosToolStripMenuItem
-        '
-        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(192, 24)
-        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
-        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -316,7 +309,6 @@ Partial Class Menu
     Friend WithEvents VehiculosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TallerToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DepartamentosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RequisicionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OrdenDeCompraToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OrdenServicioToolStripMenuItem As ToolStripMenuItem
