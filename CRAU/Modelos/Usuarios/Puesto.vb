@@ -6,10 +6,11 @@
     Public Sub New()
     End Sub
 
-    Public Sub New(id As Integer, eliminado As Integer, puesto As String)
+    Public Sub New(id As Integer, puesto As String, eliminado As Integer)
         _id = id
-        _eliminado = eliminado
+
         _puesto = puesto
+        _eliminado = eliminado
     End Sub
 
     Public Property Id As Integer

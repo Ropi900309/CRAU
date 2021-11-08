@@ -1,17 +1,17 @@
 /*
 Navicat SQL Server Data Transfer
 
-Source Server         : SQL_SERV
-Source Server Version : 140000
+Source Server         : crau
+Source Server Version : 150000
 Source Host           : localhost:1433
-Source Database       : CRAU
+Source Database       : crau
 Source Schema         : dbo
 
 Target Server Type    : SQL Server
-Target Server Version : 140000
+Target Server Version : 150000
 File Encoding         : 65001
 
-Date: 2021-11-08 12:17:04
+Date: 2021-11-08 16:56:55
 */
 
 
@@ -266,6 +266,8 @@ CREATE TABLE [dbo].[departamentos] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[departamentos]', RESEED, 2)
+GO
 
 -- ----------------------------
 -- Records of departamentos
@@ -273,6 +275,9 @@ GO
 SET IDENTITY_INSERT [dbo].[departamentos] ON
 GO
 INSERT INTO [dbo].[departamentos] ([id], [departamento], [eliminado]) VALUES (N'1', N'SISTEMAS', N'0')
+GO
+GO
+INSERT INTO [dbo].[departamentos] ([id], [departamento], [eliminado]) VALUES (N'2', N'ALMACEN', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[departamentos] OFF
@@ -292,10 +297,13 @@ CREATE TABLE [dbo].[empleados] (
 [nss] varchar(20) NULL ,
 [fecha_alta] date NULL ,
 [departamento] int NULL ,
-[puesto] int NULL 
+[puesto] int NULL ,
+[fecha_baja] date NULL 
 )
 
 
+GO
+DBCC CHECKIDENT(N'[dbo].[empleados]', RESEED, 2)
 GO
 
 -- ----------------------------
@@ -303,7 +311,10 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[empleados] ON
 GO
-INSERT INTO [dbo].[empleados] ([id], [nombre], [paterno], [materno], [rfc], [nss], [fecha_alta], [departamento], [puesto]) VALUES (N'1', N'Isaac', N'Rodriguez', N'Paredes', N'ROPI900309A62', N'330632552', N'2021-10-28', N'1', N'1')
+INSERT INTO [dbo].[empleados] ([id], [nombre], [paterno], [materno], [rfc], [nss], [fecha_alta], [departamento], [puesto], [fecha_baja]) VALUES (N'1', N'Isaac', N'Rodriguez', N'Paredes', N'ROPI900309A62', N'330632552', N'2021-10-28', N'1', N'1', null)
+GO
+GO
+INSERT INTO [dbo].[empleados] ([id], [nombre], [paterno], [materno], [rfc], [nss], [fecha_alta], [departamento], [puesto], [fecha_baja]) VALUES (N'2', N'Mauricio', N'Pastellin', N'Reyes', N'asdadad', N'adadada', N'2021-11-08', N'2', N'2', N'2021-11-08')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[empleados] OFF
@@ -322,6 +333,8 @@ CREATE TABLE [dbo].[empleados_puestos] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[empleados_puestos]', RESEED, 2)
+GO
 
 -- ----------------------------
 -- Records of empleados_puestos
@@ -329,6 +342,9 @@ GO
 SET IDENTITY_INSERT [dbo].[empleados_puestos] ON
 GO
 INSERT INTO [dbo].[empleados_puestos] ([id], [puesto], [eliminado]) VALUES (N'1', N'DESARROLLADOR', N'0')
+GO
+GO
+INSERT INTO [dbo].[empleados_puestos] ([id], [puesto], [eliminado]) VALUES (N'2', N'OPERADOR', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[empleados_puestos] OFF
@@ -375,6 +391,122 @@ GO
 -- ----------------------------
 -- Records of garantias_detalle
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for menu_opc_sub
+-- ----------------------------
+DROP TABLE [dbo].[menu_opc_sub]
+GO
+CREATE TABLE [dbo].[menu_opc_sub] (
+[id] int NOT NULL IDENTITY(1,1) ,
+[menu_opcion] int NULL ,
+[submenu] varchar(150) NULL 
+)
+
+
+GO
+DBCC CHECKIDENT(N'[dbo].[menu_opc_sub]', RESEED, 18)
+GO
+
+-- ----------------------------
+-- Records of menu_opc_sub
+-- ----------------------------
+SET IDENTITY_INSERT [dbo].[menu_opc_sub] ON
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'1', N'1', N'Recepción de Material')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'2', N'1', N'Ajuste Inventario Entrada')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'3', N'1', N'Salida De Material')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'4', N'1', N'Ajuste Inventario Salida')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'5', N'1', N'Venta')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'6', N'1', N'Garantia')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'7', N'1', N'Inventario')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'8', N'1', N'Resguardo de herramienta')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'9', N'2', N'Requisiciones')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'10', N'2', N'Orden de Compra')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'11', N'3', N'Clientes')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'12', N'3', N'Proveedores')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'13', N'3', N'Productos')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'14', N'3', N'Servicios')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'15', N'3', N'Vehiculos')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'16', N'4', N'Orden Servicio')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'17', N'5', N'Empleados')
+GO
+GO
+INSERT INTO [dbo].[menu_opc_sub] ([id], [menu_opcion], [submenu]) VALUES (N'18', N'5', N'Usuario')
+GO
+GO
+SET IDENTITY_INSERT [dbo].[menu_opc_sub] OFF
+GO
+
+-- ----------------------------
+-- Table structure for menu_opciones
+-- ----------------------------
+DROP TABLE [dbo].[menu_opciones]
+GO
+CREATE TABLE [dbo].[menu_opciones] (
+[id] int NOT NULL IDENTITY(1,1) ,
+[opcion_menu] varchar(150) NULL 
+)
+
+
+GO
+DBCC CHECKIDENT(N'[dbo].[menu_opciones]', RESEED, 5)
+GO
+
+-- ----------------------------
+-- Records of menu_opciones
+-- ----------------------------
+SET IDENTITY_INSERT [dbo].[menu_opciones] ON
+GO
+INSERT INTO [dbo].[menu_opciones] ([id], [opcion_menu]) VALUES (N'1', N'Almacen')
+GO
+GO
+INSERT INTO [dbo].[menu_opciones] ([id], [opcion_menu]) VALUES (N'2', N'Compras')
+GO
+GO
+INSERT INTO [dbo].[menu_opciones] ([id], [opcion_menu]) VALUES (N'3', N'Cátalogos')
+GO
+GO
+INSERT INTO [dbo].[menu_opciones] ([id], [opcion_menu]) VALUES (N'4', N'Taller')
+GO
+GO
+INSERT INTO [dbo].[menu_opciones] ([id], [opcion_menu]) VALUES (N'5', N'Administrar')
+GO
+GO
+SET IDENTITY_INSERT [dbo].[menu_opciones] OFF
+GO
 
 -- ----------------------------
 -- Table structure for monedas
@@ -960,6 +1092,17 @@ SET IDENTITY_INSERT [dbo].[vehiculos] OFF
 GO
 
 -- ----------------------------
+-- View structure for listado_empleados
+-- ----------------------------
+DROP VIEW [dbo].[listado_empleados]
+GO
+CREATE VIEW [dbo].[listado_empleados] AS 
+SELECT emp.*,dep.departamento as dec_depto, empu.puesto as desc_puesto from empleados emp 
+INNER JOIN departamentos dep on dep.id=emp.departamento
+INNER JOIN empleados_puestos empu on empu.id= emp.puesto
+GO
+
+-- ----------------------------
 -- View structure for listado_productos
 -- ----------------------------
 DROP VIEW [dbo].[listado_productos]
@@ -1169,6 +1312,26 @@ ALTER TABLE [dbo].[garantias_detalle] ADD PRIMARY KEY ([garantia], [producto])
 GO
 
 -- ----------------------------
+-- Indexes structure for table menu_opc_sub
+-- ----------------------------
+
+-- ----------------------------
+-- Primary Key structure for table menu_opc_sub
+-- ----------------------------
+ALTER TABLE [dbo].[menu_opc_sub] ADD PRIMARY KEY ([id])
+GO
+
+-- ----------------------------
+-- Indexes structure for table menu_opciones
+-- ----------------------------
+
+-- ----------------------------
+-- Primary Key structure for table menu_opciones
+-- ----------------------------
+ALTER TABLE [dbo].[menu_opciones] ADD PRIMARY KEY ([id])
+GO
+
+-- ----------------------------
 -- Indexes structure for table monedas
 -- ----------------------------
 
@@ -1261,6 +1424,7 @@ BEGIN
 		INSERT INTO productos_inventario VALUES (0,0,0,@producto)
    
 END
+
 
 
 GO
