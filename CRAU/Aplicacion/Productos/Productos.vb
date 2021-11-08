@@ -126,11 +126,8 @@
                 .Item(15, i).Value = row.Stock.Stock
                 .Item(16, i).Value = row.Stock.ALerta_min_stock
                 .Item(17, i).Value = row.Stock.Alerta_max_stock
-
                 i += 1
-
                 a += 1
-
             Next
 
             listaProducttos = resultado
@@ -158,7 +155,8 @@
             Dim pro As New Producto
             With ListProductos
                 pro.Id = .Item(0, .CurrentRow.Index).Value
-                'MsgBox(BuscarProductoLista(pro.Id))
+
+                ' MsgBox(BuscarProductoLista(pro.Id))
                 pro = listaProducttos(BuscarProductoLista(pro.Id))
                 ProductoCRUB.pro = pro
                 ProductoCRUB.recibView = Me

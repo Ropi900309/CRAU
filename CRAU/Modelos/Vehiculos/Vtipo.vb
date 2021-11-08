@@ -1,12 +1,13 @@
 ﻿Public Class Vtipo
-    Private _id As Integer
+    Private _id, _eliminado As Integer
     Private _tipo As String
 
     Public Sub New()
     End Sub
 
-    Public Sub New(id As Integer, tipo As String)
+    Public Sub New(id As Integer, eliminado As Integer, tipo As String)
         _id = id
+        _eliminado = eliminado
         _tipo = tipo
     End Sub
 
@@ -16,6 +17,15 @@
         End Get
         Set(value As Integer)
             _id = value
+        End Set
+    End Property
+
+    Public Property Eliminado As Integer
+        Get
+            Return _eliminado
+        End Get
+        Set(value As Integer)
+            _eliminado = value
         End Set
     End Property
 

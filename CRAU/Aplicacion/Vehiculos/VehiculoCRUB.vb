@@ -5,17 +5,20 @@
 
 
     Private Sub VehiculoCRUB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        llenarMarcas()
-        llenarTipos()
+        Try
+            llenarMarcas()
+            llenarTipos()
 
-        If veh.Id > 0 Then
-            txtRegistro.Text = veh.Registro_vehicular
-            txtPlaca.Text = veh.Placas
-            txtModelo.Text = veh.Modelo
-            comboMarca.SelectedValue = veh.Marca.Id
-            comboTipo.SelectedValue = veh.Tipo.Id
-            txtSerie.Text = veh.Serie
-        End If
+            If veh.Id = 0 Then
+                LimpiarForm()
+            Else
+                RecibirData()
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical, "Error")
+        End Try
+
     End Sub
 
     Private Sub DataMap()
@@ -26,7 +29,24 @@
         dao.Marca.Id = comboMarca.SelectedValue
         dao.Tipo.Id = comboTipo.SelectedValue
         dao.Serie = txtSerie.Text
+    End Sub
 
+    Private Sub RecibirData()
+        txtRegistro.Text = veh.Registro_vehicular
+        txtPlaca.Text = veh.Placas
+        txtModelo.Text = veh.Modelo
+        comboMarca.SelectedValue = veh.Marca.Id
+        comboTipo.SelectedValue = veh.Tipo.Id
+        txtSerie.Text = veh.Serie
+    End Sub
+
+    Private Sub LimpiarForm()
+        txtRegistro.Text = ""
+        txtPlaca.Text = ""
+        txtModelo.Text = ""
+        comboMarca.SelectedValue = 0
+        comboTipo.SelectedValue = 0
+        txtSerie.Text = ""
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -46,10 +66,10 @@
         End Try
     End Sub
 
-
-    Private Sub llenarMarcas()
+    Public Sub llenarMarcas()
         Dim mar As New DAOVmarca
-        Dim ma As Object = mar.getRecords
+        mar.Eliminado = 0
+        Dim ma As Object = mar.ListarTodos
 
         With comboMarca
             .DataSource = ma
@@ -60,10 +80,10 @@
 
     End Sub
 
-    Private Sub llenarTipos()
+    Public Sub llenarTipos()
         Dim tip As New DAOVtipo
 
-        Dim ti As Object = tip.getRecords
+        Dim ti As Object = tip.ListarTodos
 
         With comboTipo
             .DataSource = ti
@@ -74,7 +94,21 @@
 
     End Sub
 
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+
+    Private Sub btnSalir_Click_1(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
+        Me.Dispose()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        VmarcaCRUB.recibview = Me
+        VmarcaCRUB.ShowDialog()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        VtipoCRUB.recibview = Me
+        VtipoCRUB.ShowDialog()
+    End Sub
+
+
 End Class

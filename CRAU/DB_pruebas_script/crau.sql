@@ -11,7 +11,7 @@ Target Server Type    : SQL Server
 Target Server Version : 140000
 File Encoding         : 65001
 
-Date: 2021-11-02 17:45:46
+Date: 2021-11-08 12:17:04
 */
 
 
@@ -555,13 +555,21 @@ CREATE TABLE [dbo].[productos] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[productos]', RESEED, 1001)
+GO
 
 -- ----------------------------
 -- Records of productos
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[productos] ON
 GO
-INSERT INTO [dbo].[productos] ([id], [no_parte], [descripcion], [precio_compra], [precio_venta], [costo_promedio], [medida], [categoria], [marca], [familia], [eliminado]) VALUES (N'1', N'1', N'Intel i9 3200 MHZ', N'7000', N'10000', N'7200', N'1', N'1', N'1', N'1', N'0')
+INSERT INTO [dbo].[productos] ([id], [no_parte], [descripcion], [precio_compra], [precio_venta], [costo_promedio], [medida], [categoria], [marca], [familia], [eliminado]) VALUES (N'1', N'2222', N'Intel i9 3200 MHZvfvfvfdv', N'70000', N'100000', N'72000', N'1', N'1', N'1', N'1', N'0')
+GO
+GO
+INSERT INTO [dbo].[productos] ([id], [no_parte], [descripcion], [precio_compra], [precio_venta], [costo_promedio], [medida], [categoria], [marca], [familia], [eliminado]) VALUES (N'2', N'1111', N'0', N'1', N'2', N'1', N'1', N'1', N'1', N'1', N'0')
+GO
+GO
+INSERT INTO [dbo].[productos] ([id], [no_parte], [descripcion], [precio_compra], [precio_venta], [costo_promedio], [medida], [categoria], [marca], [familia], [eliminado]) VALUES (N'3', N'B-BALERO', N'MATERIAL 3 /4 "', N'1', N'2', N'1', N'1', N'1', N'1', N'1', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[productos] OFF
@@ -580,13 +588,21 @@ CREATE TABLE [dbo].[productos_categoria] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[productos_categoria]', RESEED, 1001)
+GO
 
 -- ----------------------------
 -- Records of productos_categoria
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[productos_categoria] ON
 GO
-INSERT INTO [dbo].[productos_categoria] ([id], [categoria], [eliminado]) VALUES (N'1', N'procesador', N'0')
+INSERT INTO [dbo].[productos_categoria] ([id], [categoria], [eliminado]) VALUES (N'1', N'Procesador', N'0')
+GO
+GO
+INSERT INTO [dbo].[productos_categoria] ([id], [categoria], [eliminado]) VALUES (N'2', N'Herramienta', N'1')
+GO
+GO
+INSERT INTO [dbo].[productos_categoria] ([id], [categoria], [eliminado]) VALUES (N'3', N'Grafica', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[productos_categoria] OFF
@@ -605,13 +621,18 @@ CREATE TABLE [dbo].[productos_familia] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[productos_familia]', RESEED, 1001)
+GO
 
 -- ----------------------------
 -- Records of productos_familia
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[productos_familia] ON
 GO
-INSERT INTO [dbo].[productos_familia] ([id], [familia], [eliminado]) VALUES (N'1', N'Accesorios para computadora', N'0')
+INSERT INTO [dbo].[productos_familia] ([id], [familia], [eliminado]) VALUES (N'1', N'Accesorios', N'0')
+GO
+GO
+INSERT INTO [dbo].[productos_familia] ([id], [familia], [eliminado]) VALUES (N'2', N'Componentes', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[productos_familia] OFF
@@ -649,6 +670,8 @@ CREATE TABLE [dbo].[productos_inventario] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[productos_inventario]', RESEED, 1001)
+GO
 
 -- ----------------------------
 -- Records of productos_inventario
@@ -656,6 +679,12 @@ GO
 SET IDENTITY_INSERT [dbo].[productos_inventario] ON
 GO
 INSERT INTO [dbo].[productos_inventario] ([id], [stock], [alerta_min_stock], [alerta_max_stock], [producto]) VALUES (N'1', N'0', N'0', N'0', N'1')
+GO
+GO
+INSERT INTO [dbo].[productos_inventario] ([id], [stock], [alerta_min_stock], [alerta_max_stock], [producto]) VALUES (N'2', N'0', N'0', N'0', N'2')
+GO
+GO
+INSERT INTO [dbo].[productos_inventario] ([id], [stock], [alerta_min_stock], [alerta_max_stock], [producto]) VALUES (N'3', N'0', N'0', N'0', N'3')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[productos_inventario] OFF
@@ -674,13 +703,18 @@ CREATE TABLE [dbo].[productos_marca] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[productos_marca]', RESEED, 1001)
+GO
 
 -- ----------------------------
 -- Records of productos_marca
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[productos_marca] ON
 GO
-INSERT INTO [dbo].[productos_marca] ([id], [marca], [eliminado]) VALUES (N'1', N'intell', N'0')
+INSERT INTO [dbo].[productos_marca] ([id], [marca], [eliminado]) VALUES (N'1', N'Intel', N'0')
+GO
+GO
+INSERT INTO [dbo].[productos_marca] ([id], [marca], [eliminado]) VALUES (N'2', N'AMD', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[productos_marca] OFF
@@ -699,6 +733,8 @@ CREATE TABLE [dbo].[productos_umedida] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[productos_umedida]', RESEED, 1001)
+GO
 
 -- ----------------------------
 -- Records of productos_umedida
@@ -706,6 +742,9 @@ GO
 SET IDENTITY_INSERT [dbo].[productos_umedida] ON
 GO
 INSERT INTO [dbo].[productos_umedida] ([id], [unidad], [eliminado]) VALUES (N'1', N'pieza', N'0')
+GO
+GO
+INSERT INTO [dbo].[productos_umedida] ([id], [unidad], [eliminado]) VALUES (N'2', N'Caja', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[productos_umedida] OFF
@@ -814,10 +853,13 @@ DROP TABLE [dbo].[vehiculo_marca]
 GO
 CREATE TABLE [dbo].[vehiculo_marca] (
 [id] int NOT NULL IDENTITY(1,1) ,
-[marca] varchar(50) NULL 
+[marca] varchar(50) NULL ,
+[eliminado] tinyint NULL 
 )
 
 
+GO
+DBCC CHECKIDENT(N'[dbo].[vehiculo_marca]', RESEED, 1001)
 GO
 
 -- ----------------------------
@@ -825,7 +867,10 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[vehiculo_marca] ON
 GO
-INSERT INTO [dbo].[vehiculo_marca] ([id], [marca]) VALUES (N'1', N'NISSAN')
+INSERT INTO [dbo].[vehiculo_marca] ([id], [marca], [eliminado]) VALUES (N'1', N'KENWORTH', N'0')
+GO
+GO
+INSERT INTO [dbo].[vehiculo_marca] ([id], [marca], [eliminado]) VALUES (N'8', N'ISUZU', N'1')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[vehiculo_marca] OFF
@@ -838,10 +883,13 @@ DROP TABLE [dbo].[vehiculo_tipo]
 GO
 CREATE TABLE [dbo].[vehiculo_tipo] (
 [id] int NOT NULL IDENTITY(1,1) ,
-[tipo] varchar(50) NULL 
+[tipo] varchar(50) NULL ,
+[eliminado] tinyint NULL 
 )
 
 
+GO
+DBCC CHECKIDENT(N'[dbo].[vehiculo_tipo]', RESEED, 1001)
 GO
 
 -- ----------------------------
@@ -849,7 +897,10 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[vehiculo_tipo] ON
 GO
-INSERT INTO [dbo].[vehiculo_tipo] ([id], [tipo]) VALUES (N'1', N'TORTON')
+INSERT INTO [dbo].[vehiculo_tipo] ([id], [tipo], [eliminado]) VALUES (N'1', N'TORTON', N'0')
+GO
+GO
+INSERT INTO [dbo].[vehiculo_tipo] ([id], [tipo], [eliminado]) VALUES (N'2', N'CAJA SECA', N'1')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[vehiculo_tipo] OFF
@@ -864,13 +915,16 @@ CREATE TABLE [dbo].[vehiculos] (
 [id] int NOT NULL IDENTITY(1,1) ,
 [registro_vehicular] varchar(50) NULL ,
 [placas] varchar(50) NULL ,
-[modelo] int NULL ,
+[modelo] varchar(50) NULL ,
 [marca] int NULL ,
 [tipo] int NULL ,
-[serie] varchar(50) NULL 
+[serie] varchar(50) NULL ,
+[eliminado] tinyint NULL 
 )
 
 
+GO
+DBCC CHECKIDENT(N'[dbo].[vehiculos]', RESEED, 8)
 GO
 
 -- ----------------------------
@@ -878,7 +932,28 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[vehiculos] ON
 GO
-INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie]) VALUES (N'1', N'01010101', N'xw8009a', N'2021', N'1', N'1', N'01010101p')
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'1', N'5612', N'XX70667', N'T680', N'1', N'1', N'3863997788H', N'0')
+GO
+GO
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'2', N'5613', N'XW80069', N'T8080', N'1', N'1', N'99632A6A55', N'0')
+GO
+GO
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'3', N'5614', N'XS96A', N'T8080', N'1', N'1', N'99ASA66A4664', N'0')
+GO
+GO
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'4', N'5615', N'PSFG89A', N'T460', N'1', N'1', N'CASDA996A', N'0')
+GO
+GO
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'5', N'5617', N'XDF988A', N'T460', N'1', N'1', N'99998745A478', N'0')
+GO
+GO
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'6', N'5618', N'XSXS9', N'T460', N'1', N'1', N'1552669P', N'0')
+GO
+GO
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'7', N'5619', N'PDP96', N'T460', N'1', N'1', N'7899633DD55F69', N'0')
+GO
+GO
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'8', N'5620', N'GDD70A', N'T680A', N'1', N'1', N'19992ASDG33', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[vehiculos] OFF
@@ -909,10 +984,15 @@ GO
 DROP VIEW [dbo].[listado_vehiculos]
 GO
 CREATE VIEW [dbo].[listado_vehiculos] AS 
-s(
-select vh.*, vhp.tipo as des_tipo , vhm.marca as des_marca from vehiculos vh
-INNER JOIN vehiculo_tipo vhp on vhp.id = vh.tipo
-INNER JOIN vehiculo_marca vhm on vhm.id = vh.marca)
+SELECT
+		vh.*, vhp.tipo AS des_tipo,
+		vhm.marca AS des_marca
+	FROM
+		vehiculos vh
+	INNER JOIN vehiculo_tipo vhp ON vhp.id = vh.tipo
+	INNER JOIN vehiculo_marca vhm ON vhm.id = vh.marca
+	WHERE
+		vh.eliminado = '0'
 GO
 
 -- ----------------------------

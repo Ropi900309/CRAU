@@ -39,8 +39,10 @@ Partial Class VehiculoCRUB
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.btnSalir = New FontAwesome.Sharp.IconButton()
         Me.txtSerie = New System.Windows.Forms.TextBox()
+        Me.btnSalir = New FontAwesome.Sharp.IconButton()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -81,7 +83,7 @@ Partial Class VehiculoCRUB
         'txtModelo
         '
         Me.txtModelo.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.txtModelo.Location = New System.Drawing.Point(392, 165)
+        Me.txtModelo.Location = New System.Drawing.Point(392, 168)
         Me.txtModelo.Name = "txtModelo"
         Me.txtModelo.Size = New System.Drawing.Size(177, 20)
         Me.txtModelo.TabIndex = 3
@@ -89,7 +91,7 @@ Partial Class VehiculoCRUB
         'txtPlaca
         '
         Me.txtPlaca.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.txtPlaca.Location = New System.Drawing.Point(392, 133)
+        Me.txtPlaca.Location = New System.Drawing.Point(392, 138)
         Me.txtPlaca.Name = "txtPlaca"
         Me.txtPlaca.Size = New System.Drawing.Size(177, 20)
         Me.txtPlaca.TabIndex = 2
@@ -218,23 +220,6 @@ Partial Class VehiculoCRUB
         Me.PictureBox3.TabIndex = 15
         Me.PictureBox3.TabStop = False
         '
-        'btnSalir
-        '
-        Me.btnSalir.BackColor = System.Drawing.Color.White
-        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.ForeColor = System.Drawing.Color.White
-        Me.btnSalir.IconChar = FontAwesome.Sharp.IconChar.WindowClose
-        Me.btnSalir.IconColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnSalir.IconSize = 25
-        Me.btnSalir.Location = New System.Drawing.Point(480, 2)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(99, 38)
-        Me.btnSalir.TabIndex = 16
-        Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnSalir.UseVisualStyleBackColor = False
-        '
         'txtSerie
         '
         Me.txtSerie.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
@@ -243,14 +228,50 @@ Partial Class VehiculoCRUB
         Me.txtSerie.Size = New System.Drawing.Size(177, 20)
         Me.txtSerie.TabIndex = 17
         '
+        'btnSalir
+        '
+        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
+        Me.btnSalir.IconChar = FontAwesome.Sharp.IconChar.WindowClose
+        Me.btnSalir.IconColor = System.Drawing.Color.White
+        Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSalir.IconSize = 25
+        Me.btnSalir.Location = New System.Drawing.Point(504, 0)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(99, 38)
+        Me.btnSalir.TabIndex = 18
+        Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSalir.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(575, 204)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(28, 23)
+        Me.Button1.TabIndex = 40
+        Me.Button1.Text = "..."
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(575, 242)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(28, 23)
+        Me.Button2.TabIndex = 41
+        Me.Button2.Text = "..."
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'VehiculoCRUB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(581, 358)
-        Me.Controls.Add(Me.txtSerie)
+        Me.ClientSize = New System.Drawing.Size(606, 358)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.txtSerie)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lblPlaca)
@@ -294,6 +315,8 @@ Partial Class VehiculoCRUB
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
     Friend WithEvents txtSerie As TextBox
+    Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class
