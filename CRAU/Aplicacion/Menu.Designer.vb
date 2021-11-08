@@ -27,7 +27,6 @@ Partial Class Menu
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServiciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VehiculosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mstMenu = New System.Windows.Forms.MenuStrip()
         Me.AlmacenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -54,6 +53,7 @@ Partial Class Menu
         Me.Panel = New System.Windows.Forms.Panel()
         Me.lblFecha = New System.Windows.Forms.Label()
         Me.PanelInf = New System.Windows.Forms.Panel()
+        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mstMenu.SuspendLayout()
         Me.Panel.SuspendLayout()
         Me.PanelInf.SuspendLayout()
@@ -61,7 +61,7 @@ Partial Class Menu
         '
         'SalirToolStripMenuItem
         '
-        Me.SalirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ServiciosToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.VehiculosToolStripMenuItem})
+        Me.SalirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ServiciosToolStripMenuItem, Me.VehiculosToolStripMenuItem})
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(94, 23)
         Me.SalirToolStripMenuItem.Text = "Cátalogos"
@@ -89,12 +89,6 @@ Partial Class Menu
         Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
         Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
         Me.ServiciosToolStripMenuItem.Text = "Servicios"
-        '
-        'EmpleadosToolStripMenuItem
-        '
-        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
-        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'VehiculosToolStripMenuItem
         '
@@ -218,10 +212,10 @@ Partial Class Menu
         '
         'ConfiguraciónToolStripMenuItem
         '
-        Me.ConfiguraciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentosToolStripMenuItem, Me.UsuarioToolStripMenuItem})
+        Me.ConfiguraciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentosToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.UsuarioToolStripMenuItem})
         Me.ConfiguraciónToolStripMenuItem.Name = "ConfiguraciónToolStripMenuItem"
-        Me.ConfiguraciónToolStripMenuItem.Size = New System.Drawing.Size(123, 23)
-        Me.ConfiguraciónToolStripMenuItem.Text = "Configuración"
+        Me.ConfiguraciónToolStripMenuItem.Size = New System.Drawing.Size(126, 23)
+        Me.ConfiguraciónToolStripMenuItem.Text = "Administrador"
         '
         'DepartamentosToolStripMenuItem
         '
@@ -281,6 +275,12 @@ Partial Class Menu
         Me.PanelInf.Size = New System.Drawing.Size(1028, 28)
         Me.PanelInf.TabIndex = 78
         '
+        'EmpleadosToolStripMenuItem
+        '
+        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(192, 24)
+        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -308,7 +308,6 @@ Partial Class Menu
     Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ServiciosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AlmacenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ComprasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConfiguraciónToolStripMenuItem As ToolStripMenuItem
@@ -334,4 +333,5 @@ Partial Class Menu
     Friend WithEvents lblFecha As Label
     Friend WithEvents PanelInf As Panel
     Friend WithEvents SalidaDeMaterialToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -22,16 +22,16 @@ Partial Class Vehiculos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTotEntidades = New System.Windows.Forms.Label()
         Me.btnNuevo = New FontAwesome.Sharp.IconButton()
         Me.btnEditar = New FontAwesome.Sharp.IconButton()
-        Me.ListProductos = New System.Windows.Forms.DataGridView()
+        Me.ListVehiculos = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnBuscar = New FontAwesome.Sharp.IconButton()
         Me.textBuscar = New System.Windows.Forms.TextBox()
-        CType(Me.ListProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ListVehiculos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTotEntidades
@@ -48,65 +48,73 @@ Partial Class Vehiculos
         'btnNuevo
         '
         Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnNuevo.ForeColor = System.Drawing.SystemColors.Window
         Me.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Box
-        Me.btnNuevo.IconColor = System.Drawing.Color.Black
+        Me.btnNuevo.IconColor = System.Drawing.Color.White
         Me.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnNuevo.IconSize = 25
-        Me.btnNuevo.Location = New System.Drawing.Point(1213, 587)
+        Me.btnNuevo.Location = New System.Drawing.Point(1134, 587)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(47, 35)
+        Me.btnNuevo.Size = New System.Drawing.Size(84, 35)
         Me.btnNuevo.TabIndex = 299
-        Me.btnNuevo.UseVisualStyleBackColor = True
+        Me.btnNuevo.Text = "Agregar"
+        Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnNuevo.UseVisualStyleBackColor = False
         '
         'btnEditar
         '
         Me.btnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnEditar.ForeColor = System.Drawing.Color.White
         Me.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit
-        Me.btnEditar.IconColor = System.Drawing.Color.Black
+        Me.btnEditar.IconColor = System.Drawing.Color.White
         Me.btnEditar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnEditar.IconSize = 25
-        Me.btnEditar.Location = New System.Drawing.Point(1266, 587)
+        Me.btnEditar.Location = New System.Drawing.Point(1224, 587)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(54, 35)
+        Me.btnEditar.Size = New System.Drawing.Size(96, 35)
         Me.btnEditar.TabIndex = 298
-        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEditar.UseVisualStyleBackColor = False
         '
-        'ListProductos
+        'ListVehiculos
         '
-        Me.ListProductos.AllowUserToAddRows = False
-        Me.ListProductos.AllowUserToDeleteRows = False
-        Me.ListProductos.AllowUserToResizeRows = False
-        Me.ListProductos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.ListVehiculos.AllowUserToAddRows = False
+        Me.ListVehiculos.AllowUserToDeleteRows = False
+        Me.ListVehiculos.AllowUserToResizeRows = False
+        Me.ListVehiculos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ListProductos.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.ListProductos.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ListProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.ListProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(20, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ListProductos.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ListProductos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.ListProductos.EnableHeadersVisualStyles = False
-        Me.ListProductos.Location = New System.Drawing.Point(12, 52)
-        Me.ListProductos.Name = "ListProductos"
-        Me.ListProductos.ReadOnly = True
-        Me.ListProductos.RowHeadersVisible = False
-        Me.ListProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ListProductos.Size = New System.Drawing.Size(1308, 524)
-        Me.ListProductos.TabIndex = 297
+        Me.ListVehiculos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.ListVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ListVehiculos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.ListVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(20, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ListVehiculos.DefaultCellStyle = DataGridViewCellStyle4
+        Me.ListVehiculos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.ListVehiculos.EnableHeadersVisualStyles = False
+        Me.ListVehiculos.Location = New System.Drawing.Point(12, 52)
+        Me.ListVehiculos.Name = "ListVehiculos"
+        Me.ListVehiculos.ReadOnly = True
+        Me.ListVehiculos.RowHeadersVisible = False
+        Me.ListVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.ListVehiculos.Size = New System.Drawing.Size(1308, 524)
+        Me.ListVehiculos.TabIndex = 297
         '
         'Label1
         '
@@ -149,13 +157,13 @@ Partial Class Vehiculos
         Me.Controls.Add(Me.lblTotEntidades)
         Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.ListProductos)
+        Me.Controls.Add(Me.ListVehiculos)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.textBuscar)
         Me.Name = "Vehiculos"
         Me.Text = "Vehiculos"
-        CType(Me.ListProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ListVehiculos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -164,7 +172,7 @@ Partial Class Vehiculos
     Friend WithEvents lblTotEntidades As Label
     Friend WithEvents btnNuevo As FontAwesome.Sharp.IconButton
     Friend WithEvents btnEditar As FontAwesome.Sharp.IconButton
-    Friend WithEvents ListProductos As DataGridView
+    Friend WithEvents ListVehiculos As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents btnBuscar As FontAwesome.Sharp.IconButton
     Friend WithEvents textBuscar As TextBox

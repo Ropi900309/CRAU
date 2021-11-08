@@ -1,11 +1,12 @@
-﻿Public Class MarcaCRUB
+﻿Public Class VmarcaCRUB
+
     Implements GripMethod
 
-    Friend Shared recibview As ProductoCRUB
-    Private cat As New DAOMarca
+    Friend Shared recibview As VehiculoCRUB
+    Private mar As New DAOVmarca
 
     Public Sub CrearGrid() Implements GripMethod.CrearGrid
-        With ListProductos
+        With ListVehiculos
             .Rows.Clear()
 
             'PROPIEDADES DEL GRID
@@ -25,17 +26,11 @@
             .Columns(2).HeaderText = "Descripcion"
             .Columns(3).HeaderText = "Eliminado"
 
-
-
             'DEFINE EL ANCHO DE LAS COLUMNAS 
 
             .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
-
-
             .Columns(1).ValueType = Type.GetType("System.Int32")
-
-
 
             'DEFINE COLUMNA PARA BUSQUEDA
             .Columns(1).Name = "Clave"
@@ -44,8 +39,6 @@
             'OCULTAR COLUMNAS
             .Columns(0).Visible = False
             .Columns(3).Visible = False
-
-
 
             'SOLO LECTURA PARA COLUMNAS 
             .Columns(0).ReadOnly = True
@@ -57,66 +50,68 @@
     End Sub
 
     Public Sub LlenarGrid() Implements GripMethod.LlenarGrid
-        Dim pro As New DAOMarca
-
-        Dim resultado As List(Of Marca) = pro.ListarTodos()
-
-        Dim i As Integer = 0
-        Dim a As Integer = 0
-        With ListProductos
-            .Rows.Clear()
-
-
-            For Each row As Marca In resultado
-                .Rows.Add(1)
-                .Item(0, i).Value = row.Id
-                .Item(1, i).Value = row.Id
-                .Item(2, i).Value = row.Marca
-                .Item(3, i).Value = row.Eliminado
-
-
-                i += 1
-
-                a += 1
-
-            Next
-
-
-        End With
-    End Sub
-
-    Private Sub CategoriaCRUB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CrearGrid()
-        LlenarGrid()
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
-            cat.Marca = textNombre.Text
-            cat.Eliminado = 0
+            Dim mar As New DAOVmarca
 
-            If cat.Id > 0 Then
-                cat.Actualizar()
+            Dim resultado As List(Of Vmarca) = mar.ListarTodos()
+
+            Dim i As Integer = 0
+            Dim a As Integer = 0
+            With ListVehiculos
+                .Rows.Clear()
+
+
+                For Each row As Vmarca In resultado
+                    .Rows.Add(1)
+                    .Item(0, i).Value = row.Id
+                    .Item(1, i).Value = row.Id
+                    .Item(2, i).Value = row.Marca
+                    .Item(3, i).Value = row.Eliminado
+
+                    i += 1
+
+                    a += 1
+
+                Next
+
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical, "Error")
+        End Try
+    End Sub
+
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        Try
+            mar.Marca = textNombre.Text
+            mar.Eliminado = 0
+
+            If mar.Id > 0 Then
+                mar.Actualizar()
             Else
-
-                cat.Guardar()
+                mar.Guardar()
             End If
             ClearData()
-            recibview.LlenarMarcas()
+            recibview.llenarMarcas()
             LlenarGrid()
             MsgBox("Se actualizaron los datos correctamente", vbInformation, "Resultado")
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
     End Sub
+
+    Private Sub ClearData()
+        mar.Id = 0
+        mar.Marca = ""
+        mar.Eliminado = 0
+        textNombre.Text = ""
+    End Sub
+
+
     Private Sub btnSeleccionar_Click(sender As Object, e As EventArgs) Handles btnSeleccionar.Click
         Try
-            With ListProductos
+            With ListVehiculos
 
                 recibview.comboMarca.SelectedValue = .Item(0, .CurrentRow.Index).Value
-
-
             End With
             Me.Close()
         Catch ex As Exception
@@ -124,14 +119,25 @@
         End Try
     End Sub
 
+    Private Sub VmarcaCRUB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            CrearGrid()
+            LlenarGrid()
+
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical, "Error")
+        End Try
+
+    End Sub
+
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Try
-            With ListProductos
-                cat.Id = .Item(0, .CurrentRow.Index).Value
-                cat.Marca = .Item(2, .CurrentRow.Index).Value
-                cat.Eliminado = .Item(3, .CurrentRow.Index).Value
+            With ListVehiculos
+                mar.Id = .Item(0, .CurrentRow.Index).Value
+                mar.Marca = .Item(2, .CurrentRow.Index).Value
+                mar.Eliminado = .Item(3, .CurrentRow.Index).Value
 
-                textNombre.Text = cat.Marca
+                textNombre.Text = mar.Marca
             End With
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical, "Error")
@@ -140,29 +146,18 @@
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
-            With ListProductos
-                cat.Id = .Item(0, .CurrentRow.Index).Value
-                cat.Marca = .Item(2, .CurrentRow.Index).Value
-                cat.Eliminado = 1
-                cat.Eliminar()
+            With ListVehiculos
+                mar.Id = .Item(0, .CurrentRow.Index).Value
+                mar.Marca = .Item(2, .CurrentRow.Index).Value
+                mar.Eliminado = 1
+                mar.Eliminar()
             End With
             ClearData()
-            recibview.LlenarMarcas()
+            recibview.llenarMarcas()
             LlenarGrid()
             MsgBox("Se eliminaron los datos correctamente", vbInformation, "Resultado")
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
-    End Sub
-
-    Private Sub ClearData()
-        cat.Id = 0
-        cat.Marca = ""
-        cat.Eliminado = 0
-        textNombre.Text = ""
-    End Sub
-
-    Private Sub Close_form(sender As Object, e As EventArgs) Handles Me.Closed
-        Me.Dispose()
     End Sub
 End Class

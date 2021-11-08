@@ -65,7 +65,7 @@ Partial Class ProductoCRUB
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(250, 140)
+        Me.Label3.Location = New System.Drawing.Point(250, 186)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(117, 20)
         Me.Label3.TabIndex = 2
@@ -75,7 +75,7 @@ Partial Class ProductoCRUB
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(230, 179)
+        Me.Label4.Location = New System.Drawing.Point(230, 225)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(137, 18)
         Me.Label4.TabIndex = 3
@@ -85,7 +85,7 @@ Partial Class ProductoCRUB
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(574, 143)
+        Me.Label7.Location = New System.Drawing.Point(574, 189)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(86, 18)
         Me.Label7.TabIndex = 6
@@ -95,7 +95,7 @@ Partial Class ProductoCRUB
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(592, 212)
+        Me.Label8.Location = New System.Drawing.Point(592, 258)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(60, 18)
         Me.Label8.TabIndex = 7
@@ -105,7 +105,7 @@ Partial Class ProductoCRUB
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(240, 105)
+        Me.Label10.Location = New System.Drawing.Point(240, 151)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(127, 18)
         Me.Label10.TabIndex = 9
@@ -113,7 +113,7 @@ Partial Class ProductoCRUB
         '
         'textParte
         '
-        Me.textParte.Location = New System.Drawing.Point(373, 70)
+        Me.textParte.Location = New System.Drawing.Point(373, 116)
         Me.textParte.Name = "textParte"
         Me.textParte.Size = New System.Drawing.Size(135, 20)
         Me.textParte.TabIndex = 1
@@ -121,7 +121,7 @@ Partial Class ProductoCRUB
         '
         'textDescripcion
         '
-        Me.textDescripcion.Location = New System.Drawing.Point(373, 276)
+        Me.textDescripcion.Location = New System.Drawing.Point(373, 322)
         Me.textDescripcion.Multiline = True
         Me.textDescripcion.Name = "textDescripcion"
         Me.textDescripcion.Size = New System.Drawing.Size(462, 98)
@@ -129,7 +129,7 @@ Partial Class ProductoCRUB
         '
         'textPPromedio
         '
-        Me.textPPromedio.Location = New System.Drawing.Point(373, 175)
+        Me.textPPromedio.Location = New System.Drawing.Point(373, 221)
         Me.textPPromedio.Name = "textPPromedio"
         Me.textPPromedio.Size = New System.Drawing.Size(135, 20)
         Me.textPPromedio.TabIndex = 4
@@ -138,7 +138,7 @@ Partial Class ProductoCRUB
         '
         'textPCompra
         '
-        Me.textPCompra.Location = New System.Drawing.Point(373, 106)
+        Me.textPCompra.Location = New System.Drawing.Point(373, 152)
         Me.textPCompra.Name = "textPCompra"
         Me.textPCompra.Size = New System.Drawing.Size(135, 20)
         Me.textPCompra.TabIndex = 2
@@ -147,7 +147,7 @@ Partial Class ProductoCRUB
         '
         'textPVenta
         '
-        Me.textPVenta.Location = New System.Drawing.Point(373, 142)
+        Me.textPVenta.Location = New System.Drawing.Point(373, 188)
         Me.textPVenta.Name = "textPVenta"
         Me.textPVenta.Size = New System.Drawing.Size(135, 20)
         Me.textPVenta.TabIndex = 3
@@ -157,7 +157,7 @@ Partial Class ProductoCRUB
         'comboMarca
         '
         Me.comboMarca.FormattingEnabled = True
-        Me.comboMarca.Location = New System.Drawing.Point(666, 211)
+        Me.comboMarca.Location = New System.Drawing.Point(666, 257)
         Me.comboMarca.Name = "comboMarca"
         Me.comboMarca.Size = New System.Drawing.Size(135, 21)
         Me.comboMarca.TabIndex = 11
@@ -165,7 +165,7 @@ Partial Class ProductoCRUB
         'comboMedida
         '
         Me.comboMedida.FormattingEnabled = True
-        Me.comboMedida.Location = New System.Drawing.Point(666, 176)
+        Me.comboMedida.Location = New System.Drawing.Point(666, 222)
         Me.comboMedida.Name = "comboMedida"
         Me.comboMedida.Size = New System.Drawing.Size(135, 21)
         Me.comboMedida.TabIndex = 10
@@ -173,7 +173,7 @@ Partial Class ProductoCRUB
         'comboCategoria
         '
         Me.comboCategoria.FormattingEnabled = True
-        Me.comboCategoria.Location = New System.Drawing.Point(666, 140)
+        Me.comboCategoria.Location = New System.Drawing.Point(666, 186)
         Me.comboCategoria.Name = "comboCategoria"
         Me.comboCategoria.Size = New System.Drawing.Size(135, 21)
         Me.comboCategoria.TabIndex = 9
@@ -181,7 +181,7 @@ Partial Class ProductoCRUB
         'comboFamilia
         '
         Me.comboFamilia.FormattingEnabled = True
-        Me.comboFamilia.Location = New System.Drawing.Point(666, 244)
+        Me.comboFamilia.Location = New System.Drawing.Point(666, 290)
         Me.comboFamilia.Name = "comboFamilia"
         Me.comboFamilia.Size = New System.Drawing.Size(135, 21)
         Me.comboFamilia.TabIndex = 12
@@ -195,7 +195,7 @@ Partial Class ProductoCRUB
         Me.btnSave.IconColor = System.Drawing.Color.White
         Me.btnSave.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSave.IconSize = 25
-        Me.btnSave.Location = New System.Drawing.Point(510, 382)
+        Me.btnSave.Location = New System.Drawing.Point(608, 426)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(105, 38)
         Me.btnSave.TabIndex = 13
@@ -212,7 +212,7 @@ Partial Class ProductoCRUB
         Me.btnErase.IconColor = System.Drawing.Color.White
         Me.btnErase.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnErase.IconSize = 25
-        Me.btnErase.Location = New System.Drawing.Point(623, 382)
+        Me.btnErase.Location = New System.Drawing.Point(728, 426)
         Me.btnErase.Name = "btnErase"
         Me.btnErase.Size = New System.Drawing.Size(107, 38)
         Me.btnErase.TabIndex = 14
@@ -223,7 +223,7 @@ Partial Class ProductoCRUB
         'textExistencia
         '
         Me.textExistencia.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.textExistencia.Location = New System.Drawing.Point(373, 212)
+        Me.textExistencia.Location = New System.Drawing.Point(373, 258)
         Me.textExistencia.Name = "textExistencia"
         Me.textExistencia.ReadOnly = True
         Me.textExistencia.Size = New System.Drawing.Size(135, 20)
@@ -233,7 +233,7 @@ Partial Class ProductoCRUB
         '
         'textAlertMax
         '
-        Me.textAlertMax.Location = New System.Drawing.Point(666, 104)
+        Me.textAlertMax.Location = New System.Drawing.Point(666, 150)
         Me.textAlertMax.Name = "textAlertMax"
         Me.textAlertMax.Size = New System.Drawing.Size(135, 20)
         Me.textAlertMax.TabIndex = 8
@@ -244,7 +244,7 @@ Partial Class ProductoCRUB
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(525, 106)
+        Me.Label11.Location = New System.Drawing.Point(525, 152)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(126, 18)
         Me.Label11.TabIndex = 26
@@ -252,7 +252,7 @@ Partial Class ProductoCRUB
         '
         'textAlertMin
         '
-        Me.textAlertMin.Location = New System.Drawing.Point(666, 67)
+        Me.textAlertMin.Location = New System.Drawing.Point(666, 113)
         Me.textAlertMin.Name = "textAlertMin"
         Me.textAlertMin.Size = New System.Drawing.Size(135, 20)
         Me.textAlertMin.TabIndex = 7
@@ -263,7 +263,7 @@ Partial Class ProductoCRUB
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(533, 67)
+        Me.Label12.Location = New System.Drawing.Point(533, 113)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(122, 18)
         Me.Label12.TabIndex = 28
@@ -275,7 +275,7 @@ Partial Class ProductoCRUB
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(367, 432)
+        Me.PictureBox1.Size = New System.Drawing.Size(367, 476)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 31
         Me.PictureBox1.TabStop = False
@@ -294,7 +294,7 @@ Partial Class ProductoCRUB
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(493, 9)
+        Me.Label2.Location = New System.Drawing.Point(459, 59)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(342, 42)
         Me.Label2.TabIndex = 33
@@ -304,7 +304,7 @@ Partial Class ProductoCRUB
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(300, 72)
+        Me.Label1.Location = New System.Drawing.Point(300, 118)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 18)
         Me.Label1.TabIndex = 34
@@ -314,7 +314,7 @@ Partial Class ProductoCRUB
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(277, 214)
+        Me.Label5.Location = New System.Drawing.Point(277, 260)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(90, 18)
         Me.Label5.TabIndex = 35
@@ -324,7 +324,7 @@ Partial Class ProductoCRUB
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(587, 180)
+        Me.Label6.Location = New System.Drawing.Point(587, 226)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 18)
         Me.Label6.TabIndex = 36
@@ -334,7 +334,7 @@ Partial Class ProductoCRUB
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(585, 247)
+        Me.Label9.Location = New System.Drawing.Point(585, 293)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(67, 18)
         Me.Label9.TabIndex = 37
@@ -344,7 +344,7 @@ Partial Class ProductoCRUB
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(251, 275)
+        Me.Label13.Location = New System.Drawing.Point(251, 321)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(103, 18)
         Me.Label13.TabIndex = 38
@@ -359,17 +359,16 @@ Partial Class ProductoCRUB
         Me.btnSalir.IconColor = System.Drawing.Color.White
         Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSalir.IconSize = 25
-        Me.btnSalir.Location = New System.Drawing.Point(736, 382)
+        Me.btnSalir.Location = New System.Drawing.Point(757, 0)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(99, 38)
         Me.btnSalir.TabIndex = 15
-        Me.btnSalir.Text = "Salir"
         Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSalir.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(807, 139)
+        Me.Button1.Location = New System.Drawing.Point(807, 185)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(28, 23)
         Me.Button1.TabIndex = 39
@@ -378,7 +377,7 @@ Partial Class ProductoCRUB
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(807, 175)
+        Me.Button2.Location = New System.Drawing.Point(807, 221)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(28, 23)
         Me.Button2.TabIndex = 40
@@ -387,7 +386,7 @@ Partial Class ProductoCRUB
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(807, 210)
+        Me.Button3.Location = New System.Drawing.Point(807, 256)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(28, 23)
         Me.Button3.TabIndex = 41
@@ -396,7 +395,7 @@ Partial Class ProductoCRUB
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(807, 242)
+        Me.Button4.Location = New System.Drawing.Point(807, 288)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(28, 23)
         Me.Button4.TabIndex = 42
@@ -408,7 +407,7 @@ Partial Class ProductoCRUB
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(858, 432)
+        Me.ClientSize = New System.Drawing.Size(858, 476)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)

@@ -8,7 +8,7 @@ Public Class DAOVehiculo
 
     Public Sub Guardar() Implements OpSql.Guardar
         conn = Cnx.GetConection
-        Me.sql.CommandText = "INSERT INTO vehiculos values ('" & Registro_vehicular & "','" & Placas & "'," & Modelo & "," & Marca.Id & "," & Tipo.Id & "," & Serie & ")"
+        Me.sql.CommandText = "INSERT INTO vehiculos values ('" & Registro_vehicular.Trim & "','" & Placas.Trim & "','" & Modelo.Trim & "'," & Marca.Id & "," & Tipo.Id & ",'" & Serie.Trim & "')"
         Me.sql.Connection = conn
         MsgBox(Me.sql.CommandText)
         Me.sql.ExecuteNonQuery()
@@ -16,8 +16,9 @@ Public Class DAOVehiculo
 
     Public Sub Actualizar() Implements OpSql.Actualizar
         conn = Cnx.GetConection
-        Me.sql.CommandText = "update vehiculos Set registro_vehicular='" & Registro_vehicular & "', placas='" & Placas & "' , modelo=" & Modelo & " , marca=" & Marca.Id & ", tipo=" & Tipo.Id & ", serie=" & Serie & " where id=" & Id & ""
+        Me.sql.CommandText = "update vehiculos Set registro_vehicular='" & Registro_vehicular.Trim & "', placas='" & Placas.Trim & "' , modelo='" & Modelo.Trim & "' , marca=" & Marca.Id & ", tipo=" & Tipo.Id & ", serie='" & Serie.Trim & "' where id=" & Id & ""
         Me.sql.Connection = conn
+        MsgBox(Me.sql.CommandText)
         Me.sql.ExecuteNonQuery()
     End Sub
 
@@ -36,8 +37,10 @@ Public Class DAOVehiculo
 
         conn = Cnx.GetConection
         ' If  IsNot Nothing Then
-        Me.sql.CommandText = "select * from listado_vehiculos"
+        Me.sql.CommandText = "select * from listado_vehiculos "
+
         Me.sql.Connection = conn
+
         r = Me.sql.ExecuteReader()
 
         If r.HasRows Then
@@ -52,8 +55,7 @@ Public Class DAOVehiculo
                 tipo.Id = r.GetValue((r.GetOrdinal("tipo")))
                 tipo.Tipo = r.GetValue((r.GetOrdinal("des_tipo")))
 
-                consulta.Add(New Vehiculo(r.GetValue((r.GetOrdinal("id"))), r.GetValue((r.GetOrdinal("modelo"))),
-                             marca, tipo, r.GetValue((r.GetOrdinal("registro_vehicular"))),
+                consulta.Add(New Vehiculo(r.GetValue((r.GetOrdinal("id"))), marca, tipo, r.GetValue((r.GetOrdinal("registro_vehicular"))), r.GetValue((r.GetOrdinal("modelo"))),
                              r.GetValue((r.GetOrdinal("placas"))), r.GetValue((r.GetOrdinal("serie")))))
                 i += 1
             End While

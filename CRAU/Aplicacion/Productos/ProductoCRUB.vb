@@ -60,9 +60,9 @@
         comboCategoria.SelectedValue = 0
         comboFamilia.SelectedValue = 0
         comboMedida.SelectedValue = 0
-        textPCompra.Text = "0"
-        textPVenta.Text = "0"
-        textPPromedio.Text = "0"
+        textPCompra.Text = "0.00"
+        textPVenta.Text = "0.00"
+        textPPromedio.Text = "0.00"
         textDescripcion.Text = "0"
         textAlertMax.Text = "0"
         textAlertMin.Text = "0"

@@ -148,6 +148,18 @@
     <Compile Include="Aplicacion\Vehiculos\Vehiculos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VmarcaCRUB.Designer.vb">
+      <DependentUpon>VmarcaCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VmarcaCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VtipoCRUB.Designer.vb">
+      <DependentUpon>VtipoCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VtipoCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Conexion\Cnx.vb" />
     <Compile Include="Aplicacion\Login.vb">
       <SubType>Form</SubType>
@@ -232,6 +244,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Vehiculos\Vehiculos.resx">
       <DependentUpon>Vehiculos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Vehiculos\VmarcaCRUB.resx">
+      <DependentUpon>VmarcaCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Vehiculos\VtipoCRUB.resx">
+      <DependentUpon>VtipoCRUB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

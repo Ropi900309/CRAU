@@ -4,37 +4,39 @@
     Private listaVehiculos As List(Of Vehiculo)
 
     Public Sub CrearGrid() Implements GripMethod.CrearGrid
-        With ListProductos
+        With ListVehiculos
             .Rows.Clear()
 
             'PROPIEDADES DEL GRID
             '.DefaultCellStyle.Font = New Font("OCR A", 9)
             '.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.RowsDefaultCellStyle.BackColor = Color.White
+            .RowsDefaultCellStyle.BackColor = Color.White
+            .RowsDefaultCellStyle.ForeColor = Color.Black
             '.DefaultCellStyle.SelectionBackColor = Color.OrangeRed
             '.DefaultCellStyle.SelectionForeColor = Color.White
             '.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            '.AlternatingRowsDefaultCellStyle.BackColor = Color.White
+            .AlternatingRowsDefaultCellStyle.BackColor = Color.White
+            .AlternatingRowsDefaultCellStyle.ForeColor = Color.Black
+
             'NUMERO DE COLUMNAS 
             .ColumnCount = 9
 
             'DEFINICION DE COLUMNAS 
-            .Columns(0).HeaderText = "id"
-            .Columns(1).HeaderText = "Registro_vehicular"
+            .Columns(0).HeaderText = "#"
+            .Columns(1).HeaderText = "Registro_Vehicular"
             .Columns(2).HeaderText = "Placas"
             .Columns(3).HeaderText = "Modelo"
-            .Columns(4).HeaderText = "Marca"
-            .Columns(5).HeaderText = "Tipo"
+            .Columns(4).HeaderText = "Marca.id"
+            .Columns(5).HeaderText = "Tipo.id"
             .Columns(6).HeaderText = "Serie"
-            .Columns(7).HeaderText = "Des_marca"
-            .Columns(8).HeaderText = "Des_tipo"
+            .Columns(7).HeaderText = "Marca"
+            .Columns(8).HeaderText = "Tipo"
 
             'DEFINE EL ANCHO DE LAS COLUMNAS 
-            .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-            .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-            .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-            .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            '.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
 
             .Columns(1).ValueType = Type.GetType("System.Int32")
 
@@ -43,7 +45,9 @@
 
 
             'OCULTAR COLUMNAS
-            .Columns(0).Visible = False
+            '.Columns(0).Visible = False
+            .Columns(4).Visible = False
+            .Columns(5).Visible = False
 
             'SOLO LECTURA PARA COLUMNAS 
             .Columns(0).ReadOnly = True
@@ -66,7 +70,7 @@
 
         Dim i As Integer = 0
         Dim a As Integer = 0
-        With ListProductos
+        With ListVehiculos
             .Rows.Clear()
 
 
@@ -93,14 +97,11 @@
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
             Dim veh As New Vehiculo
-            With ListProductos
-                veh.Id = .Item(0, .CurrentRow.Index).Value
 
-                veh = listaVehiculos(0)
-                VehiculoCRUB.veh = veh
-                VehiculoCRUB.recibView = Me
-                VehiculoCRUB.ShowDialog()
-            End With
+            VehiculoCRUB.veh = veh
+            VehiculoCRUB.recibView = Me
+            VehiculoCRUB.ShowDialog()
+
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
@@ -109,10 +110,11 @@
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Try
             Dim veh As New Vehiculo
-            With ListProductos
-                veh.Id = .Item(1, .CurrentRow.Index).Value
+            With ListVehiculos
+                'MsgBox(veh.Id)
+                veh.Id = .Item(0, .CurrentRow.Index).Value
 
-                veh = listaVehiculos(0)
+                veh = listaVehiculos(BuscarVehiculoLista(veh.Id))
                 VehiculoCRUB.veh = veh
                 VehiculoCRUB.recibView = Me
                 VehiculoCRUB.ShowDialog()
@@ -127,5 +129,22 @@
         LlenarGrid()
     End Sub
 
+    Private Function BuscarVehiculoLista(id As Integer) As Integer
+        Dim indice As Integer = 0
+
+        For Each item As Vehiculo In listaVehiculos
+            indice += 1
+            If (item.Id = id) Then
+                If (indice = 1) Then
+                    indice = 0
+                Else
+                    indice = indice - 1
+                End If
+                Exit For
+            End If
+        Next
+
+        Return indice
+    End Function
 
 End Class
