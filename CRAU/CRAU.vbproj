@@ -106,16 +106,22 @@
     <Compile Include="Aplicacion\Clientes\Clientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Aplicacion\Clientes\CondicionesPagoCRUB.Designer.vb">
+      <DependentUpon>CondicionesPagoCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Clientes\CondicionesPagoCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Aplicacion\Clientes\ContactoCRUB.Designer.vb">
       <DependentUpon>ContactoCRUB.vb</DependentUpon>
     </Compile>
     <Compile Include="Aplicacion\Clientes\ContactoCRUB.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aplicacion\Clientes\CtipoCRUB.Designer.vb">
-      <DependentUpon>CtipoCRUB.vb</DependentUpon>
+    <Compile Include="Aplicacion\Clientes\FormasPagoCRUB.Designer.vb">
+      <DependentUpon>FormasPagoCRUB.vb</DependentUpon>
     </Compile>
-    <Compile Include="Aplicacion\Clientes\CtipoCRUB.vb">
+    <Compile Include="Aplicacion\Clientes\FormasPagoCRUB.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aplicacion\Menu.Designer.vb">
@@ -318,11 +324,14 @@
     <EmbeddedResource Include="Aplicacion\Clientes\Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Clientes\CondicionesPagoCRUB.resx">
+      <DependentUpon>CondicionesPagoCRUB.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Clientes\ContactoCRUB.resx">
       <DependentUpon>ContactoCRUB.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aplicacion\Clientes\CtipoCRUB.resx">
-      <DependentUpon>CtipoCRUB.vb</DependentUpon>
+    <EmbeddedResource Include="Aplicacion\Clientes\FormasPagoCRUB.resx">
+      <DependentUpon>FormasPagoCRUB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
