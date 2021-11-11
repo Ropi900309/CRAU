@@ -27,7 +27,7 @@
         dao.Razon_social = txtRazon.Text
         dao.Rfc = txtRfc.Text
         dao.Direccion = txtDireccion.Text
-        dao.Tipo.Id = comboTipo.SelectedValue
+        dao.Tipo.Id = 1
     End Sub
 
     Private Sub RecibirData()
@@ -82,12 +82,15 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        CtipoCRUB.recibview = Me
-        CtipoCRUB.ShowDialog()
-    End Sub
-
-    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         ContactoCRUB.ShowDialog()
     End Sub
 
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        CondicionesPagoCRUB.ShowDialog()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        FormasPagoCRUB.ShowDialog()
+    End Sub
 End Class
