@@ -66,6 +66,24 @@
         End Try
     End Sub
 
+
+    Private Sub btnErase_Click(sender As Object, e As EventArgs) Handles btnErase.Click
+        Try
+            DataMap()
+            If veh.Id > 0 Then
+                dao.Eliminado = 1
+                dao.Eliminar()
+            End If
+            MsgBox("Se ha eliminado con exito", vbInformation, "Informacion")
+            recibView.LlenarGrid()
+            Me.Close()
+            Me.Dispose()
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical, "Error")
+        End Try
+    End Sub
+
+
     Public Sub llenarMarcas()
         Dim mar As New DAOVmarca
         mar.Eliminado = 0

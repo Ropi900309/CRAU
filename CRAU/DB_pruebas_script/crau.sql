@@ -1,17 +1,17 @@
 /*
 Navicat SQL Server Data Transfer
 
-Source Server         : crau
-Source Server Version : 150000
+Source Server         : SQL_SERV
+Source Server Version : 140000
 Source Host           : localhost:1433
-Source Database       : crau
+Source Database       : CRAU
 Source Schema         : dbo
 
 Target Server Type    : SQL Server
-Target Server Version : 150000
+Target Server Version : 140000
 File Encoding         : 65001
 
-Date: 2021-11-08 16:56:55
+Date: 2021-11-11 10:48:15
 */
 
 
@@ -152,11 +152,31 @@ CREATE TABLE [dbo].[asociados] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[asociados]', RESEED, 5)
+GO
 
 -- ----------------------------
 -- Records of asociados
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[asociados] ON
+GO
+INSERT INTO [dbo].[asociados] ([id], [razon_social], [rfc], [direccion], [tipo_asociado]) VALUES (N'1', N'GRUPO PECUARIO SAN ANTONIO SA DE CV
+', N'GPS680713D5A
+', N'KM.335 CARRETERA FEDERAL FORTIN-CORDOBA
+', N'1')
+GO
+GO
+INSERT INTO [dbo].[asociados] ([id], [razon_social], [rfc], [direccion], [tipo_asociado]) VALUES (N'2', N'ZETA TRANSPORTES , S.A. DE C.V.', N'ZTR000329TY2', N'KM. 291 AUTOPISTA MEX-VER JUNTO A CAFETALERA ZETA', N'2')
+GO
+GO
+INSERT INTO [dbo].[asociados] ([id], [razon_social], [rfc], [direccion], [tipo_asociado]) VALUES (N'3', N'ERIK MIGUEL MARIN GARZA', N'MAGE860614AJ1', N'AVENIDA JUAREZ', N'1')
+GO
+GO
+INSERT INTO [dbo].[asociados] ([id], [razon_social], [rfc], [direccion], [tipo_asociado]) VALUES (N'4', N'AUTOQUIMICOS S.A. DE C.V.', N'AUT9407288V2', N'AV. 51 CALLE 2', N'1')
+GO
+GO
+INSERT INTO [dbo].[asociados] ([id], [razon_social], [rfc], [direccion], [tipo_asociado]) VALUES (N'5', N'FLETERA CONTINENTAL DE LIQUIDOS, S.A. DE C.V.', N'FCL820609NI8', N'CONOCIDO RANCHO SANTA TECLA', N'2')
+GO
 GO
 SET IDENTITY_INSERT [dbo].[asociados] OFF
 GO
@@ -180,6 +200,9 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[asociados_cond_pago] ON
 GO
+INSERT INTO [dbo].[asociados_cond_pago] ([id], [asociado], [pago]) VALUES (N'1', N'1', N'contado')
+GO
+GO
 SET IDENTITY_INSERT [dbo].[asociados_cond_pago] OFF
 GO
 
@@ -198,11 +221,22 @@ CREATE TABLE [dbo].[asociados_contactos] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[asociados_contactos]', RESEED, 3)
+GO
 
 -- ----------------------------
 -- Records of asociados_contactos
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[asociados_contactos] ON
+GO
+INSERT INTO [dbo].[asociados_contactos] ([id], [asociado], [telefono], [correo_electronico], [nombre_contacto]) VALUES (N'1', N'1', N'2712631143', N'm.pastelin@grupoporres.com.mx', N'Mauricio Pastelin Mendoza')
+GO
+GO
+INSERT INTO [dbo].[asociados_contactos] ([id], [asociado], [telefono], [correo_electronico], [nombre_contacto]) VALUES (N'2', N'1', N'2712631143', N'a.pastelin@grupoporres.com.mx', N'Adrian Pastelin Mendoza')
+GO
+GO
+INSERT INTO [dbo].[asociados_contactos] ([id], [asociado], [telefono], [correo_electronico], [nombre_contacto]) VALUES (N'3', N'2', N'2712631143', N'a.linares@azteka.com.mx', N'Adriana Linares Mendez')
+GO
 GO
 SET IDENTITY_INSERT [dbo].[asociados_contactos] OFF
 GO
@@ -220,11 +254,19 @@ CREATE TABLE [dbo].[asociados_tipo] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[asociados_tipo]', RESEED, 5)
+GO
 
 -- ----------------------------
 -- Records of asociados_tipo
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[asociados_tipo] ON
+GO
+INSERT INTO [dbo].[asociados_tipo] ([id], [tipo_asociado], [eliminado]) VALUES (N'1', N'CLIENTE', N'0')
+GO
+GO
+INSERT INTO [dbo].[asociados_tipo] ([id], [tipo_asociado], [eliminado]) VALUES (N'2', N'PROVEEDOR', N'0')
+GO
 GO
 SET IDENTITY_INSERT [dbo].[asociados_tipo] OFF
 GO
@@ -314,7 +356,7 @@ GO
 INSERT INTO [dbo].[empleados] ([id], [nombre], [paterno], [materno], [rfc], [nss], [fecha_alta], [departamento], [puesto], [fecha_baja]) VALUES (N'1', N'Isaac', N'Rodriguez', N'Paredes', N'ROPI900309A62', N'330632552', N'2021-10-28', N'1', N'1', null)
 GO
 GO
-INSERT INTO [dbo].[empleados] ([id], [nombre], [paterno], [materno], [rfc], [nss], [fecha_alta], [departamento], [puesto], [fecha_baja]) VALUES (N'2', N'Mauricio', N'Pastellin', N'Reyes', N'asdadad', N'adadada', N'2021-11-08', N'2', N'2', N'2021-11-08')
+INSERT INTO [dbo].[empleados] ([id], [nombre], [paterno], [materno], [rfc], [nss], [fecha_alta], [departamento], [puesto], [fecha_baja]) VALUES (N'2', N'Mauricio', N'Pastellin', N'Mendoza', N'asdadad', N'adadada', N'2021-11-08', N'1', N'1', null)
 GO
 GO
 SET IDENTITY_INSERT [dbo].[empleados] OFF
@@ -695,7 +737,7 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[productos] ON
 GO
-INSERT INTO [dbo].[productos] ([id], [no_parte], [descripcion], [precio_compra], [precio_venta], [costo_promedio], [medida], [categoria], [marca], [familia], [eliminado]) VALUES (N'1', N'2222', N'Intel i9 3200 MHZvfvfvfdv', N'70000', N'100000', N'72000', N'1', N'1', N'1', N'1', N'0')
+INSERT INTO [dbo].[productos] ([id], [no_parte], [descripcion], [precio_compra], [precio_venta], [costo_promedio], [medida], [categoria], [marca], [familia], [eliminado]) VALUES (N'1', N'2222', N'Intel i9 3200 ', N'70000', N'100000', N'72000', N'1', N'1', N'1', N'1', N'0')
 GO
 GO
 INSERT INTO [dbo].[productos] ([id], [no_parte], [descripcion], [precio_compra], [precio_venta], [costo_promedio], [medida], [categoria], [marca], [familia], [eliminado]) VALUES (N'2', N'1111', N'0', N'1', N'2', N'1', N'1', N'1', N'1', N'1', N'0')
@@ -941,6 +983,8 @@ CREATE TABLE [dbo].[usuarios] (
 
 
 GO
+DBCC CHECKIDENT(N'[dbo].[usuarios]', RESEED, 2)
+GO
 
 -- ----------------------------
 -- Records of usuarios
@@ -948,6 +992,9 @@ GO
 SET IDENTITY_INSERT [dbo].[usuarios] ON
 GO
 INSERT INTO [dbo].[usuarios] ([id], [usuario], [contraseña], [empleado], [usuario_rol], [eliminado]) VALUES (N'1', N'ropi', N'holamundo', N'1', N'1', N'0')
+GO
+GO
+INSERT INTO [dbo].[usuarios] ([id], [usuario], [contraseña], [empleado], [usuario_rol], [eliminado]) VALUES (N'2', N'mapa', N'123', N'2', N'1', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[usuarios] OFF
@@ -1002,7 +1049,7 @@ GO
 INSERT INTO [dbo].[vehiculo_marca] ([id], [marca], [eliminado]) VALUES (N'1', N'KENWORTH', N'0')
 GO
 GO
-INSERT INTO [dbo].[vehiculo_marca] ([id], [marca], [eliminado]) VALUES (N'8', N'ISUZU', N'1')
+INSERT INTO [dbo].[vehiculo_marca] ([id], [marca], [eliminado]) VALUES (N'8', N'ISUZU', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[vehiculo_marca] OFF
@@ -1032,7 +1079,7 @@ GO
 INSERT INTO [dbo].[vehiculo_tipo] ([id], [tipo], [eliminado]) VALUES (N'1', N'TORTON', N'0')
 GO
 GO
-INSERT INTO [dbo].[vehiculo_tipo] ([id], [tipo], [eliminado]) VALUES (N'2', N'CAJA SECA', N'1')
+INSERT INTO [dbo].[vehiculo_tipo] ([id], [tipo], [eliminado]) VALUES (N'2', N'CAJA SECA', N'0')
 GO
 GO
 SET IDENTITY_INSERT [dbo].[vehiculo_tipo] OFF
@@ -1056,7 +1103,7 @@ CREATE TABLE [dbo].[vehiculos] (
 
 
 GO
-DBCC CHECKIDENT(N'[dbo].[vehiculos]', RESEED, 8)
+DBCC CHECKIDENT(N'[dbo].[vehiculos]', RESEED, 10)
 GO
 
 -- ----------------------------
@@ -1064,7 +1111,7 @@ GO
 -- ----------------------------
 SET IDENTITY_INSERT [dbo].[vehiculos] ON
 GO
-INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'1', N'5612', N'XX70667', N'T680', N'1', N'1', N'3863997788H', N'0')
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'1', N'5612', N'XX70667', N'T680', N'1', N'2', N'3863997788H', N'0')
 GO
 GO
 INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'2', N'5613', N'XW80069', N'T8080', N'1', N'1', N'99632A6A55', N'0')
@@ -1082,13 +1129,31 @@ GO
 INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'6', N'5618', N'XSXS9', N'T460', N'1', N'1', N'1552669P', N'0')
 GO
 GO
-INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'7', N'5619', N'PDP96', N'T460', N'1', N'1', N'7899633DD55F69', N'0')
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'7', N'5619', N'PDP96', N'T460', N'1', N'1', N'ASDG3454656FHG', N'0')
 GO
 GO
 INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'8', N'5620', N'GDD70A', N'T680A', N'1', N'1', N'19992ASDG33', N'0')
 GO
 GO
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'9', N'5621', N'XWA965A', N'T680', N'1', N'1', N'ASD996ASAAA', N'0')
+GO
+GO
+INSERT INTO [dbo].[vehiculos] ([id], [registro_vehicular], [placas], [modelo], [marca], [tipo], [serie], [eliminado]) VALUES (N'10', N'5625', N'PAXASF4', N'T8080', N'8', N'2', N'DS669SD', N'0')
+GO
+GO
 SET IDENTITY_INSERT [dbo].[vehiculos] OFF
+GO
+
+-- ----------------------------
+-- View structure for listado_clientes
+-- ----------------------------
+DROP VIEW [dbo].[listado_clientes]
+GO
+CREATE VIEW [dbo].[listado_clientes] AS 
+select aso.*, asot.tipo_asociado AS des_tipo
+from asociados aso
+inner join asociados_tipo asot on asot.id = aso.tipo_asociado
+where aso.tipo_asociado = 1
 GO
 
 -- ----------------------------
@@ -1119,6 +1184,18 @@ INNER JOIN productos_familia pfa on pfa.id=pro.familia
 where pro.eliminado = 0
 
 )
+GO
+
+-- ----------------------------
+-- View structure for listado_proveedores
+-- ----------------------------
+DROP VIEW [dbo].[listado_proveedores]
+GO
+CREATE VIEW [dbo].[listado_proveedores] AS 
+select aso.*, asot.tipo_asociado AS des_tipo
+from asociados aso
+inner join asociados_tipo asot on asot.id = aso.tipo_asociado
+where aso.tipo_asociado = 2
 GO
 
 -- ----------------------------
@@ -1424,6 +1501,7 @@ BEGIN
 		INSERT INTO productos_inventario VALUES (0,0,0,@producto)
    
 END
+
 
 
 

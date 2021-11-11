@@ -107,6 +107,7 @@
         End Try
 
     End Sub
+
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Try
             Dim veh As New Vehiculo
@@ -124,10 +125,7 @@
         End Try
     End Sub
 
-    Private Sub Vehiculos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CrearGrid()
-        LlenarGrid()
-    End Sub
+
 
     Private Function BuscarVehiculoLista(id As Integer) As Integer
         Dim indice As Integer = 0
@@ -146,5 +144,20 @@
 
         Return indice
     End Function
+
+    Private Sub textBuscar_TextChanged(sender As Object, e As EventArgs) Handles textBuscar.TextChanged
+        Metodos.Buscar(textBuscar.Text, ListVehiculos, 1, 2)
+    End Sub
+
+    Private Sub Vehiculos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Try
+            CrearGrid()
+            LlenarGrid()
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical, "Error")
+        End Try
+    End Sub
+
 
 End Class
