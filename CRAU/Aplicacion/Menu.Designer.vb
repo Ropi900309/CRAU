@@ -22,11 +22,11 @@ Partial Class Menu
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ServiciosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VehiculosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mstMenu = New System.Windows.Forms.MenuStrip()
         Me.AlmacenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,6 +53,8 @@ Partial Class Menu
         Me.Panel = New System.Windows.Forms.Panel()
         Me.lblFecha = New System.Windows.Forms.Label()
         Me.PanelInf = New System.Windows.Forms.Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.mstMenu.SuspendLayout()
         Me.Panel.SuspendLayout()
         Me.PanelInf.SuspendLayout()
@@ -60,7 +62,7 @@ Partial Class Menu
         '
         'SalirToolStripMenuItem
         '
-        Me.SalirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ServiciosToolStripMenuItem, Me.VehiculosToolStripMenuItem})
+        Me.SalirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.VehiculosToolStripMenuItem})
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(94, 23)
         Me.SalirToolStripMenuItem.Text = "Cátalogos"
@@ -68,31 +70,25 @@ Partial Class Menu
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.ProductosToolStripMenuItem.Text = "Productos"
-        '
-        'ServiciosToolStripMenuItem
-        '
-        Me.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem"
-        Me.ServiciosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
-        Me.ServiciosToolStripMenuItem.Text = "Servicios"
         '
         'VehiculosToolStripMenuItem
         '
         Me.VehiculosToolStripMenuItem.Name = "VehiculosToolStripMenuItem"
-        Me.VehiculosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.VehiculosToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.VehiculosToolStripMenuItem.Text = "Vehiculos"
         '
         'mstMenu
@@ -219,13 +215,13 @@ Partial Class Menu
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'UsuarioToolStripMenuItem
         '
         Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
         Me.UsuarioToolStripMenuItem.Text = "Usuario"
         '
         'SalirToolStripMenuItem1
@@ -258,7 +254,7 @@ Partial Class Menu
         Me.lblFecha.AutoSize = True
         Me.lblFecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFecha.ForeColor = System.Drawing.Color.White
-        Me.lblFecha.Location = New System.Drawing.Point(12, 6)
+        Me.lblFecha.Location = New System.Drawing.Point(68, 5)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(59, 18)
         Me.lblFecha.TabIndex = 0
@@ -267,12 +263,29 @@ Partial Class Menu
         'PanelInf
         '
         Me.PanelInf.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.PanelInf.Controls.Add(Me.Label1)
         Me.PanelInf.Controls.Add(Me.lblFecha)
         Me.PanelInf.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelInf.Location = New System.Drawing.Point(0, 422)
         Me.PanelInf.Name = "PanelInf"
         Me.PanelInf.Size = New System.Drawing.Size(1028, 28)
         Me.PanelInf.TabIndex = 78
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 1000
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(13, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 18)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Hora:"
         '
         'Menu
         '
@@ -300,7 +313,6 @@ Partial Class Menu
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ServiciosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AlmacenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ComprasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConfiguraciónToolStripMenuItem As ToolStripMenuItem
@@ -326,4 +338,6 @@ Partial Class Menu
     Friend WithEvents PanelInf As Panel
     Friend WithEvents SalidaDeMaterialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label1 As Label
 End Class

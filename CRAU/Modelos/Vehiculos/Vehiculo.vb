@@ -1,6 +1,6 @@
 ﻿Public Class Vehiculo
 
-    Private _id As Integer
+    Private _id, _eliminado As Integer
     Private _marca As Vmarca
     Private _tipo As Vtipo
     Private _registro_vehicular, _modelo, _placas, _serie As String
@@ -10,8 +10,10 @@
         _tipo = New Vtipo
     End Sub
 
-    Public Sub New(id As Integer, marca As Vmarca, tipo As Vtipo, registro_vehicular As String, modelo As String, placas As String, serie As String)
+
+    Public Sub New(id As Integer, eliminado As Integer, marca As Vmarca, tipo As Vtipo, registro_vehicular As String, modelo As String, placas As String, serie As String)
         _id = id
+        _eliminado = eliminado
         _marca = marca
         _tipo = tipo
         _registro_vehicular = registro_vehicular
@@ -26,6 +28,15 @@
         End Get
         Set(value As Integer)
             _id = value
+        End Set
+    End Property
+
+    Public Property Eliminado As Integer
+        Get
+            Return _eliminado
+        End Get
+        Set(value As Integer)
+            _eliminado = value
         End Set
     End Property
 

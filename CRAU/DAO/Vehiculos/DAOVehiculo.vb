@@ -8,22 +8,32 @@ Public Class DAOVehiculo
 
     Public Sub Guardar() Implements OpSql.Guardar
         conn = Cnx.GetConection
-        Me.sql.CommandText = "INSERT INTO vehiculos values ('" & Registro_vehicular.Trim & "','" & Placas.Trim & "','" & Modelo.Trim & "'," & Marca.Id & "," & Tipo.Id & ",'" & Serie.Trim & "')"
+        Me.sql.CommandText = "INSERT INTO vehiculos values ('" & Registro_vehicular.Trim & "','" & Placas.Trim & "','" & Modelo.Trim & "'," & Marca.Id & "," & Tipo.Id & ",'" & Serie.Trim & "', " & Eliminado & ")"
         Me.sql.Connection = conn
-        MsgBox(Me.sql.CommandText)
+        'MsgBox(Me.sql.CommandText)
         Me.sql.ExecuteNonQuery()
     End Sub
 
     Public Sub Actualizar() Implements OpSql.Actualizar
         conn = Cnx.GetConection
-        Me.sql.CommandText = "update vehiculos Set registro_vehicular='" & Registro_vehicular.Trim & "', placas='" & Placas.Trim & "' , modelo='" & Modelo.Trim & "' , marca=" & Marca.Id & ", tipo=" & Tipo.Id & ", serie='" & Serie.Trim & "' where id=" & Id & ""
+        Me.sql.CommandText = "update vehiculos Set registro_vehicular='" & Registro_vehicular.Trim & "', placas='" & Placas.Trim & "' , modelo='" & Modelo.Trim & "' , marca=" & Marca.Id & ", tipo=" & Tipo.Id & ", serie='" & Serie.Trim & "', eliminado=" & Eliminado & " " & "where id=" & Id & ""
         Me.sql.Connection = conn
-        MsgBox(Me.sql.CommandText)
+        ' MsgBox(Me.sql.CommandText)
         Me.sql.ExecuteNonQuery()
     End Sub
 
     Public Sub Eliminar() Implements OpSql.Eliminar
-        Throw New NotImplementedException()
+        Try
+            conn = Cnx.GetConection
+            Me.sql.CommandText = "update vehiculos Set eliminado=" & Eliminado & " " &
+            " where id=" & Id & ""
+            Me.sql.Connection = conn
+            Me.sql.ExecuteNonQuery()
+            ' MsgBox(Me.sql.CommandText)
+        Catch ex As SqlException
+            MsgBox(ex.Message, vbCritical, "Error")
+        End Try
+
     End Sub
 
     Public Function Count() As Integer Implements OpSql.Count
@@ -38,7 +48,7 @@ Public Class DAOVehiculo
         conn = Cnx.GetConection
         ' If  IsNot Nothing Then
         Me.sql.CommandText = "select * from listado_vehiculos "
-
+        'MsgBox(Me.sql.CommandText)
         Me.sql.Connection = conn
 
         r = Me.sql.ExecuteReader()
@@ -55,7 +65,7 @@ Public Class DAOVehiculo
                 tipo.Id = r.GetValue((r.GetOrdinal("tipo")))
                 tipo.Tipo = r.GetValue((r.GetOrdinal("des_tipo")))
 
-                consulta.Add(New Vehiculo(r.GetValue((r.GetOrdinal("id"))), marca, tipo, r.GetValue((r.GetOrdinal("registro_vehicular"))), r.GetValue((r.GetOrdinal("modelo"))),
+                consulta.Add(New Vehiculo(r.GetValue((r.GetOrdinal("id"))), r.GetValue((r.GetOrdinal("eliminado"))), marca, tipo, r.GetValue((r.GetOrdinal("registro_vehicular"))), r.GetValue((r.GetOrdinal("modelo"))),
                              r.GetValue((r.GetOrdinal("placas"))), r.GetValue((r.GetOrdinal("serie")))))
                 i += 1
             End While
