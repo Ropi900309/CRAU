@@ -164,6 +164,7 @@
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+
         Me.Close()
         Me.Dispose()
     End Sub
@@ -201,6 +202,15 @@
     Private Sub textPPromedio_TextChanged(sender As Object, e As EventArgs) Handles textPPromedio.LostFocus
         textPPromedio.Text = SoloNumeros.formatoMoneda(textPPromedio.Text)
     End Sub
-
-
+    'EL EVENTO SE COLOCA AL PERDER EL FOCO, VALIDO QUE NO ESTE VACIO Y QUE SEA UNICO
+    Private Sub textParte_LostFocus(sender As Object, e As EventArgs) Handles textParte.LostFocus
+        DataMap()
+        Metodos.ValidarUnico(dao, textParte)
+        Metodos.ValidarSolocaja(textParte)
+    End Sub
+    Private Sub textParte_KeyDown(sender As Object, e As KeyEventArgs) Handles textParte.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            SendKeys.Send("{TAB}")
+        End If
+    End Sub
 End Class
