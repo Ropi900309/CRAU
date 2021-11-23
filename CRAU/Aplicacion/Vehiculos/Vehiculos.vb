@@ -19,30 +19,31 @@
             .AlternatingRowsDefaultCellStyle.ForeColor = Color.Black
 
             'NUMERO DE COLUMNAS 
-            .ColumnCount = 9
+            .ColumnCount = 10
 
             'DEFINICION DE COLUMNAS 
             .Columns(0).HeaderText = "#"
-            .Columns(1).HeaderText = "Registro_Vehicular"
+            .Columns(1).HeaderText = "Número Económico"
             .Columns(2).HeaderText = "Placas"
             .Columns(3).HeaderText = "Modelo"
             .Columns(4).HeaderText = "Marca.id"
             .Columns(5).HeaderText = "Tipo.id"
-            .Columns(6).HeaderText = "Serie"
+            .Columns(6).HeaderText = "VIN"
             .Columns(7).HeaderText = "Marca"
             .Columns(8).HeaderText = "Tipo"
+            .Columns(9).HeaderText = "Descripción"
 
             'DEFINE EL ANCHO DE LAS COLUMNAS 
-            .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-            '.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            '.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-
-
+            .Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns(9).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             .Columns(1).ValueType = Type.GetType("System.Int32")
 
             'DEFINE COLUMNA PARA BUSQUEDA
             .Columns(1).Name = "Clave"
-
 
             'OCULTAR COLUMNAS
             '.Columns(0).Visible = False
@@ -59,6 +60,7 @@
             .Columns(6).ReadOnly = True
             .Columns(7).ReadOnly = True
             .Columns(8).ReadOnly = True
+            .Columns(9).ReadOnly = True
 
         End With
     End Sub
@@ -85,6 +87,7 @@
                 .Item(6, i).Value = row.Serie
                 .Item(7, i).Value = row.Marca.Marca
                 .Item(8, i).Value = row.Tipo.Tipo
+                .Item(9, i).Value = row.Descripcion
                 i += 1
                 a += 1
             Next
@@ -96,7 +99,9 @@
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
+
             Dim veh As New Vehiculo
+
 
             VehiculoCRUB.veh = veh
             VehiculoCRUB.recibView = Me
@@ -128,24 +133,30 @@
 
 
     Private Function BuscarVehiculoLista(id As Integer) As Integer
-        Dim indice As Integer = 0
+        Try
 
-        For Each item As Vehiculo In listaVehiculos
-            indice += 1
-            If (item.Id = id) Then
-                If (indice = 1) Then
-                    indice = 0
-                Else
-                    indice = indice - 1
+            Dim indice As Integer = 0
+            For Each item As Vehiculo In listaVehiculos
+                indice += 1
+                If (item.Id = id) Then
+                    If (indice = 1) Then
+                        indice = 0
+                    Else
+                        indice = indice - 1
+                    End If
+                    Exit For
                 End If
-                Exit For
-            End If
-        Next
+            Next
 
-        Return indice
+            Return indice
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical, "Error")
+        End Try
+
     End Function
 
-    Private Sub textBuscar_TextChanged(sender As Object, e As EventArgs) Handles textBuscar.TextChanged
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Metodos.Buscar(textBuscar.Text, ListVehiculos, 1, 2)
     End Sub
 
@@ -158,6 +169,7 @@
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
     End Sub
+
 
 
 End Class

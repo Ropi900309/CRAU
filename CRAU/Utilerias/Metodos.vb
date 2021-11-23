@@ -35,33 +35,33 @@
     End Sub
 
 
-    Public Shared Sub LlenarComboEmpleado(combo As ComboBox)
-        'Dim objeto As New DAOEmpleado
-        'Dim ListCat As List(Of Empleado) = objeto.llenarCombo
+    'Public Shared Sub LlenarComboEmpleado(combo As ComboBox)
+    '    Dim objeto As New DAOEmpleado
+    '    Dim ListCat As List(Of Empleado) = objeto.llenarCombo
 
-        'With combo
-        '    '.Items.Clear()
-        '    .DataSource = ListCat
-        '    .DisplayMember = "Nombre"
-        '    .ValueMember = "Clave"
-        '    .SelectedIndex = -1
-        'End With
+    '    With combo
+    '        '.Items.Clear()
+    '        .DataSource = ListCat
+    '        .DisplayMember = "Nombre"
+    '        .ValueMember = "Clave"
+    '        .SelectedIndex = -1
+    '    End With
 
-    End Sub
+    'End Sub
 
-    Public Shared Sub LlenarComboCategoria(combo As ComboBox, empleado As Integer)
-        'Dim objeto As New DAOCategoria
-        'Dim ListCat As List(Of Categoria) = objeto.llenarCombo(empleado)
+    'Public Shared Sub LlenarComboCategoria(combo As ComboBox, empleado As Integer)
+    '    Dim objeto As New DAOCategoria
+    '    Dim ListCat As List(Of Categoria) = objeto.llenarCombo(empleado)
 
-        'With combo
-        '    '.Items.Clear()
-        '    .DataSource = ListCat
-        '    .DisplayMember = "Categoria"
-        '    .ValueMember = "Clave"
-        '    .SelectedIndex = -1
-        'End With
+    '    With combo
+    '        '.Items.Clear()
+    '        .DataSource = ListCat
+    '        .DisplayMember = "Categoria"
+    '        .ValueMember = "Clave"
+    '        .SelectedIndex = -1
+    '    End With
 
-    End Sub
+    'End Sub
 
     Public Shared Function setCeros(valor As Integer) As String
         Dim largo As Integer = Len(valor.ToString)

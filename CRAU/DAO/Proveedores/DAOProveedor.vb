@@ -10,7 +10,7 @@ Public Class DAOProveedor
     Public Sub Guardar() Implements OpSql.Guardar
         Try
             conn = Cnx.GetConection
-            Me.sql.CommandText = "INSERT INTO asociados values ('" & Razon_social.Trim & "','" & Rfc.Trim & "','" & Direccion.Trim & "'," & Tipo.Id & ") "
+            Me.sql.CommandText = "INSERT INTO asociados values ('" & Razon_social.Trim & "','" & Rfc.Trim & "','" & Direccion.Trim & "',2) "
             Me.sql.Connection = conn
             MsgBox(Me.sql.CommandText)
             Me.sql.ExecuteNonQuery()
@@ -30,7 +30,7 @@ Public Class DAOProveedor
     Public Sub Actualizar() Implements OpSql.Actualizar
         Try
             conn = Cnx.GetConection
-            Me.sql.CommandText = "update asociados Set razon_social='" & Razon_social.Trim & "', rfc='" & Rfc.Trim & "' , direccion='" & Direccion.Trim & "' , tipo_asociado=" & Tipo.Id & " where id=" & Id & ""
+            Me.sql.CommandText = "update asociados Set razon_social='" & Razon_social.Trim & "', rfc='" & Rfc.Trim & "' , direccion='" & Direccion.Trim & "' where id=" & Id & " "
             Me.sql.Connection = conn
             MsgBox(Me.sql.CommandText)
             Me.sql.ExecuteNonQuery()

@@ -38,6 +38,7 @@
 
             'OCULTAR COLUMNAS
             .Columns(0).Visible = False
+            .Columns(1).Visible = False
             .Columns(3).Visible = False
 
             'SOLO LECTURA PARA COLUMNAS 

@@ -106,10 +106,10 @@
     <Compile Include="Aplicacion\Clientes\Clientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aplicacion\Clientes\CondicionesPagoCRUB.Designer.vb">
-      <DependentUpon>CondicionesPagoCRUB.vb</DependentUpon>
+    <Compile Include="Aplicacion\Clientes\CpagoCRUB.Designer.vb">
+      <DependentUpon>CpagoCRUB.vb</DependentUpon>
     </Compile>
-    <Compile Include="Aplicacion\Clientes\CondicionesPagoCRUB.vb">
+    <Compile Include="Aplicacion\Clientes\CpagoCRUB.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aplicacion\Clientes\ContactoCRUB.Designer.vb">
@@ -118,10 +118,10 @@
     <Compile Include="Aplicacion\Clientes\ContactoCRUB.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aplicacion\Clientes\FormasPagoCRUB.Designer.vb">
-      <DependentUpon>FormasPagoCRUB.vb</DependentUpon>
+    <Compile Include="Aplicacion\Clientes\FpagoCRUB.Designer.vb">
+      <DependentUpon>FpagoCRUB.vb</DependentUpon>
     </Compile>
-    <Compile Include="Aplicacion\Clientes\FormasPagoCRUB.vb">
+    <Compile Include="Aplicacion\Clientes\FpagoCRUB.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aplicacion\Menu.Designer.vb">
@@ -259,7 +259,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DAO\Clientes\DAOCliente.vb" />
+    <Compile Include="DAO\Clientes\DAOCpago.vb" />
+    <Compile Include="DAO\Clientes\DAOContacto.vb" />
     <Compile Include="DAO\Clientes\DAOCtipo.vb" />
+    <Compile Include="DAO\Clientes\DAOFpago.vb" />
     <Compile Include="DAO\Proveedores\DAOProveedor.vb" />
     <Compile Include="DAO\Proveedores\DAOPtipo.vb" />
     <Compile Include="DAO\Usuarios\DAODepartamento.vb" />
@@ -277,6 +280,9 @@
     <Compile Include="DAO\Vehiculos\DAOVtipo.vb" />
     <Compile Include="Interfaces\GripMethod.vb" />
     <Compile Include="Interfaces\OpSql.vb" />
+    <Compile Include="Modelos\Clientes\Ccpago.vb" />
+    <Compile Include="Modelos\Clientes\Ccontacto.vb" />
+    <Compile Include="Modelos\Clientes\Cfpago.vb" />
     <Compile Include="Modelos\Clientes\Cliente.vb" />
     <Compile Include="Modelos\Clientes\Ctipo.vb" />
     <Compile Include="Modelos\Productos\Categoria.vb" />
@@ -324,14 +330,14 @@
     <EmbeddedResource Include="Aplicacion\Clientes\Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aplicacion\Clientes\CondicionesPagoCRUB.resx">
-      <DependentUpon>CondicionesPagoCRUB.vb</DependentUpon>
+    <EmbeddedResource Include="Aplicacion\Clientes\CpagoCRUB.resx">
+      <DependentUpon>CpagoCRUB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Clientes\ContactoCRUB.resx">
       <DependentUpon>ContactoCRUB.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aplicacion\Clientes\FormasPagoCRUB.resx">
-      <DependentUpon>FormasPagoCRUB.vb</DependentUpon>
+    <EmbeddedResource Include="Aplicacion\Clientes\FpagoCRUB.resx">
+      <DependentUpon>FpagoCRUB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -427,6 +433,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB_pruebas_script\crau.sql" />
+    <None Include="Resources\bgtxt.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

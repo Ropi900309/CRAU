@@ -36,13 +36,13 @@ Partial Class ClienteCRUB
         Me.txtRfc = New System.Windows.Forms.TextBox()
         Me.lblModelo = New System.Windows.Forms.Label()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
-        Me.comboTipo = New System.Windows.Forms.ComboBox()
+        Me.comboForma = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.comboContacto = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.comboCondicion = New System.Windows.Forms.ComboBox()
         Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,6 +50,7 @@ Partial Class ClienteCRUB
         '
         'Button2
         '
+        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(693, 204)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(28, 23)
@@ -196,14 +197,14 @@ Partial Class ClienteCRUB
         Me.txtDireccion.Size = New System.Drawing.Size(327, 20)
         Me.txtDireccion.TabIndex = 44
         '
-        'comboTipo
+        'comboForma
         '
-        Me.comboTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.comboTipo.FormattingEnabled = True
-        Me.comboTipo.Location = New System.Drawing.Point(394, 247)
-        Me.comboTipo.Name = "comboTipo"
-        Me.comboTipo.Size = New System.Drawing.Size(275, 21)
-        Me.comboTipo.TabIndex = 48
+        Me.comboForma.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboForma.FormattingEnabled = True
+        Me.comboForma.Location = New System.Drawing.Point(394, 247)
+        Me.comboForma.Name = "comboForma"
+        Me.comboForma.Size = New System.Drawing.Size(275, 21)
+        Me.comboForma.TabIndex = 48
         '
         'PictureBox1
         '
@@ -216,14 +217,14 @@ Partial Class ClienteCRUB
         Me.PictureBox1.TabIndex = 56
         Me.PictureBox1.TabStop = False
         '
-        'ComboBox1
+        'comboContacto
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(394, 206)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(275, 21)
-        Me.ComboBox1.TabIndex = 63
+        Me.comboContacto.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboContacto.FormattingEnabled = True
+        Me.comboContacto.Location = New System.Drawing.Point(394, 206)
+        Me.comboContacto.Name = "comboContacto"
+        Me.comboContacto.Size = New System.Drawing.Size(275, 21)
+        Me.comboContacto.TabIndex = 63
         '
         'Label1
         '
@@ -238,6 +239,7 @@ Partial Class ClienteCRUB
         '
         'Button1
         '
+        Me.Button1.Enabled = False
         Me.Button1.Location = New System.Drawing.Point(693, 245)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(28, 23)
@@ -256,14 +258,15 @@ Partial Class ClienteCRUB
         Me.Label3.TabIndex = 67
         Me.Label3.Text = "Condiciones de Pago"
         '
-        'ComboBox2
+        'comboCondicion
         '
-        Me.ComboBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(394, 288)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(275, 21)
-        Me.ComboBox2.TabIndex = 66
+        Me.comboCondicion.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboCondicion.Enabled = False
+        Me.comboCondicion.FormattingEnabled = True
+        Me.comboCondicion.Location = New System.Drawing.Point(394, 288)
+        Me.comboCondicion.Name = "comboCondicion"
+        Me.comboCondicion.Size = New System.Drawing.Size(275, 21)
+        Me.comboCondicion.TabIndex = 66
         '
         'Button3
         '
@@ -273,6 +276,7 @@ Partial Class ClienteCRUB
         Me.Button3.TabIndex = 68
         Me.Button3.Text = "..."
         Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.Visible = False
         '
         'ClienteCRUB
         '
@@ -282,10 +286,10 @@ Partial Class ClienteCRUB
         Me.ClientSize = New System.Drawing.Size(733, 405)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.comboCondicion)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.comboContacto)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.PictureBox3)
@@ -299,7 +303,7 @@ Partial Class ClienteCRUB
         Me.Controls.Add(Me.txtRfc)
         Me.Controls.Add(Me.lblModelo)
         Me.Controls.Add(Me.txtDireccion)
-        Me.Controls.Add(Me.comboTipo)
+        Me.Controls.Add(Me.comboForma)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ClienteCRUB"
@@ -325,12 +329,12 @@ Partial Class ClienteCRUB
     Friend WithEvents txtRfc As TextBox
     Friend WithEvents lblModelo As Label
     Friend WithEvents txtDireccion As TextBox
-    Friend WithEvents comboTipo As ComboBox
+    Friend WithEvents comboForma As ComboBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents comboContacto As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents comboCondicion As ComboBox
     Friend WithEvents Button3 As Button
 End Class

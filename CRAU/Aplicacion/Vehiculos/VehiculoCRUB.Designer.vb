@@ -40,9 +40,13 @@ Partial Class VehiculoCRUB
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.txtSerie = New System.Windows.Forms.TextBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnSalir = New FontAwesome.Sharp.IconButton()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblContador = New System.Windows.Forms.Label()
+        Me.btnMarca = New FontAwesome.Sharp.IconButton()
+        Me.btnTipo = New FontAwesome.Sharp.IconButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -52,85 +56,95 @@ Partial Class VehiculoCRUB
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(323, 281)
+        Me.Label3.Location = New System.Drawing.Point(343, 269)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 18)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Serie:"
+        Me.Label3.Size = New System.Drawing.Size(39, 18)
+        Me.Label3.TabIndex = 71458
+        Me.Label3.Text = "VIN:"
         '
         'lblModelo
         '
         Me.lblModelo.AutoSize = True
         Me.lblModelo.BackColor = System.Drawing.Color.White
         Me.lblModelo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblModelo.Location = New System.Drawing.Point(313, 167)
+        Me.lblModelo.Location = New System.Drawing.Point(269, 146)
         Me.lblModelo.Name = "lblModelo"
-        Me.lblModelo.Size = New System.Drawing.Size(69, 18)
-        Me.lblModelo.TabIndex = 6
-        Me.lblModelo.Text = "Modelo:"
+        Me.lblModelo.Size = New System.Drawing.Size(113, 18)
+        Me.lblModelo.TabIndex = 445
+        Me.lblModelo.Text = "Modelo / Año:"
         '
         'lblRegistro
         '
         Me.lblRegistro.AutoSize = True
         Me.lblRegistro.BackColor = System.Drawing.Color.White
         Me.lblRegistro.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRegistro.Location = New System.Drawing.Point(235, 109)
+        Me.lblRegistro.Location = New System.Drawing.Point(220, 69)
         Me.lblRegistro.Name = "lblRegistro"
-        Me.lblRegistro.Size = New System.Drawing.Size(151, 18)
-        Me.lblRegistro.TabIndex = 4
-        Me.lblRegistro.Text = "Registro Vehicular:"
+        Me.lblRegistro.Size = New System.Drawing.Size(162, 18)
+        Me.lblRegistro.TabIndex = 414
+        Me.lblRegistro.Text = "Número económico:"
         '
         'txtModelo
         '
         Me.txtModelo.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.txtModelo.Location = New System.Drawing.Point(392, 168)
+        Me.txtModelo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtModelo.Location = New System.Drawing.Point(395, 140)
+        Me.txtModelo.MaxLength = 50
         Me.txtModelo.Name = "txtModelo"
-        Me.txtModelo.Size = New System.Drawing.Size(177, 20)
+        Me.txtModelo.Size = New System.Drawing.Size(274, 24)
         Me.txtModelo.TabIndex = 3
         '
         'txtPlaca
         '
         Me.txtPlaca.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.txtPlaca.Location = New System.Drawing.Point(392, 138)
+        Me.txtPlaca.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPlaca.Location = New System.Drawing.Point(395, 103)
+        Me.txtPlaca.MaxLength = 50
         Me.txtPlaca.Name = "txtPlaca"
-        Me.txtPlaca.Size = New System.Drawing.Size(177, 20)
+        Me.txtPlaca.Size = New System.Drawing.Size(274, 24)
         Me.txtPlaca.TabIndex = 2
         '
         'txtRegistro
         '
         Me.txtRegistro.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.txtRegistro.Location = New System.Drawing.Point(392, 107)
+        Me.txtRegistro.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRegistro.Location = New System.Drawing.Point(395, 63)
+        Me.txtRegistro.MaxLength = 50
         Me.txtRegistro.Name = "txtRegistro"
-        Me.txtRegistro.Size = New System.Drawing.Size(177, 20)
+        Me.txtRegistro.Size = New System.Drawing.Size(274, 24)
         Me.txtRegistro.TabIndex = 1
         '
         'comboMarca
         '
         Me.comboMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboMarca.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboMarca.FormattingEnabled = True
-        Me.comboMarca.Location = New System.Drawing.Point(392, 204)
+        Me.comboMarca.ItemHeight = 18
+        Me.comboMarca.Location = New System.Drawing.Point(395, 183)
         Me.comboMarca.Name = "comboMarca"
-        Me.comboMarca.Size = New System.Drawing.Size(177, 21)
+        Me.comboMarca.Size = New System.Drawing.Size(273, 26)
         Me.comboMarca.TabIndex = 4
         '
         'comboTipo
         '
         Me.comboTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboTipo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboTipo.FormattingEnabled = True
-        Me.comboTipo.Location = New System.Drawing.Point(392, 242)
+        Me.comboTipo.ItemHeight = 18
+        Me.comboTipo.Location = New System.Drawing.Point(395, 221)
         Me.comboTipo.Name = "comboTipo"
-        Me.comboTipo.Size = New System.Drawing.Size(177, 21)
-        Me.comboTipo.TabIndex = 5
+        Me.comboTipo.Size = New System.Drawing.Size(273, 26)
+        Me.comboTipo.TabIndex = 6
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(336, 245)
+        Me.Label2.Location = New System.Drawing.Point(336, 228)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 18)
-        Me.Label2.TabIndex = 9
+        Me.Label2.TabIndex = 14556
         Me.Label2.Text = "Tipo:"
         '
         'btnSave
@@ -142,10 +156,10 @@ Partial Class VehiculoCRUB
         Me.btnSave.IconColor = System.Drawing.Color.White
         Me.btnSave.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSave.IconSize = 25
-        Me.btnSave.Location = New System.Drawing.Point(357, 316)
+        Me.btnSave.Location = New System.Drawing.Point(333, 450)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(109, 38)
-        Me.btnSave.TabIndex = 7
+        Me.btnSave.TabIndex = 10
         Me.btnSave.Text = "Guardar"
         Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSave.UseVisualStyleBackColor = False
@@ -159,10 +173,10 @@ Partial Class VehiculoCRUB
         Me.btnErase.IconColor = System.Drawing.Color.White
         Me.btnErase.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnErase.IconSize = 25
-        Me.btnErase.Location = New System.Drawing.Point(472, 316)
+        Me.btnErase.Location = New System.Drawing.Point(448, 450)
         Me.btnErase.Name = "btnErase"
         Me.btnErase.Size = New System.Drawing.Size(100, 38)
-        Me.btnErase.TabIndex = 8
+        Me.btnErase.TabIndex = 11
         Me.btnErase.Text = "Eliminar"
         Me.btnErase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnErase.UseVisualStyleBackColor = False
@@ -172,28 +186,28 @@ Partial Class VehiculoCRUB
         Me.lblPlaca.AutoSize = True
         Me.lblPlaca.BackColor = System.Drawing.Color.White
         Me.lblPlaca.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPlaca.Location = New System.Drawing.Point(323, 135)
+        Me.lblPlaca.Location = New System.Drawing.Point(318, 109)
         Me.lblPlaca.Name = "lblPlaca"
-        Me.lblPlaca.Size = New System.Drawing.Size(59, 18)
-        Me.lblPlaca.TabIndex = 5
-        Me.lblPlaca.Text = "Placas"
+        Me.lblPlaca.Size = New System.Drawing.Size(64, 18)
+        Me.lblPlaca.TabIndex = 444
+        Me.lblPlaca.Text = "Placas:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(322, 203)
+        Me.Label1.Location = New System.Drawing.Point(322, 191)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(60, 18)
-        Me.Label1.TabIndex = 9
+        Me.Label1.TabIndex = 14556
         Me.Label1.Text = "Marca:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(222, 56)
+        Me.Label4.Location = New System.Drawing.Point(376, 2)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(336, 42)
         Me.Label4.TabIndex = 12
@@ -205,7 +219,7 @@ Partial Class VehiculoCRUB
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(351, 358)
+        Me.PictureBox1.Size = New System.Drawing.Size(386, 500)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 13
         Me.PictureBox1.TabStop = False
@@ -213,9 +227,9 @@ Partial Class VehiculoCRUB
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(34, 103)
+        Me.PictureBox3.Location = New System.Drawing.Point(45, 170)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(185, 118)
+        Me.PictureBox3.Size = New System.Drawing.Size(228, 145)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 15
         Me.PictureBox3.TabStop = False
@@ -223,10 +237,35 @@ Partial Class VehiculoCRUB
         'txtSerie
         '
         Me.txtSerie.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.txtSerie.Location = New System.Drawing.Point(392, 282)
+        Me.txtSerie.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSerie.Location = New System.Drawing.Point(395, 263)
+        Me.txtSerie.MaxLength = 50
         Me.txtSerie.Name = "txtSerie"
-        Me.txtSerie.Size = New System.Drawing.Size(177, 20)
-        Me.txtSerie.TabIndex = 17
+        Me.txtSerie.Size = New System.Drawing.Size(273, 24)
+        Me.txtSerie.TabIndex = 8
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.txtDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescripcion.Location = New System.Drawing.Point(395, 304)
+        Me.txtDescripcion.MaxLength = 255
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtDescripcion.Size = New System.Drawing.Size(273, 102)
+        Me.txtDescripcion.TabIndex = 9
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.White
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(279, 307)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(103, 18)
+        Me.Label5.TabIndex = 1414
+        Me.Label5.Text = "Descripción:"
         '
         'btnSalir
         '
@@ -237,40 +276,73 @@ Partial Class VehiculoCRUB
         Me.btnSalir.IconColor = System.Drawing.Color.White
         Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSalir.IconSize = 25
-        Me.btnSalir.Location = New System.Drawing.Point(504, 0)
+        Me.btnSalir.Location = New System.Drawing.Point(554, 450)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(99, 38)
-        Me.btnSalir.TabIndex = 18
+        Me.btnSalir.Size = New System.Drawing.Size(115, 38)
+        Me.btnSalir.TabIndex = 12
+        Me.btnSalir.Text = "Cancelar"
         Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSalir.UseVisualStyleBackColor = False
         '
-        'Button1
+        'Label6
         '
-        Me.Button1.Location = New System.Drawing.Point(575, 204)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(28, 23)
-        Me.Button1.TabIndex = 40
-        Me.Button1.Text = "..."
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.White
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(392, 419)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(242, 15)
+        Me.Label6.TabIndex = 71459
+        Me.Label6.Text = "Contador de caracteres (Limite 255):"
         '
-        'Button2
+        'lblContador
         '
-        Me.Button2.Location = New System.Drawing.Point(575, 242)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(28, 23)
-        Me.Button2.TabIndex = 41
-        Me.Button2.Text = "..."
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.lblContador.AutoSize = True
+        Me.lblContador.BackColor = System.Drawing.Color.White
+        Me.lblContador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblContador.Location = New System.Drawing.Point(640, 419)
+        Me.lblContador.Name = "lblContador"
+        Me.lblContador.Size = New System.Drawing.Size(27, 15)
+        Me.lblContador.TabIndex = 71460
+        Me.lblContador.Text = "----"
+        '
+        'btnMarca
+        '
+        Me.btnMarca.IconChar = FontAwesome.Sharp.IconChar.EllipsisH
+        Me.btnMarca.IconColor = System.Drawing.Color.Black
+        Me.btnMarca.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnMarca.IconSize = 20
+        Me.btnMarca.Location = New System.Drawing.Point(674, 183)
+        Me.btnMarca.Name = "btnMarca"
+        Me.btnMarca.Size = New System.Drawing.Size(28, 26)
+        Me.btnMarca.TabIndex = 5
+        Me.btnMarca.UseVisualStyleBackColor = True
+        '
+        'btnTipo
+        '
+        Me.btnTipo.IconChar = FontAwesome.Sharp.IconChar.EllipsisH
+        Me.btnTipo.IconColor = System.Drawing.Color.Black
+        Me.btnTipo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnTipo.IconSize = 20
+        Me.btnTipo.Location = New System.Drawing.Point(674, 221)
+        Me.btnTipo.Name = "btnTipo"
+        Me.btnTipo.Size = New System.Drawing.Size(28, 26)
+        Me.btnTipo.TabIndex = 7
+        Me.btnTipo.UseVisualStyleBackColor = True
         '
         'VehiculoCRUB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(606, 358)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(714, 500)
+        Me.Controls.Add(Me.btnTipo)
+        Me.Controls.Add(Me.btnMarca)
+        Me.Controls.Add(Me.lblContador)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.txtDescripcion)
         Me.Controls.Add(Me.txtSerie)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label4)
@@ -316,7 +388,11 @@ Partial Class VehiculoCRUB
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents txtSerie As TextBox
+    Friend WithEvents txtDescripcion As TextBox
+    Friend WithEvents Label5 As Label
     Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents lblContador As Label
+    Friend WithEvents btnMarca As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnTipo As FontAwesome.Sharp.IconButton
 End Class

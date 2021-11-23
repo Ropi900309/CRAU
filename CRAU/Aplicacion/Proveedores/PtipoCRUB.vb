@@ -105,7 +105,7 @@
         Try
             With ListProveedores
 
-                recibview.comboTipo.SelectedValue = .Item(0, .CurrentRow.Index).Value
+                'recibview.comboTipo.SelectedValue = .Item(0, .CurrentRow.Index).Value
             End With
             Me.Close()
         Catch ex As Exception
@@ -136,7 +136,7 @@
                 tip.Eliminar()
             End With
             ClearData()
-            recibview.llenarTipos()
+            'recibview.llenarTipos()
             LlenarGrid()
             MsgBox("Se eliminaron los datos correctamente", vbInformation, "Resultado")
         Catch ex As Exception
@@ -155,7 +155,7 @@
                 tip.Guardar()
             End If
             ClearData()
-            recibview.llenarTipos()
+            'recibview.llenarTipos()
             LlenarGrid()
             MsgBox("Se actualizaron los datos correctamente", vbInformation, "Resultado")
         Catch ex As Exception

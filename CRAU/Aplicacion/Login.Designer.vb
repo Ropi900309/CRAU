@@ -84,7 +84,7 @@ Partial Class Login
         Me.btnPassword.Location = New System.Drawing.Point(26, 195)
         Me.btnPassword.Name = "btnPassword"
         Me.btnPassword.Size = New System.Drawing.Size(148, 28)
-        Me.btnPassword.TabIndex = 18
+        Me.btnPassword.TabIndex = 1848944
         Me.btnPassword.Text = "Contraseña"
         Me.btnPassword.UseVisualStyleBackColor = False
         '
@@ -103,7 +103,7 @@ Partial Class Login
         Me.btnUser.Location = New System.Drawing.Point(26, 138)
         Me.btnUser.Name = "btnUser"
         Me.btnUser.Size = New System.Drawing.Size(121, 32)
-        Me.btnUser.TabIndex = 17
+        Me.btnUser.TabIndex = 995656
         Me.btnUser.Text = "Usuario"
         Me.btnUser.UseVisualStyleBackColor = False
         '

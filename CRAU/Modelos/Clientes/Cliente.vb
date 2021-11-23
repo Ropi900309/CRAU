@@ -1,18 +1,19 @@
 ﻿Public Class Cliente
     Private _id As Integer
     Private _tipo As Ctipo
-    Private _razon_social, _rfc, _direccion As String
+    Private _razon_social, _rfc, _direccion, _clave As String
 
     Public Sub New()
         _tipo = New Ctipo
     End Sub
 
-    Public Sub New(id As Integer, tipo As Ctipo, razon_social As String, rfc As String, direccion As String)
+    Public Sub New(id As Integer, tipo As Ctipo, razon_social As String, rfc As String, direccion As String, clave As String)
         _id = id
         _tipo = tipo
         _razon_social = razon_social
         _rfc = rfc
         _direccion = direccion
+        _clave = clave
     End Sub
 
     Public Property Id As Integer
@@ -57,6 +58,15 @@
         End Get
         Set(value As String)
             _direccion = value
+        End Set
+    End Property
+
+    Public Property Clave As String
+        Get
+            Return _clave
+        End Get
+        Set(value As String)
+            _clave = value
         End Set
     End Property
 End Class
