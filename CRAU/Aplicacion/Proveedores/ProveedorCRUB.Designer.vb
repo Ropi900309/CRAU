@@ -23,7 +23,6 @@ Partial Class ProveedorCRUB
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProveedorCRUB))
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.btnSalir = New FontAwesome.Sharp.IconButton()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -36,20 +35,10 @@ Partial Class ProveedorCRUB
         Me.txtRfc = New System.Windows.Forms.TextBox()
         Me.lblModelo = New System.Windows.Forms.Label()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
-        Me.comboTipo = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(699, 207)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(28, 23)
-        Me.Button2.TabIndex = 76
-        Me.Button2.Text = "..."
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'btnSalir
         '
@@ -147,6 +136,7 @@ Partial Class ProveedorCRUB
         '
         Me.txtRazon.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.txtRazon.Location = New System.Drawing.Point(400, 107)
+        Me.txtRazon.MaxLength = 250
         Me.txtRazon.Name = "txtRazon"
         Me.txtRazon.Size = New System.Drawing.Size(327, 20)
         Me.txtRazon.TabIndex = 62
@@ -166,6 +156,7 @@ Partial Class ProveedorCRUB
         '
         Me.txtRfc.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.txtRfc.Location = New System.Drawing.Point(400, 138)
+        Me.txtRfc.MaxLength = 13
         Me.txtRfc.Name = "txtRfc"
         Me.txtRfc.Size = New System.Drawing.Size(327, 20)
         Me.txtRfc.TabIndex = 63
@@ -189,15 +180,6 @@ Partial Class ProveedorCRUB
         Me.txtDireccion.Size = New System.Drawing.Size(327, 20)
         Me.txtDireccion.TabIndex = 64
         '
-        'comboTipo
-        '
-        Me.comboTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.comboTipo.FormattingEnabled = True
-        Me.comboTipo.Location = New System.Drawing.Point(400, 209)
-        Me.comboTipo.Name = "comboTipo"
-        Me.comboTipo.Size = New System.Drawing.Size(275, 21)
-        Me.comboTipo.TabIndex = 67
-        '
         'PictureBox1
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
@@ -215,7 +197,6 @@ Partial Class ProveedorCRUB
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(733, 310)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label4)
@@ -228,7 +209,6 @@ Partial Class ProveedorCRUB
         Me.Controls.Add(Me.txtRfc)
         Me.Controls.Add(Me.lblModelo)
         Me.Controls.Add(Me.txtDireccion)
-        Me.Controls.Add(Me.comboTipo)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ProveedorCRUB"
@@ -240,8 +220,6 @@ Partial Class ProveedorCRUB
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button2 As Button
     Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label4 As Label
@@ -254,6 +232,5 @@ Partial Class ProveedorCRUB
     Friend WithEvents txtRfc As TextBox
     Friend WithEvents lblModelo As Label
     Friend WithEvents txtDireccion As TextBox
-    Friend WithEvents comboTipo As ComboBox
     Friend WithEvents PictureBox1 As PictureBox
 End Class

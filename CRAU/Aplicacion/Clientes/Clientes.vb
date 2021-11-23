@@ -30,13 +30,6 @@
             .Columns(4).HeaderText = "Tipoid"
             .Columns(5).HeaderText = "Tipo"
 
-            Dim btn As New DataGridViewButtonColumn()
-            ListClientes.Columns.Add(btn)
-            btn.HeaderText = " "
-            btn.Text = "Contacto"
-            btn.Name = "btn"
-            btn.UseColumnTextForButtonValue = True
-
 
             'DEFINE EL ANCHO DE LAS COLUMNAS 
             .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
@@ -119,8 +112,8 @@
             Dim cli As New Cliente
             With ListClientes
                 'MsgBox(veh.Id)
-                cli.Id = .Item(0, .CurrentRow.Index).Value
 
+                cli.Id = .Item(0, .CurrentRow.Index).Value
                 cli = listaClientes(BuscarClienteLista(cli.Id))
 
                 ClienteCRUB.cli = cli
@@ -149,7 +142,7 @@
         Return indice
     End Function
 
-    Private Sub textBuscar_TextChanged(sender As Object, e As EventArgs) 
+    Private Sub textBuscar_TextChanged(sender As Object, e As EventArgs)
         Metodos.Buscar(textBuscar.Text, ListClientes, 1, 2)
     End Sub
 
@@ -164,9 +157,4 @@
 
     End Sub
 
-
-
-    Private Sub ListClientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles ListClientes.CellDoubleClick
-        ContactoCRUB.ShowDialog()
-    End Sub
 End Class

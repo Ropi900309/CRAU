@@ -61,7 +61,7 @@ Class DAOVmarca
         Dim i As Integer = 0
 
         conn = Cnx.GetConection
-        Me.sql.CommandText = "select * from vehiculo_marca where eliminado=" & Eliminado & " "
+        Me.sql.CommandText = "select * from vehiculo_marca where eliminado=" & Eliminado & " order by marca asc "
         Me.sql.Connection = conn
         r = Me.sql.ExecuteReader()
 

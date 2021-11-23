@@ -4,17 +4,30 @@
     Public Shared Property recibView As Clientes
     Private dao As New DAOCliente
 
-
     Private Sub ClienteCRUB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            llenarTipos()
+            Dim pag As New DAOCpago
+            pag.Asociado.Id = pag.Id
+
+            llenarContacto()
+            llenarCondicion()
+
+            MsgBox(dao.CountCliente)
+
+            If (comboCondicion.SelectedValue = pag.Pago) Then
+                comboCondicion.Enabled = True
+
+            Else
+                comboCondicion.Enabled = False
+
+            End If
+
 
             If cli.Id = 0 Then
                 LimpiarForm()
             Else
                 RecibirData()
             End If
-
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
@@ -34,29 +47,45 @@
         txtRazon.Text = cli.Razon_social
         txtRfc.Text = cli.Rfc
         txtDireccion.Text = cli.Direccion
-        comboTipo.SelectedValue = cli.Tipo.Id
+        comboContacto.SelectedValue = cli.Id
+        comboForma.SelectedValue = cli.Id
     End Sub
 
     Private Sub LimpiarForm()
         txtRazon.Text = ""
         txtRfc.Text = ""
         txtDireccion.Text = ""
-        comboTipo.SelectedValue = 0
+        comboContacto.SelectedValue = 0
+        comboForma.SelectedValue = 0
     End Sub
 
+    Public Sub llenarContacto()
 
-    Public Sub llenarTipos()
-        Dim tip As New DAOCtipo
+        Dim con As New DAOContacto
+        con.Asociado.Id = cli.Id
 
-        Dim ti As Object = tip.ListarTodos
+        Dim co As Object = con.ListarTodos
 
-        With comboTipo
-            .DataSource = ti
-            .DisplayMember = "Tipo_asociado"
+        With comboContacto
+            .DataSource = co
+            .DisplayMember = "Nombre_contacto"
             .ValueMember = "Id"
             .SelectedIndex = -1
         End With
+    End Sub
 
+    Public Sub llenarCondicion()
+        Dim con As New DAOCpago
+        con.Asociado.Id = cli.Id
+
+        Dim co As Object = con.ListarTodos
+
+        With comboForma
+            .DataSource = co
+            .DisplayMember = "pago"
+            .ValueMember = "Id"
+            .SelectedIndex = -1
+        End With
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -66,6 +95,7 @@
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
+
             DataMap()
             If cli.Id > 0 Then
                 dao.Actualizar()
@@ -82,15 +112,23 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        ContactoCRUB.ShowDialog()
+
+        Try
+            ContactoCRUB.recibview = Me
+            ContactoCRUB.ShowDialog()
+        Catch ex As Exception
+            MsgBox(ex.Message, vbCritical, "Error")
+        End Try
     End Sub
 
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        CondicionesPagoCRUB.ShowDialog()
+
+        CpagoCRUB.ShowDialog()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        FormasPagoCRUB.ShowDialog()
+        FpagoCRUB.ShowDialog()
     End Sub
+
 End Class
