@@ -352,16 +352,17 @@ Partial Class ProductoCRUB
         '
         'btnSalir
         '
-        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.btnSalir.BackColor = System.Drawing.Color.White
+        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.ForeColor = System.Drawing.Color.White
+        Me.btnSalir.ForeColor = System.Drawing.Color.Transparent
         Me.btnSalir.IconChar = FontAwesome.Sharp.IconChar.WindowClose
-        Me.btnSalir.IconColor = System.Drawing.Color.White
+        Me.btnSalir.IconColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnSalir.IconSize = 25
-        Me.btnSalir.Location = New System.Drawing.Point(757, 0)
+        Me.btnSalir.IconSize = 40
+        Me.btnSalir.Location = New System.Drawing.Point(807, 12)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(99, 38)
+        Me.btnSalir.Size = New System.Drawing.Size(52, 38)
         Me.btnSalir.TabIndex = 15
         Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSalir.UseVisualStyleBackColor = False

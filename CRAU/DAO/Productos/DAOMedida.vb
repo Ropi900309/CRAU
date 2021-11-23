@@ -65,4 +65,8 @@ Public Class DAOMedida
     Public Function Buscar() As Object Implements OpSql.Buscar
         Throw New NotImplementedException()
     End Function
+
+    Public Function Exist() As Boolean Implements OpSql.Exist
+        Throw New NotImplementedException()
+    End Function
 End Class

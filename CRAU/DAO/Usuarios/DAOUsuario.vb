@@ -76,4 +76,7 @@ Public Class DAOUsuario
         Throw New NotImplementedException()
     End Function
 
+    Public Function Exist() As Boolean Implements OpSql.Exist
+        Throw New NotImplementedException()
+    End Function
 End Class

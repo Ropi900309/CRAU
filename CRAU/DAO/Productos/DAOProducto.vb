@@ -92,4 +92,31 @@ Public Class DAOProducto
         Throw New NotImplementedException()
     End Function
 
+    Public Function Exist() As Boolean Implements OpSql.Exist
+        Dim consulta As Boolean = False
+        Dim r As SqlDataReader
+        Dim i As Integer = 0
+
+        conn = Cnx.GetConection
+        ' If  IsNot Nothing Then
+        Me.sql.CommandText = "select * from listado_productos where no_parte='" & No_parte & "' "
+
+
+        Me.sql.Connection = conn
+
+        r = Me.sql.ExecuteReader()
+
+        If r.HasRows Then
+            While r.Read()
+
+                consulta = True
+
+            End While
+        End If
+
+        r.Close()
+        'End If
+
+        Return consulta
+    End Function
 End Class

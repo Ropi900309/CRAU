@@ -29,19 +29,29 @@
     End Function
 
     Public Shared Function formatoNumero(valor As Object) As String
-        If valor IsNot Nothing And valor <> 0 Then
-            Dim cantidad As Object = FormatNumber(valor, 2)
-            Return cantidad
-        End If
+        Try
+            If valor IsNot Nothing And valor <> 0 Then
+                Dim cantidad As Object = FormatNumber(valor, 2)
+                Return cantidad
+            End If
+        Catch ex As Exception
+
+        End Try
+
 
     End Function
 
     Public Shared Function formatoMoneda(valor As Object) As String
-        Dim cadena As String = valor.ToString
-        If valor IsNot Nothing And valor <> 0 And cadena <> "" Then
-            Dim cantidad As Object = FormatCurrency(valor, , , TriState.True, TriState.True)
-            Return cantidad
-        End If
+        Try
+            Dim cadena As String = valor.ToString
+            If valor IsNot Nothing And valor <> 0 And cadena <> "" Then
+                Dim cantidad As Object = FormatCurrency(valor, , , TriState.True, TriState.True)
+                Return cantidad
+            End If
+        Catch ex As Exception
+
+        End Try
+
 
     End Function
 End Class
