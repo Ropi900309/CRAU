@@ -136,6 +136,34 @@
         End With
     End Sub
 
+    Private Sub Productos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CrearGrid()
+        LlenarGrid()
+
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Metodos.Buscar(textBuscar.Text, ListProductos, 1, 2)
+    End Sub
+
+    Private Function BuscarProductoLista(id As Integer) As Integer
+        Dim indice As Integer = 0
+
+        For Each item As Producto In listaProducttos
+            indice += 1
+            If (item.Id = id) Then
+                If (indice = 1) Then
+                    indice = 0
+                Else
+                    indice = indice - 1
+                End If
+                Exit For
+            End If
+        Next
+
+        Return indice
+    End Function
+
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
             Dim pro As New Producto
@@ -166,33 +194,4 @@
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
     End Sub
-
-    Private Sub Productos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CrearGrid()
-        LlenarGrid()
-
-    End Sub
-
-    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        Metodos.Buscar(textBuscar.Text, ListProductos, 1, 2)
-    End Sub
-
-    Private Function BuscarProductoLista(id As Integer) As Integer
-        Dim indice As Integer = 0
-
-        For Each item As Producto In listaProducttos
-            indice += 1
-            If (item.Id = id) Then
-                If (indice = 1) Then
-                    indice = 0
-                Else
-                    indice = indice - 1
-                End If
-                Exit For
-            End If
-        Next
-
-        Return indice
-    End Function
-
 End Class

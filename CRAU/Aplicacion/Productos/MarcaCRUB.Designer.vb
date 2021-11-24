@@ -22,6 +22,7 @@ Partial Class MarcaCRUB
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnSeleccionar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
@@ -61,9 +62,9 @@ Partial Class MarcaCRUB
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(464, 14)
+        Me.btnGuardar.Location = New System.Drawing.Point(464, 16)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(99, 23)
+        Me.btnGuardar.Size = New System.Drawing.Size(99, 24)
         Me.btnGuardar.TabIndex = 313
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
@@ -71,17 +72,20 @@ Partial Class MarcaCRUB
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(15, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.Size = New System.Drawing.Size(62, 18)
         Me.Label1.TabIndex = 312
         Me.Label1.Text = "Nombre"
         '
         'textNombre
         '
-        Me.textNombre.Location = New System.Drawing.Point(65, 16)
+        Me.textNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textNombre.Location = New System.Drawing.Point(83, 16)
+        Me.textNombre.MaxLength = 255
         Me.textNombre.Name = "textNombre"
-        Me.textNombre.Size = New System.Drawing.Size(393, 20)
+        Me.textNombre.Size = New System.Drawing.Size(375, 24)
         Me.textNombre.TabIndex = 311
         '
         'ListProductos
@@ -91,31 +95,43 @@ Partial Class MarcaCRUB
         Me.ListProductos.AllowUserToResizeRows = False
         Me.ListProductos.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ListProductos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ListProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.ListProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ListProductos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.ListProductos.Location = New System.Drawing.Point(18, 43)
+        Me.ListProductos.Location = New System.Drawing.Point(17, 51)
         Me.ListProductos.Name = "ListProductos"
         Me.ListProductos.ReadOnly = True
         Me.ListProductos.RowHeadersVisible = False
         Me.ListProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ListProductos.Size = New System.Drawing.Size(545, 232)
-        Me.ListProductos.TabIndex = 310
+        Me.ListProductos.Size = New System.Drawing.Size(545, 219)
+        Me.ListProductos.TabIndex = 318
         '
         'MarcaCRUB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(579, 320)
+        Me.Controls.Add(Me.ListProductos)
         Me.Controls.Add(Me.btnSeleccionar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.textNombre)
-        Me.Controls.Add(Me.ListProductos)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "MarcaCRUB"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "MarcaCRUB"
+        Me.Text = "Marca"
         CType(Me.ListProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

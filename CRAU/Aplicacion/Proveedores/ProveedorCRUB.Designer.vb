@@ -23,38 +23,21 @@ Partial Class ProveedorCRUB
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProveedorCRUB))
-        Me.btnSalir = New FontAwesome.Sharp.IconButton()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblPlaca = New System.Windows.Forms.Label()
         Me.btnErase = New FontAwesome.Sharp.IconButton()
         Me.btnSave = New FontAwesome.Sharp.IconButton()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtRazon = New System.Windows.Forms.TextBox()
         Me.lblRegistro = New System.Windows.Forms.Label()
         Me.txtRfc = New System.Windows.Forms.TextBox()
         Me.lblModelo = New System.Windows.Forms.Label()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnSalir = New FontAwesome.Sharp.IconButton()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btnSalir
-        '
-        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.ForeColor = System.Drawing.Color.White
-        Me.btnSalir.IconChar = FontAwesome.Sharp.IconChar.WindowClose
-        Me.btnSalir.IconColor = System.Drawing.Color.White
-        Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnSalir.IconSize = 25
-        Me.btnSalir.Location = New System.Drawing.Point(628, 12)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(99, 38)
-        Me.btnSalir.TabIndex = 75
-        Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnSalir.UseVisualStyleBackColor = False
         '
         'PictureBox3
         '
@@ -121,17 +104,6 @@ Partial Class ProveedorCRUB
         Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSave.UseVisualStyleBackColor = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(331, 212)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 18)
-        Me.Label2.TabIndex = 71
-        Me.Label2.Text = "Tipo:"
-        '
         'txtRazon
         '
         Me.txtRazon.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
@@ -191,6 +163,23 @@ Partial Class ProveedorCRUB
         Me.PictureBox1.TabIndex = 73
         Me.PictureBox1.TabStop = False
         '
+        'btnSalir
+        '
+        Me.btnSalir.BackColor = System.Drawing.Color.White
+        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.Color.Transparent
+        Me.btnSalir.IconChar = FontAwesome.Sharp.IconChar.WindowClose
+        Me.btnSalir.IconColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSalir.IconSize = 40
+        Me.btnSalir.Location = New System.Drawing.Point(679, 2)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(52, 38)
+        Me.btnSalir.TabIndex = 71462
+        Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSalir.UseVisualStyleBackColor = False
+        '
         'ProveedorCRUB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -203,7 +192,6 @@ Partial Class ProveedorCRUB
         Me.Controls.Add(Me.lblPlaca)
         Me.Controls.Add(Me.btnErase)
         Me.Controls.Add(Me.btnSave)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtRazon)
         Me.Controls.Add(Me.lblRegistro)
         Me.Controls.Add(Me.txtRfc)
@@ -220,17 +208,16 @@ Partial Class ProveedorCRUB
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents lblPlaca As Label
     Friend WithEvents btnErase As FontAwesome.Sharp.IconButton
     Friend WithEvents btnSave As FontAwesome.Sharp.IconButton
-    Friend WithEvents Label2 As Label
     Friend WithEvents txtRazon As TextBox
     Friend WithEvents lblRegistro As Label
     Friend WithEvents txtRfc As TextBox
     Friend WithEvents lblModelo As Label
     Friend WithEvents txtDireccion As TextBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
 End Class

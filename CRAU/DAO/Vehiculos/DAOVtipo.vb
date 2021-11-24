@@ -54,7 +54,7 @@ Public Class DAOVtipo
         Dim i As Integer = 0
 
         conn = Cnx.GetConection
-        Me.sql.CommandText = "select * from vehiculo_tipo where eliminado=" & Eliminado & " order by tipo asc "
+        Me.sql.CommandText = "select * from vehiculo_tipo where eliminado=" & Eliminado & " "
         Me.sql.Connection = conn
         r = Me.sql.ExecuteReader()
 

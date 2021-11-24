@@ -53,10 +53,12 @@ Partial Class ProductoCRUB
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.btnSalir = New FontAwesome.Sharp.IconButton()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.lblContador = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.btnCategoria = New FontAwesome.Sharp.IconButton()
+        Me.btnMedida = New FontAwesome.Sharp.IconButton()
+        Me.btnMarca = New FontAwesome.Sharp.IconButton()
+        Me.btnFamilia = New FontAwesome.Sharp.IconButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -65,7 +67,7 @@ Partial Class ProductoCRUB
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(250, 186)
+        Me.Label3.Location = New System.Drawing.Point(250, 158)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(117, 20)
         Me.Label3.TabIndex = 2
@@ -75,7 +77,7 @@ Partial Class ProductoCRUB
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(230, 225)
+        Me.Label4.Location = New System.Drawing.Point(230, 197)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(137, 18)
         Me.Label4.TabIndex = 3
@@ -85,7 +87,7 @@ Partial Class ProductoCRUB
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(574, 189)
+        Me.Label7.Location = New System.Drawing.Point(525, 163)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(86, 18)
         Me.Label7.TabIndex = 6
@@ -95,7 +97,7 @@ Partial Class ProductoCRUB
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(592, 258)
+        Me.Label8.Location = New System.Drawing.Point(525, 236)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(60, 18)
         Me.Label8.TabIndex = 7
@@ -105,7 +107,7 @@ Partial Class ProductoCRUB
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(240, 151)
+        Me.Label10.Location = New System.Drawing.Point(240, 123)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(127, 18)
         Me.Label10.TabIndex = 9
@@ -113,77 +115,97 @@ Partial Class ProductoCRUB
         '
         'textParte
         '
-        Me.textParte.Location = New System.Drawing.Point(373, 116)
+        Me.textParte.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.textParte.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textParte.Location = New System.Drawing.Point(373, 88)
         Me.textParte.Name = "textParte"
-        Me.textParte.Size = New System.Drawing.Size(135, 20)
+        Me.textParte.Size = New System.Drawing.Size(135, 24)
         Me.textParte.TabIndex = 1
         Me.textParte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'textDescripcion
         '
-        Me.textDescripcion.Location = New System.Drawing.Point(373, 322)
+        Me.textDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.textDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textDescripcion.Location = New System.Drawing.Point(373, 293)
+        Me.textDescripcion.MaxLength = 255
         Me.textDescripcion.Multiline = True
         Me.textDescripcion.Name = "textDescripcion"
-        Me.textDescripcion.Size = New System.Drawing.Size(462, 98)
+        Me.textDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.textDescripcion.Size = New System.Drawing.Size(428, 98)
         Me.textDescripcion.TabIndex = 6
         '
         'textPPromedio
         '
-        Me.textPPromedio.Location = New System.Drawing.Point(373, 221)
+        Me.textPPromedio.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.textPPromedio.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textPPromedio.Location = New System.Drawing.Point(373, 193)
         Me.textPPromedio.Name = "textPPromedio"
-        Me.textPPromedio.Size = New System.Drawing.Size(135, 20)
+        Me.textPPromedio.Size = New System.Drawing.Size(135, 24)
         Me.textPPromedio.TabIndex = 4
         Me.textPPromedio.Text = "0"
         Me.textPPromedio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'textPCompra
         '
-        Me.textPCompra.Location = New System.Drawing.Point(373, 152)
+        Me.textPCompra.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.textPCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textPCompra.Location = New System.Drawing.Point(373, 124)
         Me.textPCompra.Name = "textPCompra"
-        Me.textPCompra.Size = New System.Drawing.Size(135, 20)
+        Me.textPCompra.Size = New System.Drawing.Size(135, 24)
         Me.textPCompra.TabIndex = 2
         Me.textPCompra.Text = "0"
         Me.textPCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'textPVenta
         '
-        Me.textPVenta.Location = New System.Drawing.Point(373, 188)
+        Me.textPVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.textPVenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textPVenta.Location = New System.Drawing.Point(373, 160)
         Me.textPVenta.Name = "textPVenta"
-        Me.textPVenta.Size = New System.Drawing.Size(135, 20)
+        Me.textPVenta.Size = New System.Drawing.Size(135, 24)
         Me.textPVenta.TabIndex = 3
         Me.textPVenta.Text = "0"
         Me.textPVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'comboMarca
         '
+        Me.comboMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboMarca.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboMarca.FormattingEnabled = True
-        Me.comboMarca.Location = New System.Drawing.Point(666, 257)
+        Me.comboMarca.Location = New System.Drawing.Point(617, 229)
         Me.comboMarca.Name = "comboMarca"
-        Me.comboMarca.Size = New System.Drawing.Size(135, 21)
+        Me.comboMarca.Size = New System.Drawing.Size(184, 26)
         Me.comboMarca.TabIndex = 11
         '
         'comboMedida
         '
+        Me.comboMedida.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboMedida.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboMedida.FormattingEnabled = True
-        Me.comboMedida.Location = New System.Drawing.Point(666, 222)
+        Me.comboMedida.Location = New System.Drawing.Point(617, 194)
         Me.comboMedida.Name = "comboMedida"
-        Me.comboMedida.Size = New System.Drawing.Size(135, 21)
+        Me.comboMedida.Size = New System.Drawing.Size(184, 26)
         Me.comboMedida.TabIndex = 10
         '
         'comboCategoria
         '
+        Me.comboCategoria.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboCategoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboCategoria.FormattingEnabled = True
-        Me.comboCategoria.Location = New System.Drawing.Point(666, 186)
+        Me.comboCategoria.Location = New System.Drawing.Point(617, 158)
         Me.comboCategoria.Name = "comboCategoria"
-        Me.comboCategoria.Size = New System.Drawing.Size(135, 21)
+        Me.comboCategoria.Size = New System.Drawing.Size(184, 26)
         Me.comboCategoria.TabIndex = 9
         '
         'comboFamilia
         '
+        Me.comboFamilia.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboFamilia.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboFamilia.FormattingEnabled = True
-        Me.comboFamilia.Location = New System.Drawing.Point(666, 290)
+        Me.comboFamilia.Location = New System.Drawing.Point(617, 262)
         Me.comboFamilia.Name = "comboFamilia"
-        Me.comboFamilia.Size = New System.Drawing.Size(135, 21)
+        Me.comboFamilia.Size = New System.Drawing.Size(184, 26)
         Me.comboFamilia.TabIndex = 12
         '
         'btnSave
@@ -222,20 +244,23 @@ Partial Class ProductoCRUB
         '
         'textExistencia
         '
-        Me.textExistencia.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.textExistencia.Location = New System.Drawing.Point(373, 258)
+        Me.textExistencia.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.textExistencia.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textExistencia.Location = New System.Drawing.Point(373, 230)
         Me.textExistencia.Name = "textExistencia"
         Me.textExistencia.ReadOnly = True
-        Me.textExistencia.Size = New System.Drawing.Size(135, 20)
+        Me.textExistencia.Size = New System.Drawing.Size(135, 24)
         Me.textExistencia.TabIndex = 5
         Me.textExistencia.Text = "0"
         Me.textExistencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'textAlertMax
         '
-        Me.textAlertMax.Location = New System.Drawing.Point(666, 150)
+        Me.textAlertMax.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.textAlertMax.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textAlertMax.Location = New System.Drawing.Point(666, 122)
         Me.textAlertMax.Name = "textAlertMax"
-        Me.textAlertMax.Size = New System.Drawing.Size(135, 20)
+        Me.textAlertMax.Size = New System.Drawing.Size(135, 24)
         Me.textAlertMax.TabIndex = 8
         Me.textAlertMax.Text = "0"
         Me.textAlertMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -244,7 +269,7 @@ Partial Class ProductoCRUB
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(525, 152)
+        Me.Label11.Location = New System.Drawing.Point(525, 124)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(126, 18)
         Me.Label11.TabIndex = 26
@@ -252,9 +277,11 @@ Partial Class ProductoCRUB
         '
         'textAlertMin
         '
-        Me.textAlertMin.Location = New System.Drawing.Point(666, 113)
+        Me.textAlertMin.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.textAlertMin.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textAlertMin.Location = New System.Drawing.Point(666, 85)
         Me.textAlertMin.Name = "textAlertMin"
-        Me.textAlertMin.Size = New System.Drawing.Size(135, 20)
+        Me.textAlertMin.Size = New System.Drawing.Size(135, 24)
         Me.textAlertMin.TabIndex = 7
         Me.textAlertMin.Text = "0"
         Me.textAlertMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -263,7 +290,7 @@ Partial Class ProductoCRUB
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(533, 113)
+        Me.Label12.Location = New System.Drawing.Point(525, 85)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(122, 18)
         Me.Label12.TabIndex = 28
@@ -294,7 +321,7 @@ Partial Class ProductoCRUB
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(459, 59)
+        Me.Label2.Location = New System.Drawing.Point(459, 27)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(342, 42)
         Me.Label2.TabIndex = 33
@@ -304,7 +331,7 @@ Partial Class ProductoCRUB
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(300, 118)
+        Me.Label1.Location = New System.Drawing.Point(300, 90)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 18)
         Me.Label1.TabIndex = 34
@@ -314,7 +341,7 @@ Partial Class ProductoCRUB
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(277, 260)
+        Me.Label5.Location = New System.Drawing.Point(277, 232)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(90, 18)
         Me.Label5.TabIndex = 35
@@ -324,7 +351,7 @@ Partial Class ProductoCRUB
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(587, 226)
+        Me.Label6.Location = New System.Drawing.Point(525, 199)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 18)
         Me.Label6.TabIndex = 36
@@ -334,7 +361,7 @@ Partial Class ProductoCRUB
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(585, 293)
+        Me.Label9.Location = New System.Drawing.Point(532, 268)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(67, 18)
         Me.Label9.TabIndex = 37
@@ -344,7 +371,7 @@ Partial Class ProductoCRUB
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(251, 321)
+        Me.Label13.Location = New System.Drawing.Point(251, 288)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(103, 18)
         Me.Label13.TabIndex = 38
@@ -367,41 +394,75 @@ Partial Class ProductoCRUB
         Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSalir.UseVisualStyleBackColor = False
         '
-        'Button1
+        'lblContador
         '
-        Me.Button1.Location = New System.Drawing.Point(807, 185)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(28, 23)
-        Me.Button1.TabIndex = 39
-        Me.Button1.Text = "..."
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.lblContador.AutoSize = True
+        Me.lblContador.BackColor = System.Drawing.Color.White
+        Me.lblContador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblContador.Location = New System.Drawing.Point(634, 397)
+        Me.lblContador.Name = "lblContador"
+        Me.lblContador.Size = New System.Drawing.Size(27, 15)
+        Me.lblContador.TabIndex = 71462
+        Me.lblContador.Text = "----"
         '
-        'Button2
+        'Label14
         '
-        Me.Button2.Location = New System.Drawing.Point(807, 221)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(28, 23)
-        Me.Button2.TabIndex = 40
-        Me.Button2.Text = "..."
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.White
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(373, 397)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(246, 15)
+        Me.Label14.TabIndex = 71461
+        Me.Label14.Text = "Contador de caracteres ( limite 255 ):"
         '
-        'Button3
+        'btnCategoria
         '
-        Me.Button3.Location = New System.Drawing.Point(807, 256)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(28, 23)
-        Me.Button3.TabIndex = 41
-        Me.Button3.Text = "..."
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnCategoria.IconChar = FontAwesome.Sharp.IconChar.EllipsisH
+        Me.btnCategoria.IconColor = System.Drawing.Color.Black
+        Me.btnCategoria.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnCategoria.IconSize = 20
+        Me.btnCategoria.Location = New System.Drawing.Point(818, 155)
+        Me.btnCategoria.Name = "btnCategoria"
+        Me.btnCategoria.Size = New System.Drawing.Size(28, 26)
+        Me.btnCategoria.TabIndex = 71463
+        Me.btnCategoria.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnMedida
         '
-        Me.Button4.Location = New System.Drawing.Point(807, 288)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(28, 23)
-        Me.Button4.TabIndex = 42
-        Me.Button4.Text = "..."
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnMedida.IconChar = FontAwesome.Sharp.IconChar.EllipsisH
+        Me.btnMedida.IconColor = System.Drawing.Color.Black
+        Me.btnMedida.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnMedida.IconSize = 20
+        Me.btnMedida.Location = New System.Drawing.Point(818, 189)
+        Me.btnMedida.Name = "btnMedida"
+        Me.btnMedida.Size = New System.Drawing.Size(28, 26)
+        Me.btnMedida.TabIndex = 71464
+        Me.btnMedida.UseVisualStyleBackColor = True
+        '
+        'btnMarca
+        '
+        Me.btnMarca.IconChar = FontAwesome.Sharp.IconChar.EllipsisH
+        Me.btnMarca.IconColor = System.Drawing.Color.Black
+        Me.btnMarca.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnMarca.IconSize = 20
+        Me.btnMarca.Location = New System.Drawing.Point(818, 223)
+        Me.btnMarca.Name = "btnMarca"
+        Me.btnMarca.Size = New System.Drawing.Size(28, 26)
+        Me.btnMarca.TabIndex = 71465
+        Me.btnMarca.UseVisualStyleBackColor = True
+        '
+        'btnFamilia
+        '
+        Me.btnFamilia.IconChar = FontAwesome.Sharp.IconChar.EllipsisH
+        Me.btnFamilia.IconColor = System.Drawing.Color.Black
+        Me.btnFamilia.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnFamilia.IconSize = 20
+        Me.btnFamilia.Location = New System.Drawing.Point(818, 257)
+        Me.btnFamilia.Name = "btnFamilia"
+        Me.btnFamilia.Size = New System.Drawing.Size(28, 26)
+        Me.btnFamilia.TabIndex = 71466
+        Me.btnFamilia.UseVisualStyleBackColor = True
         '
         'ProductoCRUB
         '
@@ -409,10 +470,12 @@ Partial Class ProductoCRUB
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(858, 476)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnFamilia)
+        Me.Controls.Add(Me.btnMarca)
+        Me.Controls.Add(Me.btnMedida)
+        Me.Controls.Add(Me.btnCategoria)
+        Me.Controls.Add(Me.lblContador)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label9)
@@ -485,8 +548,10 @@ Partial Class ProductoCRUB
     Friend WithEvents Label9 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents lblContador As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents btnCategoria As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnMedida As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnMarca As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnFamilia As FontAwesome.Sharp.IconButton
 End Class

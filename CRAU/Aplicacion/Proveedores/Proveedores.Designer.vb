@@ -22,15 +22,15 @@ Partial Class Proveedores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTotEntidades = New System.Windows.Forms.Label()
-        Me.btnNuevo = New FontAwesome.Sharp.IconButton()
-        Me.btnEditar = New FontAwesome.Sharp.IconButton()
         Me.ListProveedores = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnBuscar = New FontAwesome.Sharp.IconButton()
         Me.textBuscar = New System.Windows.Forms.TextBox()
+        Me.btnNuevo = New FontAwesome.Sharp.IconButton()
+        Me.btnEditar = New FontAwesome.Sharp.IconButton()
         CType(Me.ListProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,40 +45,6 @@ Partial Class Proveedores
         Me.lblTotEntidades.TabIndex = 314
         Me.lblTotEntidades.Text = "LISTADOS:"
         '
-        'btnNuevo
-        '
-        Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.btnNuevo.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Box
-        Me.btnNuevo.IconColor = System.Drawing.Color.White
-        Me.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnNuevo.IconSize = 25
-        Me.btnNuevo.Location = New System.Drawing.Point(1134, 587)
-        Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(84, 35)
-        Me.btnNuevo.TabIndex = 313
-        Me.btnNuevo.Text = "Agregar"
-        Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnNuevo.UseVisualStyleBackColor = False
-        '
-        'btnEditar
-        '
-        Me.btnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
-        Me.btnEditar.ForeColor = System.Drawing.Color.White
-        Me.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit
-        Me.btnEditar.IconColor = System.Drawing.Color.White
-        Me.btnEditar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnEditar.IconSize = 25
-        Me.btnEditar.Location = New System.Drawing.Point(1224, 587)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(96, 35)
-        Me.btnEditar.TabIndex = 312
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnEditar.UseVisualStyleBackColor = False
-        '
         'ListProveedores
         '
         Me.ListProveedores.AllowUserToAddRows = False
@@ -89,23 +55,23 @@ Partial Class Proveedores
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListProveedores.BackgroundColor = System.Drawing.SystemColors.Control
         Me.ListProveedores.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ListProveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ListProveedores.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.ListProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(20, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ListProveedores.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(20, Byte), Integer))
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ListProveedores.DefaultCellStyle = DataGridViewCellStyle8
         Me.ListProveedores.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.ListProveedores.EnableHeadersVisualStyles = False
         Me.ListProveedores.Location = New System.Drawing.Point(12, 52)
@@ -150,15 +116,51 @@ Partial Class Proveedores
         Me.textBuscar.Size = New System.Drawing.Size(243, 22)
         Me.textBuscar.TabIndex = 315
         '
+        'btnNuevo
+        '
+        Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.ForeColor = System.Drawing.SystemColors.Window
+        Me.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Box
+        Me.btnNuevo.IconColor = System.Drawing.Color.White
+        Me.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnNuevo.IconSize = 25
+        Me.btnNuevo.Location = New System.Drawing.Point(1098, 590)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(102, 35)
+        Me.btnNuevo.TabIndex = 317
+        Me.btnNuevo.Text = "Agregar"
+        Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnNuevo.UseVisualStyleBackColor = False
+        '
+        'btnEditar
+        '
+        Me.btnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditar.ForeColor = System.Drawing.Color.White
+        Me.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit
+        Me.btnEditar.IconColor = System.Drawing.Color.White
+        Me.btnEditar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnEditar.IconSize = 25
+        Me.btnEditar.Location = New System.Drawing.Point(1206, 590)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(114, 35)
+        Me.btnEditar.TabIndex = 316
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEditar.UseVisualStyleBackColor = False
+        '
         'Proveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1332, 634)
-        Me.Controls.Add(Me.textBuscar)
-        Me.Controls.Add(Me.lblTotEntidades)
         Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.btnEditar)
+        Me.Controls.Add(Me.textBuscar)
+        Me.Controls.Add(Me.lblTotEntidades)
         Me.Controls.Add(Me.ListProveedores)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnBuscar)
@@ -171,10 +173,10 @@ Partial Class Proveedores
     End Sub
 
     Friend WithEvents lblTotEntidades As Label
-    Friend WithEvents btnNuevo As FontAwesome.Sharp.IconButton
-    Friend WithEvents btnEditar As FontAwesome.Sharp.IconButton
     Friend WithEvents ListProveedores As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents btnBuscar As FontAwesome.Sharp.IconButton
     Friend WithEvents textBuscar As TextBox
+    Friend WithEvents btnNuevo As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnEditar As FontAwesome.Sharp.IconButton
 End Class

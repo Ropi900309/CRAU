@@ -22,14 +22,15 @@ Partial Class FpagoCRUB
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnSeleccionar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.textNombre = New System.Windows.Forms.TextBox()
-        Me.ListProductos = New System.Windows.Forms.DataGridView()
-        CType(Me.ListProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ListClientes = New System.Windows.Forms.DataGridView()
+        CType(Me.ListClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnSeleccionar
@@ -71,52 +72,64 @@ Partial Class FpagoCRUB
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(15, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.Size = New System.Drawing.Size(62, 18)
         Me.Label1.TabIndex = 312
         Me.Label1.Text = "Nombre"
         '
         'textNombre
         '
-        Me.textNombre.Location = New System.Drawing.Point(65, 16)
+        Me.textNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textNombre.Location = New System.Drawing.Point(83, 16)
         Me.textNombre.Name = "textNombre"
-        Me.textNombre.Size = New System.Drawing.Size(393, 20)
+        Me.textNombre.Size = New System.Drawing.Size(375, 24)
         Me.textNombre.TabIndex = 311
         '
-        'ListProductos
+        'ListClientes
         '
-        Me.ListProductos.AllowUserToAddRows = False
-        Me.ListProductos.AllowUserToDeleteRows = False
-        Me.ListProductos.AllowUserToResizeRows = False
-        Me.ListProductos.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ListProductos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ListProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ListProductos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
-        Me.ListProductos.Location = New System.Drawing.Point(18, 43)
-        Me.ListProductos.Name = "ListProductos"
-        Me.ListProductos.ReadOnly = True
-        Me.ListProductos.RowHeadersVisible = False
-        Me.ListProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ListProductos.Size = New System.Drawing.Size(545, 232)
-        Me.ListProductos.TabIndex = 310
+        Me.ListClientes.AllowUserToAddRows = False
+        Me.ListClientes.AllowUserToDeleteRows = False
+        Me.ListClientes.AllowUserToResizeRows = False
+        Me.ListClientes.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ListClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ListClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.ListClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ListClientes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.ListClientes.Location = New System.Drawing.Point(17, 51)
+        Me.ListClientes.Name = "ListClientes"
+        Me.ListClientes.ReadOnly = True
+        Me.ListClientes.RowHeadersVisible = False
+        Me.ListClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.ListClientes.Size = New System.Drawing.Size(545, 219)
+        Me.ListClientes.TabIndex = 321
         '
-        'FormasPagoCRUB
+        'FpagoCRUB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(579, 320)
+        Me.Controls.Add(Me.ListClientes)
         Me.Controls.Add(Me.btnSeleccionar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.textNombre)
-        Me.Controls.Add(Me.ListProductos)
-        Me.Name = "FormasPagoCRUB"
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "FpagoCRUB"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormasPagoCRUB"
-        CType(Me.ListProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ListClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -128,5 +141,5 @@ Partial Class FpagoCRUB
     Friend WithEvents btnGuardar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents textNombre As TextBox
-    Friend WithEvents ListProductos As DataGridView
+    Friend WithEvents ListClientes As DataGridView
 End Class

@@ -108,4 +108,13 @@
             combo.Focus()
         End If
     End Sub
+
+    Friend Shared Sub ContadorLabel(label As Label, caja As TextBox)
+        label.Text = caja.Text.Length()
+        If InStrRev(caja.Text.Length, caja.MaxLength) Then
+            MsgBox("Exede Máximo de Caracteres", vbCritical, "Error")
+            caja.Focus()
+        End If
+    End Sub
+
 End Class

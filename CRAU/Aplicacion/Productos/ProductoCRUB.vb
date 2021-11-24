@@ -4,14 +4,10 @@
     Private dao As New DAOProducto
 
     Private Sub ProductoCRUB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
         LlenarMarcas()
         LlenarCategoria()
         LlenarFamilia()
         LlenarUnidad()
-
-
         'MsgBox(pro.id)
 
         If pro.Id = 0 Then
@@ -63,7 +59,7 @@
         textPCompra.Text = "0.00"
         textPVenta.Text = "0.00"
         textPPromedio.Text = "0.00"
-        textDescripcion.Text = "0"
+        textDescripcion.Text = ""
         textAlertMax.Text = "0"
         textAlertMin.Text = "0"
         textExistencia.Text = "0"
@@ -169,27 +165,27 @@
         Me.Dispose()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    Private Sub btnCategoria_Click(sender As Object, e As EventArgs) Handles btnCategoria.Click
         CategoriaCRUB.recibview = Me
         CategoriaCRUB.ShowDialog()
-
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub btnMedida_Click(sender As Object, e As EventArgs) Handles btnMedida.Click
         MedidasCRUB.recibview = Me
         MedidasCRUB.ShowDialog()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub btnMarca_Click(sender As Object, e As EventArgs) Handles btnMarca.Click
         MarcaCRUB.recibview = Me
         MarcaCRUB.ShowDialog()
-
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub btnFamilia_Click(sender As Object, e As EventArgs) Handles btnFamilia.Click
         FamiliaCRUB.recibview = Me
         FamiliaCRUB.ShowDialog()
     End Sub
+
 
     Private Sub textPCompra_LostFocus(sender As Object, e As EventArgs) Handles textPCompra.LostFocus
         textPCompra.Text = SoloNumeros.formatoMoneda(textPCompra.Text)
@@ -213,4 +209,9 @@
             SendKeys.Send("{TAB}")
         End If
     End Sub
+
+    Private Sub textDescripcion_TextChanged(sender As Object, e As EventArgs) Handles textDescripcion.TextChanged
+        Metodos.ContadorLabel(lblContador, textDescripcion)
+    End Sub
+
 End Class

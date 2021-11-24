@@ -24,7 +24,6 @@ Partial Class ClienteCRUB
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClienteCRUB))
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.btnSalir = New FontAwesome.Sharp.IconButton()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblPlaca = New System.Windows.Forms.Label()
@@ -44,6 +43,7 @@ Partial Class ClienteCRUB
         Me.Label3 = New System.Windows.Forms.Label()
         Me.comboCondicion = New System.Windows.Forms.ComboBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnSalir = New FontAwesome.Sharp.IconButton()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -57,23 +57,6 @@ Partial Class ClienteCRUB
         Me.Button2.TabIndex = 61
         Me.Button2.Text = "..."
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'btnSalir
-        '
-        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(23, Byte), Integer))
-        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.ForeColor = System.Drawing.Color.White
-        Me.btnSalir.IconChar = FontAwesome.Sharp.IconChar.WindowClose
-        Me.btnSalir.IconColor = System.Drawing.Color.White
-        Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnSalir.IconSize = 25
-        Me.btnSalir.Location = New System.Drawing.Point(615, 355)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(115, 38)
-        Me.btnSalir.TabIndex = 59
-        Me.btnSalir.Text = "Cancelar"
-        Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnSalir.UseVisualStyleBackColor = False
         '
         'PictureBox3
         '
@@ -89,7 +72,7 @@ Partial Class ClienteCRUB
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(413, 18)
+        Me.Label4.Location = New System.Drawing.Point(348, 24)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(308, 42)
         Me.Label4.TabIndex = 55
@@ -115,7 +98,7 @@ Partial Class ClienteCRUB
         Me.btnErase.IconColor = System.Drawing.Color.White
         Me.btnErase.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnErase.IconSize = 25
-        Me.btnErase.Location = New System.Drawing.Point(509, 355)
+        Me.btnErase.Location = New System.Drawing.Point(621, 355)
         Me.btnErase.Name = "btnErase"
         Me.btnErase.Size = New System.Drawing.Size(100, 38)
         Me.btnErase.TabIndex = 52
@@ -132,7 +115,7 @@ Partial Class ClienteCRUB
         Me.btnSave.IconColor = System.Drawing.Color.White
         Me.btnSave.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSave.IconSize = 25
-        Me.btnSave.Location = New System.Drawing.Point(394, 355)
+        Me.btnSave.Location = New System.Drawing.Point(506, 355)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(109, 38)
         Me.btnSave.TabIndex = 51
@@ -270,6 +253,7 @@ Partial Class ClienteCRUB
         '
         'Button3
         '
+        Me.Button3.Enabled = False
         Me.Button3.Location = New System.Drawing.Point(693, 286)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(28, 23)
@@ -278,12 +262,30 @@ Partial Class ClienteCRUB
         Me.Button3.UseVisualStyleBackColor = True
         Me.Button3.Visible = False
         '
+        'btnSalir
+        '
+        Me.btnSalir.BackColor = System.Drawing.Color.White
+        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.Color.Transparent
+        Me.btnSalir.IconChar = FontAwesome.Sharp.IconChar.WindowClose
+        Me.btnSalir.IconColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(23, Byte), Integer))
+        Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSalir.IconSize = 40
+        Me.btnSalir.Location = New System.Drawing.Point(680, 2)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(52, 38)
+        Me.btnSalir.TabIndex = 69
+        Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSalir.UseVisualStyleBackColor = False
+        '
         'ClienteCRUB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(733, 405)
+        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.comboCondicion)
@@ -291,7 +293,6 @@ Partial Class ClienteCRUB
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.comboContacto)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lblPlaca)
@@ -317,7 +318,6 @@ Partial Class ClienteCRUB
     End Sub
 
     Friend WithEvents Button2 As Button
-    Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents lblPlaca As Label
@@ -337,4 +337,5 @@ Partial Class ClienteCRUB
     Friend WithEvents Label3 As Label
     Friend WithEvents comboCondicion As ComboBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
 End Class
