@@ -2,10 +2,41 @@
 
 Public Class DAOMedida
     Inherits Medida
+    Implements OpSql
 
     Dim conn As SqlConnection
     Dim sql As New SqlCommand
-    Public Function getRecords() As Object
+
+    Public Sub Guardar() Implements OpSql.Guardar
+        conn = Cnx.GetConection
+        Me.sql.CommandText = "INSERT INto productos_umedida values ('" & Medida & "'," & Eliminado & ")"
+        Me.sql.Connection = conn
+        'MsgBox(Me.sql.CommandText)
+        Me.sql.ExecuteNonQuery()
+    End Sub
+
+    Public Sub Actualizar() Implements OpSql.Actualizar
+        conn = Cnx.GetConection
+        Me.sql.CommandText = "update productos_umedida set unidad='" & Medida & "', eliminado=" & Eliminado & " where id=" & Id & ""
+        Me.sql.Connection = conn
+        'MsgBox(Me.sql.CommandText)
+        Me.sql.ExecuteNonQuery()
+    End Sub
+
+    Public Sub Eliminar() Implements OpSql.Eliminar
+        conn = Cnx.GetConection
+        Me.sql.CommandText = "update productos_umedida set unidad='" & Medida & "', eliminado=" & Eliminado & " where id=" & Id & ""
+        Me.sql.Connection = conn
+        'MsgBox(Me.sql.CommandText)
+        Me.sql.ExecuteNonQuery()
+    End Sub
+
+
+    Public Function Count() As Integer Implements OpSql.Count
+        Throw New NotImplementedException()
+    End Function
+
+    Public Function ListarTodos() As Object Implements OpSql.ListarTodos
         Dim consulta As New List(Of Medida)
         Dim r As SqlDataReader
         Dim i As Integer = 0
@@ -29,5 +60,13 @@ Public Class DAOMedida
         'End If
 
         Return consulta
+    End Function
+
+    Public Function Buscar() As Object Implements OpSql.Buscar
+        Throw New NotImplementedException()
+    End Function
+
+    Public Function Exist() As Boolean Implements OpSql.Exist
+        Throw New NotImplementedException()
     End Function
 End Class

@@ -12,7 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -45,7 +45,7 @@
     <OptionStrict>Off</OptionStrict>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionInfer>On</OptionInfer>
+    <OptionInfer>Off</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
@@ -94,10 +94,64 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aplicacion\Clientes\ClienteCRUB.Designer.vb">
+      <DependentUpon>ClienteCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Clientes\ClienteCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Clientes\Clientes.Designer.vb">
+      <DependentUpon>Clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Clientes\Clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Clientes\CpagoCRUB.Designer.vb">
+      <DependentUpon>CpagoCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Clientes\CpagoCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Clientes\ContactoCRUB.Designer.vb">
+      <DependentUpon>ContactoCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Clientes\ContactoCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Clientes\FpagoCRUB.Designer.vb">
+      <DependentUpon>FpagoCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Clientes\FpagoCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Aplicacion\Menu.Designer.vb">
       <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
     <Compile Include="Aplicacion\Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\CategoriaCRUB.designer.vb">
+      <DependentUpon>CategoriaCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\CategoriaCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\FamiliaCRUB.Designer.vb">
+      <DependentUpon>FamiliaCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\FamiliaCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\MarcaCRUB.Designer.vb">
+      <DependentUpon>MarcaCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\MarcaCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\MedidasCRUB.Designer.vb">
+      <DependentUpon>MedidasCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Productos\MedidasCRUB.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aplicacion\Productos\ProductoCRUB.Designer.vb">
@@ -112,6 +166,90 @@
     <Compile Include="Aplicacion\Productos\Productos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Aplicacion\Proveedores\ProveedorCRUB.Designer.vb">
+      <DependentUpon>ProveedorCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Proveedores\ProveedorCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Proveedores\Proveedores.Designer.vb">
+      <DependentUpon>Proveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Proveedores\Proveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Proveedores\PtipoCRUB.Designer.vb">
+      <DependentUpon>PtipoCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Proveedores\PtipoCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\DepartamentosCRUB.Designer.vb">
+      <DependentUpon>DepartamentosCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\DepartamentosCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\Empleados.Designer.vb">
+      <DependentUpon>Empleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\Empleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\EmpleadosCRUB.Designer.vb">
+      <DependentUpon>EmpleadosCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\EmpleadosCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\PermisosUsuariosCRUB.Designer.vb">
+      <DependentUpon>PermisosUsuariosCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\PermisosUsuariosCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\PuestosCRUB.Designer.vb">
+      <DependentUpon>PuestosCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\PuestosCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\Usuarios.Designer.vb">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\Usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\UsuariosCRUB.Designer.vb">
+      <DependentUpon>UsuariosCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Usuarios\UsuariosCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VehiculoCRUB.Designer.vb">
+      <DependentUpon>VehiculoCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VehiculoCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\Vehiculos.Designer.vb">
+      <DependentUpon>Vehiculos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\Vehiculos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VmarcaCRUB.Designer.vb">
+      <DependentUpon>VmarcaCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VmarcaCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VtipoCRUB.Designer.vb">
+      <DependentUpon>VtipoCRUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Vehiculos\VtipoCRUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Conexion\Cnx.vb" />
     <Compile Include="Aplicacion\Login.vb">
       <SubType>Form</SubType>
@@ -120,25 +258,49 @@
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DAO\DAOUsuario.vb" />
+    <Compile Include="DAO\Clientes\DAOCliente.vb" />
+    <Compile Include="DAO\Clientes\DAOCpago.vb" />
+    <Compile Include="DAO\Clientes\DAOContacto.vb" />
+    <Compile Include="DAO\Clientes\DAOCtipo.vb" />
+    <Compile Include="DAO\Clientes\DAOFpago.vb" />
+    <Compile Include="DAO\Proveedores\DAOProveedor.vb" />
+    <Compile Include="DAO\Proveedores\DAOPtipo.vb" />
+    <Compile Include="DAO\Usuarios\DAODepartamento.vb" />
+    <Compile Include="DAO\Usuarios\DAOEmpleado.vb" />
+    <Compile Include="DAO\Usuarios\DAOUsuario.vb" />
     <Compile Include="DAO\Productos\DAOCategoria.vb" />
     <Compile Include="DAO\Productos\DAOFamilia.vb" />
     <Compile Include="DAO\Productos\DAOMarca.vb" />
     <Compile Include="DAO\Productos\DAOMedida.vb" />
     <Compile Include="DAO\Productos\DAOProducto.vb" />
+    <Compile Include="DAO\Usuarios\DAOPuesto.vb" />
+    <Compile Include="DAO\Usuarios\DAORol.vb" />
+    <Compile Include="DAO\Vehiculos\DAOVehiculo.vb" />
+    <Compile Include="DAO\Vehiculos\DAOVmarca.vb" />
+    <Compile Include="DAO\Vehiculos\DAOVtipo.vb" />
     <Compile Include="Interfaces\GripMethod.vb" />
     <Compile Include="Interfaces\OpSql.vb" />
+    <Compile Include="Modelos\Clientes\Ccpago.vb" />
+    <Compile Include="Modelos\Clientes\Ccontacto.vb" />
+    <Compile Include="Modelos\Clientes\Cfpago.vb" />
+    <Compile Include="Modelos\Clientes\Cliente.vb" />
+    <Compile Include="Modelos\Clientes\Ctipo.vb" />
     <Compile Include="Modelos\Productos\Categoria.vb" />
     <Compile Include="Modelos\Productos\Familia.vb" />
     <Compile Include="Modelos\Productos\Marca.vb" />
     <Compile Include="Modelos\Productos\Medida.vb" />
     <Compile Include="Modelos\Productos\Producto.vb" />
     <Compile Include="Modelos\Productos\Stock.vb" />
+    <Compile Include="Modelos\Proveedores\Ptipo.vb" />
+    <Compile Include="Modelos\Proveedores\Proveedor.vb" />
     <Compile Include="Modelos\Usuarios\Departamento.vb" />
     <Compile Include="Modelos\Usuarios\Empleado.vb" />
     <Compile Include="Modelos\Usuarios\Puesto.vb" />
     <Compile Include="Modelos\Usuarios\Rol.vb" />
     <Compile Include="Modelos\Usuarios\Usuario.vb" />
+    <Compile Include="Modelos\Vehiculos\Vmarca.vb" />
+    <Compile Include="Modelos\Vehiculos\Vtipo.vb" />
+    <Compile Include="Modelos\Vehiculos\Vehiculo.vb" />
     <Compile Include="Modulos\Active.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -156,20 +318,98 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utilerias\ConversionFecha.vb" />
     <Compile Include="Utilerias\Metodos.vb" />
+    <Compile Include="Utilerias\SoloNumeros.vb" />
+    <Compile Include="Utilerias\Stylo.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Aplicacion\Clientes\ClienteCRUB.resx">
+      <DependentUpon>ClienteCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Clientes\Clientes.resx">
+      <DependentUpon>Clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Clientes\CpagoCRUB.resx">
+      <DependentUpon>CpagoCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Clientes\ContactoCRUB.resx">
+      <DependentUpon>ContactoCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Clientes\FpagoCRUB.resx">
+      <DependentUpon>FpagoCRUB.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Productos\CategoriaCRUB.resx">
+      <DependentUpon>CategoriaCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Productos\FamiliaCRUB.resx">
+      <DependentUpon>FamiliaCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Productos\MarcaCRUB.resx">
+      <DependentUpon>MarcaCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Productos\MedidasCRUB.resx">
+      <DependentUpon>MedidasCRUB.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Productos\ProductoCRUB.resx">
       <DependentUpon>ProductoCRUB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Productos\Productos.resx">
       <DependentUpon>Productos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Proveedores\ProveedorCRUB.resx">
+      <DependentUpon>ProveedorCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Proveedores\Proveedores.resx">
+      <DependentUpon>Proveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Proveedores\PtipoCRUB.resx">
+      <DependentUpon>PtipoCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\DepartamentosCRUB.resx">
+      <DependentUpon>DepartamentosCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\Empleados.resx">
+      <DependentUpon>Empleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\EmpleadosCRUB.resx">
+      <DependentUpon>EmpleadosCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\PermisosUsuariosCRUB.resx">
+      <DependentUpon>PermisosUsuariosCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\PuestosCRUB.resx">
+      <DependentUpon>PuestosCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\Usuarios.resx">
+      <DependentUpon>Usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Usuarios\UsuariosCRUB.resx">
+      <DependentUpon>UsuariosCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Vehiculos\VehiculoCRUB.resx">
+      <DependentUpon>VehiculoCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Vehiculos\Vehiculos.resx">
+      <DependentUpon>Vehiculos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Vehiculos\VmarcaCRUB.resx">
+      <DependentUpon>VmarcaCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Vehiculos\VtipoCRUB.resx">
+      <DependentUpon>VtipoCRUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DAO\Proveedores\DAOPtipo.resx">
+      <DependentUpon>DAOPtipo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\Proveedores\Ptipo.resx">
+      <DependentUpon>Ptipo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -193,6 +433,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB_pruebas_script\crau.sql" />
+    <None Include="Resources\bgtxt.png" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

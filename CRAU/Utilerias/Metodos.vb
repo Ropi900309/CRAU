@@ -35,34 +35,6 @@
     End Sub
 
 
-    Public Shared Sub LlenarComboEmpleado(combo As ComboBox)
-        'Dim objeto As New DAOEmpleado
-        'Dim ListCat As List(Of Empleado) = objeto.llenarCombo
-
-        'With combo
-        '    '.Items.Clear()
-        '    .DataSource = ListCat
-        '    .DisplayMember = "Nombre"
-        '    .ValueMember = "Clave"
-        '    .SelectedIndex = -1
-        'End With
-
-    End Sub
-
-    Public Shared Sub LlenarComboCategoria(combo As ComboBox, empleado As Integer)
-        'Dim objeto As New DAOCategoria
-        'Dim ListCat As List(Of Categoria) = objeto.llenarCombo(empleado)
-
-        'With combo
-        '    '.Items.Clear()
-        '    .DataSource = ListCat
-        '    .DisplayMember = "Categoria"
-        '    .ValueMember = "Clave"
-        '    .SelectedIndex = -1
-        'End With
-
-    End Sub
-
     Public Shared Function setCeros(valor As Integer) As String
         Dim largo As Integer = Len(valor.ToString)
         Dim numero As String
@@ -81,5 +53,68 @@
 
         Return numero
     End Function
+
+    Friend Shared Function validarUnicoValor(dao As Object) As Boolean
+        Dim valor As Boolean = dao.Exist()
+        Return valor
+    End Function
+
+    Friend Shared Function ValidarCajaTexto(caja As TextBox) As Boolean
+        If caja.Text = "" Or caja.Text = Nothing Or caja.Text = "0" Then
+            Return False
+        Else
+            Return True
+        End If
+    End Function
+
+    Friend Shared Sub ValidarSolocaja(caja As TextBox)
+        If Metodos.ValidarCajaTexto(caja) = True Then
+
+        Else
+            MsgBox("Rellene los campos faltantes", vbCritical, "Error")
+            caja.Text = ""
+            caja.Focus()
+        End If
+    End Sub
+
+    Friend Shared Sub ValidarUnico(dao As Object, caja As TextBox)
+        If (Metodos.validarUnicoValor(dao) = True) Then
+            MsgBox("La clave ya existe", vbCritical, "Error")
+            caja.Text = ""
+            caja.Focus()
+        End If
+    End Sub
+
+    Friend Shared Function ValidarComboSeleccion(combo As ComboBox) As Boolean
+        If combo.SelectedValue IsNot Nothing Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Friend Shared Function ValidarComboVacio(combo As ComboBox) As Boolean
+        If combo.Items.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Friend Shared Sub ValidarCombo(combo As ComboBox)
+        If Metodos.ValidarComboSeleccion(combo) = True Then
+        Else
+            MsgBox("Rellene los campos faltantes", vbCritical, "Error")
+            combo.Focus()
+        End If
+    End Sub
+
+    Friend Shared Sub ContadorLabel(label As Label, caja As TextBox)
+        label.Text = caja.Text.Length()
+        If InStrRev(caja.Text.Length, caja.MaxLength) Then
+            MsgBox("Exede Máximo de Caracteres", vbCritical, "Error")
+            caja.Focus()
+        End If
+    End Sub
 
 End Class

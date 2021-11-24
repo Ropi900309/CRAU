@@ -2,7 +2,7 @@
 
     Private _id As Integer
     Private _nombre, _paterno, _materno, _rfc, _nss As String
-    Private _fecha_alta As Date
+    Private _fecha_alta, _fecha_baja As String
     Private _departamento As Departamento
     Private _puesto As Puesto
 
@@ -11,7 +11,7 @@
         _puesto = New Puesto()
     End Sub
 
-    Public Sub New(id As Integer, nombre As String, paterno As String, materno As String, rfc As String, nss As String, fecha_alta As Date, departamento As Departamento, puesto As Puesto)
+    Public Sub New(id As Integer, nombre As String, paterno As String, materno As String, rfc As String, nss As String, fecha_alta As String, fecha_baja As String, departamento As Departamento, puesto As Puesto)
         _id = id
         _nombre = nombre
         _paterno = paterno
@@ -19,6 +19,7 @@
         _rfc = rfc
         _nss = nss
         _fecha_alta = fecha_alta
+        _fecha_baja = fecha_baja
         _departamento = departamento
         _puesto = puesto
     End Sub
@@ -77,11 +78,11 @@
         End Set
     End Property
 
-    Public Property Fecha_alta As Date
+    Public Property Fecha_alta As String
         Get
             Return _fecha_alta
         End Get
-        Set(value As Date)
+        Set(value As String)
             _fecha_alta = value
         End Set
     End Property
@@ -101,6 +102,15 @@
         End Get
         Set(value As Puesto)
             _puesto = value
+        End Set
+    End Property
+
+    Public Property Fecha_baja As String
+        Get
+            Return _fecha_baja
+        End Get
+        Set(value As String)
+            _fecha_baja = value
         End Set
     End Property
 End Class
