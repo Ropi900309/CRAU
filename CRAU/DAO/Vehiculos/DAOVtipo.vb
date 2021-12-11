@@ -11,7 +11,7 @@ Public Class DAOVtipo
             conn = Cnx.GetConection
             Me.sql.CommandText = "INSERT INTO vehiculo_tipo values ('" & Tipo.Trim & "'," & Eliminado & ") "
             Me.sql.Connection = conn
-            MsgBox(Me.sql.CommandText)
+            'MsgBox(Me.sql.CommandText)
             Me.sql.ExecuteNonQuery()
 
         Catch ex As Exception
@@ -25,7 +25,7 @@ Public Class DAOVtipo
         conn = Cnx.GetConection
         Me.sql.CommandText = "update vehiculo_tipo set tipo='" & Tipo.Trim & "', eliminado=" & Eliminado & " where id=" & Id & ""
         Me.sql.Connection = conn
-        MsgBox(Me.sql.CommandText)
+        'MsgBox(Me.sql.CommandText)
         Me.sql.ExecuteNonQuery()
     End Sub
 
@@ -35,7 +35,7 @@ Public Class DAOVtipo
             conn = Cnx.GetConection
             Me.sql.CommandText = "update vehiculo_tipo set tipo='" & Tipo & "', eliminado=" & Eliminado & " where id=" & Id & ""
             Me.sql.Connection = conn
-            MsgBox(Me.sql.CommandText)
+            'MsgBox(Me.sql.CommandText)
             Me.sql.ExecuteNonQuery()
 
         Catch ex As Exception
@@ -54,7 +54,7 @@ Public Class DAOVtipo
         Dim i As Integer = 0
 
         conn = Cnx.GetConection
-        Me.sql.CommandText = "select * from vehiculo_tipo where eliminado=" & Eliminado & " order by tipo asc "
+        Me.sql.CommandText = "select * from vehiculo_tipo where eliminado=" & Eliminado & " "
         Me.sql.Connection = conn
         r = Me.sql.ExecuteReader()
 

@@ -57,8 +57,8 @@
     End Sub
 
     Public Sub LlenarGrid() Implements GripMethod.LlenarGrid
-        Try
-            Dim pro As New DAOProveedor
+
+        Dim pro As New DAOProveedor
 
             Dim resultado As List(Of Proveedor) = pro.ListarTodos()
 
@@ -82,13 +82,9 @@
                 lblTotEntidades.Text = "LISTADOS " & a
             End With
 
-        Catch ex As Exception
-            MsgBox(ex.Message, vbCritical, "Error")
-        End Try
     End Sub
 
     Private Sub Proveedores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Try
             CrearGrid()
             LlenarGrid()
@@ -96,6 +92,7 @@
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
     End Sub
+
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
@@ -128,6 +125,7 @@
         End Try
     End Sub
 
+
     Private Function BuscarProveedorLista(id As Integer) As Integer
         Dim indice As Integer = 0
 
@@ -145,4 +143,5 @@
 
         Return indice
     End Function
+
 End Class

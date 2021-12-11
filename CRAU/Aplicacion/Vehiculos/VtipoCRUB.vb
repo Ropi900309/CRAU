@@ -40,7 +40,6 @@
 
             'OCULTAR COLUMNAS
             .Columns(0).Visible = False
-            .Columns(1).Visible = False
             .Columns(3).Visible = False
 
             'SOLO LECTURA PARA COLUMNAS 
@@ -93,7 +92,13 @@
             If tip.Id > 0 Then
                 tip.Actualizar()
             Else
-                tip.Guardar()
+                If Metodos.ValidarCajaTexto(textNombre) = False Then
+                    MsgBox("Rellene los campos faltantes", vbCritical, "Error")
+                    textNombre.Text = ""
+                    textNombre.Focus()
+                Else
+                    tip.Guardar()
+                End If
             End If
             ClearData()
             recibview.llenarTipos()

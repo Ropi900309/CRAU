@@ -6,7 +6,7 @@ Public Class Cnx
     '.ConnectionString ="Data Source=192.168.1.250;Initial Catalog=nom_ropi_azja;user id=sa;password=AsjaEvol19;Max pool Size=10024"
     Private Sub New()
         conexion = New SqlConnection With {
-             .ConnectionString = "Data Source=PC-ROPI-G;Initial Catalog=crau;Integrated Security=True"
+             .ConnectionString = "Data Source=localhost;Initial Catalog=crau;Integrated Security=True"
         }
         conexion.Open()
         '.ConnectionString = "Data Source=PC-ROPI-G;Initial Catalog=crau;Integrated Security=True"

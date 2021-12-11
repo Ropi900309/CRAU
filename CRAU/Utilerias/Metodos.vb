@@ -34,7 +34,6 @@
         Next
     End Sub
 
-
     Public Shared Function setCeros(valor As Integer) As String
         Dim largo As Integer = Len(valor.ToString)
         Dim numero As String
@@ -60,8 +59,9 @@
     End Function
 
     Friend Shared Function ValidarCajaTexto(caja As TextBox) As Boolean
-        If caja.Text = "" Or caja.Text = Nothing Or caja.Text = "0" Then
+        If caja.Text.Trim = "" Or caja.Text.Trim = Nothing Or caja.Text.Trim = "0" Then
             Return False
+
         Else
             Return True
         End If
@@ -108,4 +108,13 @@
             combo.Focus()
         End If
     End Sub
+
+    Friend Shared Sub ContadorLabel(label As Label, caja As TextBox)
+        label.Text = caja.Text.Length()
+        If InStrRev(caja.Text.Length, caja.MaxLength) Then
+            MsgBox("Exede Máximo de Caracteres", vbCritical, "Error")
+            caja.Focus()
+        End If
+    End Sub
+
 End Class

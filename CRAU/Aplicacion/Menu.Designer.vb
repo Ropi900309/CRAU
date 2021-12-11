@@ -43,11 +43,15 @@ Partial Class Menu
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RequisicionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrdenDeCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrdenDeVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TallerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrdenServicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguraciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NominaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PanelDeAsistenciasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CalculoDeNominaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitterIzq = New System.Windows.Forms.Splitter()
         Me.Panel = New System.Windows.Forms.Panel()
@@ -55,10 +59,6 @@ Partial Class Menu
         Me.PanelInf = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.OrdenDeVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NominaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PanelDeAsistenciasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CalculoDeNominaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mstMenu.SuspendLayout()
         Me.Panel.SuspendLayout()
         Me.PanelInf.SuspendLayout()
@@ -74,25 +74,25 @@ Partial Class Menu
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
         'VehiculosToolStripMenuItem
         '
         Me.VehiculosToolStripMenuItem.Name = "VehiculosToolStripMenuItem"
-        Me.VehiculosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.VehiculosToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.VehiculosToolStripMenuItem.Text = "Vehiculos"
         '
         'mstMenu
@@ -196,6 +196,12 @@ Partial Class Menu
         Me.OrdenDeCompraToolStripMenuItem.Size = New System.Drawing.Size(209, 24)
         Me.OrdenDeCompraToolStripMenuItem.Text = "Orden de Compra"
         '
+        'OrdenDeVentaToolStripMenuItem
+        '
+        Me.OrdenDeVentaToolStripMenuItem.Name = "OrdenDeVentaToolStripMenuItem"
+        Me.OrdenDeVentaToolStripMenuItem.Size = New System.Drawing.Size(209, 24)
+        Me.OrdenDeVentaToolStripMenuItem.Text = "Orden de Venta"
+        '
         'TallerToolStripMenuItem
         '
         Me.TallerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrdenServicioToolStripMenuItem})
@@ -219,14 +225,33 @@ Partial Class Menu
         'EmpleadosToolStripMenuItem
         '
         Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
         Me.EmpleadosToolStripMenuItem.Text = "Empleados"
         '
         'UsuarioToolStripMenuItem
         '
         Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
         Me.UsuarioToolStripMenuItem.Text = "Usuario"
+        '
+        'NominaToolStripMenuItem
+        '
+        Me.NominaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PanelDeAsistenciasToolStripMenuItem, Me.CalculoDeNominaToolStripMenuItem})
+        Me.NominaToolStripMenuItem.Name = "NominaToolStripMenuItem"
+        Me.NominaToolStripMenuItem.Size = New System.Drawing.Size(78, 23)
+        Me.NominaToolStripMenuItem.Text = "Nomina"
+        '
+        'PanelDeAsistenciasToolStripMenuItem
+        '
+        Me.PanelDeAsistenciasToolStripMenuItem.Name = "PanelDeAsistenciasToolStripMenuItem"
+        Me.PanelDeAsistenciasToolStripMenuItem.Size = New System.Drawing.Size(221, 24)
+        Me.PanelDeAsistenciasToolStripMenuItem.Text = "Panel de asistencias"
+        '
+        'CalculoDeNominaToolStripMenuItem
+        '
+        Me.CalculoDeNominaToolStripMenuItem.Name = "CalculoDeNominaToolStripMenuItem"
+        Me.CalculoDeNominaToolStripMenuItem.Size = New System.Drawing.Size(221, 24)
+        Me.CalculoDeNominaToolStripMenuItem.Text = "Calculo de nominas"
         '
         'SalirToolStripMenuItem1
         '
@@ -290,31 +315,6 @@ Partial Class Menu
         '
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
-        '
-        'OrdenDeVentaToolStripMenuItem
-        '
-        Me.OrdenDeVentaToolStripMenuItem.Name = "OrdenDeVentaToolStripMenuItem"
-        Me.OrdenDeVentaToolStripMenuItem.Size = New System.Drawing.Size(209, 24)
-        Me.OrdenDeVentaToolStripMenuItem.Text = "Orden de Venta"
-        '
-        'NominaToolStripMenuItem
-        '
-        Me.NominaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PanelDeAsistenciasToolStripMenuItem, Me.CalculoDeNominaToolStripMenuItem})
-        Me.NominaToolStripMenuItem.Name = "NominaToolStripMenuItem"
-        Me.NominaToolStripMenuItem.Size = New System.Drawing.Size(78, 23)
-        Me.NominaToolStripMenuItem.Text = "Nomina"
-        '
-        'PanelDeAsistenciasToolStripMenuItem
-        '
-        Me.PanelDeAsistenciasToolStripMenuItem.Name = "PanelDeAsistenciasToolStripMenuItem"
-        Me.PanelDeAsistenciasToolStripMenuItem.Size = New System.Drawing.Size(228, 24)
-        Me.PanelDeAsistenciasToolStripMenuItem.Text = "Panel de asistencias"
-        '
-        'CalculoDeNominaToolStripMenuItem
-        '
-        Me.CalculoDeNominaToolStripMenuItem.Name = "CalculoDeNominaToolStripMenuItem"
-        Me.CalculoDeNominaToolStripMenuItem.Size = New System.Drawing.Size(221, 24)
-        Me.CalculoDeNominaToolStripMenuItem.Text = "Calculo de nominas"
         '
         'Menu
         '

@@ -93,7 +93,6 @@
 
     End Sub
 
-
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
             Dim cli As New Cliente
@@ -124,6 +123,7 @@
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
     End Sub
+
     Private Function BuscarClienteLista(id As Integer) As Integer
         Dim indice As Integer = 0
 
@@ -156,5 +156,6 @@
         End Try
 
     End Sub
+
 
 End Class

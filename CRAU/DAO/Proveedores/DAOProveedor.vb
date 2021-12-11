@@ -54,8 +54,8 @@ Public Class DAOProveedor
     End Function
 
     Public Function ListarTodos() As Object Implements OpSql.ListarTodos
-        Try
-            Dim consulta As New List(Of Proveedor)
+
+        Dim consulta As New List(Of Proveedor)
             Dim r As SqlDataReader
             Dim i As Integer = 0
 
@@ -82,9 +82,6 @@ Public Class DAOProveedor
             r.Close()
             'End If
             Return consulta
-        Catch ex As Exception
-            MsgBox(ex.Message, vbCritical, "Error")
-        End Try
 
     End Function
 

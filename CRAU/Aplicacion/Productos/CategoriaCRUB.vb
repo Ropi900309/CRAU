@@ -99,8 +99,13 @@
             If cat.Id > 0 Then
                 cat.Actualizar()
             Else
-
-                cat.Guardar()
+                If Metodos.ValidarCajaTexto(textNombre) = False Then
+                    MsgBox("Rellene los campos faltantes", vbCritical, "Error")
+                    textNombre.Text = ""
+                    textNombre.Focus()
+                Else
+                    cat.Guardar()
+                End If
             End If
             ClearData()
             recibview.LlenarCategoria()

@@ -11,7 +11,7 @@ Class DAOVmarca
             conn = Cnx.GetConection
             Me.sql.CommandText = "INSERT INTO vehiculo_marca values ('" & Marca.Trim & "'," & Eliminado & ") "
             Me.sql.Connection = conn
-            MsgBox(Me.sql.CommandText)
+            'MsgBox(Me.sql.CommandText)
             Me.sql.ExecuteNonQuery()
             'If Me.sql.ExecuteNonQuery() = 1 Then
             '    MsgBox("Datos almacenados")
@@ -30,7 +30,7 @@ Class DAOVmarca
             Me.sql.CommandText = "update vehiculo_marca set marca='" & Marca.Trim & "', eliminado=" & Eliminado & " where id=" & Id & ""
             Me.sql.Connection = conn
             MsgBox(Me.sql.CommandText)
-            Me.sql.ExecuteNonQuery()
+            'Me.sql.ExecuteNonQuery()
         Catch ex As Exception
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
@@ -42,7 +42,7 @@ Class DAOVmarca
             conn = Cnx.GetConection
             Me.sql.CommandText = "update vehiculo_marca set marca='" & Marca & "', eliminado=" & Eliminado & " where id=" & Id & ""
             Me.sql.Connection = conn
-            MsgBox(Me.sql.CommandText)
+            'MsgBox(Me.sql.CommandText)
             Me.sql.ExecuteNonQuery()
 
         Catch ex As Exception
@@ -61,7 +61,7 @@ Class DAOVmarca
         Dim i As Integer = 0
 
         conn = Cnx.GetConection
-        Me.sql.CommandText = "select * from vehiculo_marca where eliminado=" & Eliminado & " order by marca asc "
+        Me.sql.CommandText = "select * from vehiculo_marca where eliminado=" & Eliminado & " "
         Me.sql.Connection = conn
         r = Me.sql.ExecuteReader()
 
