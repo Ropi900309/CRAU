@@ -29,7 +29,6 @@ Partial Class VehiculoCRUB
         Me.txtModelo = New System.Windows.Forms.TextBox()
         Me.txtPlaca = New System.Windows.Forms.TextBox()
         Me.txtRegistro = New System.Windows.Forms.TextBox()
-        Me.comboMarca = New System.Windows.Forms.ComboBox()
         Me.comboTipo = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnSave = New FontAwesome.Sharp.IconButton()
@@ -47,6 +46,7 @@ Partial Class VehiculoCRUB
         Me.btnMarca = New FontAwesome.Sharp.IconButton()
         Me.btnTipo = New FontAwesome.Sharp.IconButton()
         Me.btnSalir = New FontAwesome.Sharp.IconButton()
+        Me.comboMarca = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -113,17 +113,6 @@ Partial Class VehiculoCRUB
         Me.txtRegistro.Name = "txtRegistro"
         Me.txtRegistro.Size = New System.Drawing.Size(178, 24)
         Me.txtRegistro.TabIndex = 1
-        '
-        'comboMarca
-        '
-        Me.comboMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.comboMarca.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.comboMarca.FormattingEnabled = True
-        Me.comboMarca.ItemHeight = 18
-        Me.comboMarca.Location = New System.Drawing.Point(644, 161)
-        Me.comboMarca.Name = "comboMarca"
-        Me.comboMarca.Size = New System.Drawing.Size(178, 26)
-        Me.comboMarca.TabIndex = 4
         '
         'comboTipo
         '
@@ -330,6 +319,17 @@ Partial Class VehiculoCRUB
         Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSalir.UseVisualStyleBackColor = False
         '
+        'comboMarca
+        '
+        Me.comboMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboMarca.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comboMarca.FormattingEnabled = True
+        Me.comboMarca.ItemHeight = 18
+        Me.comboMarca.Location = New System.Drawing.Point(644, 161)
+        Me.comboMarca.Name = "comboMarca"
+        Me.comboMarca.Size = New System.Drawing.Size(178, 26)
+        Me.comboMarca.TabIndex = 4
+        '
         'VehiculoCRUB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -377,7 +377,6 @@ Partial Class VehiculoCRUB
     Friend WithEvents txtModelo As TextBox
     Friend WithEvents txtPlaca As TextBox
     Friend WithEvents txtRegistro As TextBox
-    Friend WithEvents comboMarca As ComboBox
     Friend WithEvents comboTipo As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents btnSave As FontAwesome.Sharp.IconButton
@@ -395,4 +394,5 @@ Partial Class VehiculoCRUB
     Friend WithEvents btnMarca As FontAwesome.Sharp.IconButton
     Friend WithEvents btnTipo As FontAwesome.Sharp.IconButton
     Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
+    Friend WithEvents comboMarca As ComboBox
 End Class

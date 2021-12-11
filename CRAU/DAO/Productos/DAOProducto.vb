@@ -41,7 +41,7 @@ Public Class DAOProducto
 
         conn = Cnx.GetConection
         ' If  IsNot Nothing Then
-        Me.sql.CommandText = "select * from listado_productos "
+        Me.sql.CommandText = "select top 100* from listado_productos "
 
 
         Me.sql.Connection = conn

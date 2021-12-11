@@ -77,7 +77,7 @@ Public Class Menu
     End Sub
 
     Private Sub OrdenDeCompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenDeCompraToolStripMenuItem.Click
-
+        OpenChildForm(OCompra)
     End Sub
 
     Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
@@ -90,5 +90,18 @@ Public Class Menu
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblFecha.Text = TimeOfDay
+    End Sub
+
+    Private Sub OrdenServicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenServicioToolStripMenuItem.Click
+        OpenChildForm(OServicio)
+
+    End Sub
+
+    Private Sub RequisicionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RequisicionesToolStripMenuItem.Click
+        OpenChildForm(Requisicion)
+    End Sub
+
+    Private Sub OrdenDeVentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenDeVentaToolStripMenuItem.Click
+        OpenChildForm(OVenta)
     End Sub
 End Class

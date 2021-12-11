@@ -92,7 +92,13 @@
             If tip.Id > 0 Then
                 tip.Actualizar()
             Else
-                tip.Guardar()
+                If Metodos.ValidarCajaTexto(textNombre) = False Then
+                    MsgBox("Rellene los campos faltantes", vbCritical, "Error")
+                    textNombre.Text = ""
+                    textNombre.Focus()
+                Else
+                    tip.Guardar()
+                End If
             End If
             ClearData()
             recibview.llenarTipos()

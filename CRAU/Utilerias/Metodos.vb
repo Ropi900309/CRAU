@@ -34,7 +34,6 @@
         Next
     End Sub
 
-
     Public Shared Function setCeros(valor As Integer) As String
         Dim largo As Integer = Len(valor.ToString)
         Dim numero As String
@@ -60,8 +59,9 @@
     End Function
 
     Friend Shared Function ValidarCajaTexto(caja As TextBox) As Boolean
-        If caja.Text = "" Or caja.Text = Nothing Or caja.Text = "0" Then
+        If caja.Text.Trim = "" Or caja.Text.Trim = Nothing Or caja.Text.Trim = "0" Then
             Return False
+
         Else
             Return True
         End If

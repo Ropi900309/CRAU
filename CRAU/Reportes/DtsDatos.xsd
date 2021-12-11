@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DtsDatos" targetNamespace="http://tempuri.org/DtsDatos.xsd" xmlns:mstns="http://tempuri.org/DtsDatos.xsd" xmlns="http://tempuri.org/DtsDatos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConCRAU" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConCRAU (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CRAU.My.MySettings.GlobalReference.Default.ConCRAU" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=localhost;Initial Catalog=CRAU;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="desktop-gdi323f.CRAU.dbo1" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=DESKTOP-GDI323F;Initial Catalog=CRAU;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="desktop-gdi323f.CRAU.dbo2" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProductosTableAdapter" GeneratorDataComponentClassName="ProductosTableAdapter" Name="Productos" UserDataComponentName="ProductosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="desktop-gdi323f.CRAU.dbo2" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select pro.id,pro.no_parte, pro.descripcion,pro.precio_compra, inv.stock, med.unidad, cat.categoria ,mar.marca,fam.familia 
+FROM productos pro
+INNER JOIN productos_categoria cat on cat.id = pro.categoria
+INNER JOIN productos_marca mar on mar.id = pro.marca
+INNER JOIN productos_familia fam on fam.id = pro.familia
+INNER JOIN productos_umedida med on med.id = pro.medida
+INNER JOIN productos_inventario inv on inv.producto = pro.id
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="no_parte" DataSetColumn="no_parte" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="precio_compra" DataSetColumn="precio_compra" />
+              <Mapping SourceColumn="stock" DataSetColumn="stock" />
+              <Mapping SourceColumn="unidad" DataSetColumn="unidad" />
+              <Mapping SourceColumn="categoria" DataSetColumn="categoria" />
+              <Mapping SourceColumn="marca" DataSetColumn="marca" />
+              <Mapping SourceColumn="familia" DataSetColumn="familia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DtsDatos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DtsDatos" msprop:Generator_UserDSName="DtsDatos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Productos" msprop:Generator_TableClassName="ProductosDataTable" msprop:Generator_TableVarName="tableProductos" msprop:Generator_TablePropName="Productos" msprop:Generator_RowDeletingName="ProductosRowDeleting" msprop:Generator_RowChangingName="ProductosRowChanging" msprop:Generator_RowEvHandlerName="ProductosRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductosRowDeleted" msprop:Generator_UserTableName="Productos" msprop:Generator_RowChangedName="ProductosRowChanged" msprop:Generator_RowEvArgName="ProductosRowChangeEvent" msprop:Generator_RowClassName="ProductosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="no_parte" msprop:Generator_ColumnVarNameInTable="columnno_parte" msprop:Generator_ColumnPropNameInRow="no_parte" msprop:Generator_ColumnPropNameInTable="no_parteColumn" msprop:Generator_UserColumnName="no_parte" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precio_compra" msprop:Generator_ColumnVarNameInTable="columnprecio_compra" msprop:Generator_ColumnPropNameInRow="precio_compra" msprop:Generator_ColumnPropNameInTable="precio_compraColumn" msprop:Generator_UserColumnName="precio_compra" type="xs:decimal" minOccurs="0" />
+              <xs:element name="stock" msprop:Generator_ColumnVarNameInTable="columnstock" msprop:Generator_ColumnPropNameInRow="stock" msprop:Generator_ColumnPropNameInTable="stockColumn" msprop:Generator_UserColumnName="stock" type="xs:decimal" minOccurs="0" />
+              <xs:element name="unidad" msprop:Generator_ColumnVarNameInTable="columnunidad" msprop:Generator_ColumnPropNameInRow="unidad" msprop:Generator_ColumnPropNameInTable="unidadColumn" msprop:Generator_UserColumnName="unidad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="categoria" msprop:Generator_ColumnVarNameInTable="columncategoria" msprop:Generator_ColumnPropNameInRow="categoria" msprop:Generator_ColumnPropNameInTable="categoriaColumn" msprop:Generator_UserColumnName="categoria" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="familia" msprop:Generator_ColumnVarNameInTable="columnfamilia" msprop:Generator_ColumnPropNameInRow="familia" msprop:Generator_ColumnPropNameInTable="familiaColumn" msprop:Generator_UserColumnName="familia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Productos" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

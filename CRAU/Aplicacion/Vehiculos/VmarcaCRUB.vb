@@ -88,7 +88,13 @@
             If mar.Id > 0 Then
                 mar.Actualizar()
             Else
-                mar.Guardar()
+                If Metodos.ValidarCajaTexto(textNombre) = False Then
+                    MsgBox("Rellene los campos faltantes", vbCritical, "Error")
+                    textNombre.Text.Trim()
+                    textNombre.Focus()
+                Else
+                    mar.Guardar()
+                End If
             End If
             ClearData()
             recibview.llenarMarcas()

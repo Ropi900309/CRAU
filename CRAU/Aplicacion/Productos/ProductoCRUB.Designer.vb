@@ -127,12 +127,12 @@ Partial Class ProductoCRUB
         '
         Me.textDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.textDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textDescripcion.Location = New System.Drawing.Point(373, 293)
+        Me.textDescripcion.Location = New System.Drawing.Point(376, 309)
         Me.textDescripcion.MaxLength = 255
         Me.textDescripcion.Multiline = True
         Me.textDescripcion.Name = "textDescripcion"
         Me.textDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.textDescripcion.Size = New System.Drawing.Size(428, 98)
+        Me.textDescripcion.Size = New System.Drawing.Size(486, 58)
         Me.textDescripcion.TabIndex = 6
         '
         'textPPromedio
@@ -175,7 +175,7 @@ Partial Class ProductoCRUB
         Me.comboMarca.FormattingEnabled = True
         Me.comboMarca.Location = New System.Drawing.Point(617, 229)
         Me.comboMarca.Name = "comboMarca"
-        Me.comboMarca.Size = New System.Drawing.Size(184, 26)
+        Me.comboMarca.Size = New System.Drawing.Size(243, 26)
         Me.comboMarca.TabIndex = 11
         '
         'comboMedida
@@ -185,7 +185,7 @@ Partial Class ProductoCRUB
         Me.comboMedida.FormattingEnabled = True
         Me.comboMedida.Location = New System.Drawing.Point(617, 194)
         Me.comboMedida.Name = "comboMedida"
-        Me.comboMedida.Size = New System.Drawing.Size(184, 26)
+        Me.comboMedida.Size = New System.Drawing.Size(242, 26)
         Me.comboMedida.TabIndex = 10
         '
         'comboCategoria
@@ -195,7 +195,7 @@ Partial Class ProductoCRUB
         Me.comboCategoria.FormattingEnabled = True
         Me.comboCategoria.Location = New System.Drawing.Point(617, 158)
         Me.comboCategoria.Name = "comboCategoria"
-        Me.comboCategoria.Size = New System.Drawing.Size(184, 26)
+        Me.comboCategoria.Size = New System.Drawing.Size(242, 26)
         Me.comboCategoria.TabIndex = 9
         '
         'comboFamilia
@@ -205,7 +205,7 @@ Partial Class ProductoCRUB
         Me.comboFamilia.FormattingEnabled = True
         Me.comboFamilia.Location = New System.Drawing.Point(617, 262)
         Me.comboFamilia.Name = "comboFamilia"
-        Me.comboFamilia.Size = New System.Drawing.Size(184, 26)
+        Me.comboFamilia.Size = New System.Drawing.Size(242, 26)
         Me.comboFamilia.TabIndex = 12
         '
         'btnSave
@@ -310,9 +310,9 @@ Partial Class ProductoCRUB
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(21, 139)
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 145)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(203, 117)
+        Me.PictureBox2.Size = New System.Drawing.Size(206, 143)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 32
         Me.PictureBox2.TabStop = False
@@ -361,7 +361,7 @@ Partial Class ProductoCRUB
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(532, 268)
+        Me.Label9.Location = New System.Drawing.Point(525, 270)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(67, 18)
         Me.Label9.TabIndex = 37
@@ -371,7 +371,7 @@ Partial Class ProductoCRUB
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(251, 288)
+        Me.Label13.Location = New System.Drawing.Point(251, 309)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(103, 18)
         Me.Label13.TabIndex = 38
@@ -387,7 +387,7 @@ Partial Class ProductoCRUB
         Me.btnSalir.IconColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(23, Byte), Integer))
         Me.btnSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnSalir.IconSize = 40
-        Me.btnSalir.Location = New System.Drawing.Point(807, 12)
+        Me.btnSalir.Location = New System.Drawing.Point(843, 2)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(52, 38)
         Me.btnSalir.TabIndex = 15
@@ -422,7 +422,7 @@ Partial Class ProductoCRUB
         Me.btnCategoria.IconColor = System.Drawing.Color.Black
         Me.btnCategoria.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnCategoria.IconSize = 20
-        Me.btnCategoria.Location = New System.Drawing.Point(818, 155)
+        Me.btnCategoria.Location = New System.Drawing.Point(866, 155)
         Me.btnCategoria.Name = "btnCategoria"
         Me.btnCategoria.Size = New System.Drawing.Size(28, 26)
         Me.btnCategoria.TabIndex = 71463
@@ -434,7 +434,7 @@ Partial Class ProductoCRUB
         Me.btnMedida.IconColor = System.Drawing.Color.Black
         Me.btnMedida.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnMedida.IconSize = 20
-        Me.btnMedida.Location = New System.Drawing.Point(818, 189)
+        Me.btnMedida.Location = New System.Drawing.Point(866, 193)
         Me.btnMedida.Name = "btnMedida"
         Me.btnMedida.Size = New System.Drawing.Size(28, 26)
         Me.btnMedida.TabIndex = 71464
@@ -446,7 +446,7 @@ Partial Class ProductoCRUB
         Me.btnMarca.IconColor = System.Drawing.Color.Black
         Me.btnMarca.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnMarca.IconSize = 20
-        Me.btnMarca.Location = New System.Drawing.Point(818, 223)
+        Me.btnMarca.Location = New System.Drawing.Point(866, 230)
         Me.btnMarca.Name = "btnMarca"
         Me.btnMarca.Size = New System.Drawing.Size(28, 26)
         Me.btnMarca.TabIndex = 71465
@@ -458,7 +458,7 @@ Partial Class ProductoCRUB
         Me.btnFamilia.IconColor = System.Drawing.Color.Black
         Me.btnFamilia.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnFamilia.IconSize = 20
-        Me.btnFamilia.Location = New System.Drawing.Point(818, 257)
+        Me.btnFamilia.Location = New System.Drawing.Point(866, 260)
         Me.btnFamilia.Name = "btnFamilia"
         Me.btnFamilia.Size = New System.Drawing.Size(28, 26)
         Me.btnFamilia.TabIndex = 71466
@@ -469,7 +469,7 @@ Partial Class ProductoCRUB
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(858, 476)
+        Me.ClientSize = New System.Drawing.Size(897, 476)
         Me.Controls.Add(Me.btnFamilia)
         Me.Controls.Add(Me.btnMarca)
         Me.Controls.Add(Me.btnMedida)

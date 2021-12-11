@@ -23,7 +23,6 @@ Partial Class ClienteCRUB
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClienteCRUB))
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblPlaca = New System.Windows.Forms.Label()
@@ -39,24 +38,15 @@ Partial Class ClienteCRUB
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.comboContacto = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.comboCondicion = New System.Windows.Forms.ComboBox()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.btnSalir = New FontAwesome.Sharp.IconButton()
+        Me.btnContacto = New FontAwesome.Sharp.IconButton()
+        Me.btnFroma = New FontAwesome.Sharp.IconButton()
+        Me.btnCondicion = New FontAwesome.Sharp.IconButton()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Button2
-        '
-        Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(693, 204)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(28, 23)
-        Me.Button2.TabIndex = 61
-        Me.Button2.Text = "..."
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'PictureBox3
         '
@@ -137,9 +127,10 @@ Partial Class ClienteCRUB
         'txtRazon
         '
         Me.txtRazon.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.txtRazon.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRazon.Location = New System.Drawing.Point(394, 91)
         Me.txtRazon.Name = "txtRazon"
-        Me.txtRazon.Size = New System.Drawing.Size(327, 20)
+        Me.txtRazon.Size = New System.Drawing.Size(327, 24)
         Me.txtRazon.TabIndex = 42
         '
         'lblRegistro
@@ -156,9 +147,10 @@ Partial Class ClienteCRUB
         'txtRfc
         '
         Me.txtRfc.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.txtRfc.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRfc.Location = New System.Drawing.Point(394, 127)
         Me.txtRfc.Name = "txtRfc"
-        Me.txtRfc.Size = New System.Drawing.Size(327, 20)
+        Me.txtRfc.Size = New System.Drawing.Size(327, 24)
         Me.txtRfc.TabIndex = 43
         '
         'lblModelo
@@ -175,18 +167,20 @@ Partial Class ClienteCRUB
         'txtDireccion
         '
         Me.txtDireccion.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.txtDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDireccion.Location = New System.Drawing.Point(394, 168)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(327, 20)
+        Me.txtDireccion.Size = New System.Drawing.Size(327, 24)
         Me.txtDireccion.TabIndex = 44
         '
         'comboForma
         '
         Me.comboForma.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboForma.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboForma.FormattingEnabled = True
         Me.comboForma.Location = New System.Drawing.Point(394, 247)
         Me.comboForma.Name = "comboForma"
-        Me.comboForma.Size = New System.Drawing.Size(275, 21)
+        Me.comboForma.Size = New System.Drawing.Size(327, 26)
         Me.comboForma.TabIndex = 48
         '
         'PictureBox1
@@ -203,10 +197,11 @@ Partial Class ClienteCRUB
         'comboContacto
         '
         Me.comboContacto.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.comboContacto.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboContacto.FormattingEnabled = True
         Me.comboContacto.Location = New System.Drawing.Point(394, 206)
         Me.comboContacto.Name = "comboContacto"
-        Me.comboContacto.Size = New System.Drawing.Size(275, 21)
+        Me.comboContacto.Size = New System.Drawing.Size(327, 26)
         Me.comboContacto.TabIndex = 63
         '
         'Label1
@@ -219,16 +214,6 @@ Partial Class ClienteCRUB
         Me.Label1.Size = New System.Drawing.Size(86, 18)
         Me.Label1.TabIndex = 64
         Me.Label1.Text = "Contactos"
-        '
-        'Button1
-        '
-        Me.Button1.Enabled = False
-        Me.Button1.Location = New System.Drawing.Point(693, 245)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(28, 23)
-        Me.Button1.TabIndex = 65
-        Me.Button1.Text = "..."
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -245,22 +230,12 @@ Partial Class ClienteCRUB
         '
         Me.comboCondicion.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.comboCondicion.Enabled = False
+        Me.comboCondicion.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comboCondicion.FormattingEnabled = True
         Me.comboCondicion.Location = New System.Drawing.Point(394, 288)
         Me.comboCondicion.Name = "comboCondicion"
-        Me.comboCondicion.Size = New System.Drawing.Size(275, 21)
+        Me.comboCondicion.Size = New System.Drawing.Size(327, 26)
         Me.comboCondicion.TabIndex = 66
-        '
-        'Button3
-        '
-        Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(693, 286)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(28, 23)
-        Me.Button3.TabIndex = 68
-        Me.Button3.Text = "..."
-        Me.Button3.UseVisualStyleBackColor = True
-        Me.Button3.Visible = False
         '
         'btnSalir
         '
@@ -279,20 +254,56 @@ Partial Class ClienteCRUB
         Me.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSalir.UseVisualStyleBackColor = False
         '
+        'btnContacto
+        '
+        Me.btnContacto.IconChar = FontAwesome.Sharp.IconChar.EllipsisH
+        Me.btnContacto.IconColor = System.Drawing.Color.Black
+        Me.btnContacto.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnContacto.IconSize = 20
+        Me.btnContacto.Location = New System.Drawing.Point(737, 206)
+        Me.btnContacto.Name = "btnContacto"
+        Me.btnContacto.Size = New System.Drawing.Size(28, 26)
+        Me.btnContacto.TabIndex = 71464
+        Me.btnContacto.UseVisualStyleBackColor = True
+        '
+        'btnFroma
+        '
+        Me.btnFroma.IconChar = FontAwesome.Sharp.IconChar.EllipsisH
+        Me.btnFroma.IconColor = System.Drawing.Color.Black
+        Me.btnFroma.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnFroma.IconSize = 20
+        Me.btnFroma.Location = New System.Drawing.Point(737, 247)
+        Me.btnFroma.Name = "btnFroma"
+        Me.btnFroma.Size = New System.Drawing.Size(28, 26)
+        Me.btnFroma.TabIndex = 71465
+        Me.btnFroma.UseVisualStyleBackColor = True
+        '
+        'btnCondicion
+        '
+        Me.btnCondicion.IconChar = FontAwesome.Sharp.IconChar.EllipsisH
+        Me.btnCondicion.IconColor = System.Drawing.Color.Black
+        Me.btnCondicion.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnCondicion.IconSize = 20
+        Me.btnCondicion.Location = New System.Drawing.Point(737, 288)
+        Me.btnCondicion.Name = "btnCondicion"
+        Me.btnCondicion.Size = New System.Drawing.Size(28, 26)
+        Me.btnCondicion.TabIndex = 71466
+        Me.btnCondicion.UseVisualStyleBackColor = True
+        '
         'ClienteCRUB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(733, 405)
+        Me.ClientSize = New System.Drawing.Size(777, 405)
+        Me.Controls.Add(Me.btnCondicion)
+        Me.Controls.Add(Me.btnFroma)
+        Me.Controls.Add(Me.btnContacto)
         Me.Controls.Add(Me.btnSalir)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.comboCondicion)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.comboContacto)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lblPlaca)
@@ -316,8 +327,6 @@ Partial Class ClienteCRUB
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button2 As Button
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents lblPlaca As Label
@@ -333,9 +342,10 @@ Partial Class ClienteCRUB
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents comboContacto As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents comboCondicion As ComboBox
-    Friend WithEvents Button3 As Button
     Friend WithEvents btnSalir As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnContacto As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnFroma As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnCondicion As FontAwesome.Sharp.IconButton
 End Class

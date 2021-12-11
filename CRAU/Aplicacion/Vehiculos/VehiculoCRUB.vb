@@ -2,8 +2,6 @@
     Public Shared Property veh As Vehiculo
     Public Shared Property recibView As Vehiculos
     Private dao As New DAOVehiculo
-
-
     Private Sub VehiculoCRUB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             llenarMarcas()

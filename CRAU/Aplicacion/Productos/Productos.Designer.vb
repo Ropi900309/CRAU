@@ -22,8 +22,8 @@ Partial Class Productos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.textBuscar = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -31,6 +31,7 @@ Partial Class Productos
         Me.ListProductos = New System.Windows.Forms.DataGridView()
         Me.btnNuevo = New FontAwesome.Sharp.IconButton()
         Me.btnEditar = New FontAwesome.Sharp.IconButton()
+        Me.btnReporte = New FontAwesome.Sharp.IconButton()
         CType(Me.ListProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -87,23 +88,23 @@ Partial Class Productos
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListProductos.BackgroundColor = System.Drawing.SystemColors.Control
         Me.ListProductos.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ListProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ListProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.ListProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(20, Byte), Integer))
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ListProductos.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(20, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ListProductos.DefaultCellStyle = DataGridViewCellStyle2
         Me.ListProductos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.ListProductos.EnableHeadersVisualStyles = False
         Me.ListProductos.Location = New System.Drawing.Point(12, 55)
@@ -150,12 +151,31 @@ Partial Class Productos
         Me.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnEditar.UseVisualStyleBackColor = False
         '
+        'btnReporte
+        '
+        Me.btnReporte.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnReporte.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnReporte.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReporte.ForeColor = System.Drawing.Color.White
+        Me.btnReporte.IconChar = FontAwesome.Sharp.IconChar.Egg
+        Me.btnReporte.IconColor = System.Drawing.Color.White
+        Me.btnReporte.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnReporte.IconSize = 25
+        Me.btnReporte.Location = New System.Drawing.Point(978, 590)
+        Me.btnReporte.Name = "btnReporte"
+        Me.btnReporte.Size = New System.Drawing.Size(114, 35)
+        Me.btnReporte.TabIndex = 302
+        Me.btnReporte.Text = "Reporte"
+        Me.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnReporte.UseVisualStyleBackColor = False
+        '
         'Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1332, 634)
+        Me.Controls.Add(Me.btnReporte)
         Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.ListProductos)
@@ -178,4 +198,5 @@ Partial Class Productos
     Friend WithEvents ListProductos As DataGridView
     Friend WithEvents btnNuevo As FontAwesome.Sharp.IconButton
     Friend WithEvents btnEditar As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnReporte As FontAwesome.Sharp.IconButton
 End Class

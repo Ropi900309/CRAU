@@ -6,21 +6,30 @@
 
     Private Sub ClienteCRUB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            Dim pag As New DAOCpago
-            pag.Asociado.Id = pag.Id
+            'Dim pag As New DAOCpago
+            'pag.Asociado.a = pag.Id
+
+            'Dim dato As String = comboForma.SelectedText
+
+            'Dim dato = comboForma.SelectedItem
+
+            Dim dato As String = comboForma.SelectedValue
+            MsgBox(dato)
+            'Dim con As Object = con.ListarTodos
+            'MsgBox(dato)
 
             llenarContacto()
             llenarCondicion()
 
-            MsgBox(dao.CountCliente)
+            'If (dato = ) Then
+            '    comboCondicion.Enabled = True
 
-            If (comboCondicion.SelectedValue = pag.Pago) Then
-                comboCondicion.Enabled = True
+            'Else
+            '    comboCondicion.Enabled = False
 
-            Else
-                comboCondicion.Enabled = False
+            'End If
 
-            End If
+            'MsgBox(dao.CountCliente)
 
 
             If cli.Id = 0 Then
@@ -108,8 +117,7 @@
         End Try
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+    Private Sub btnContacto_Click(sender As Object, e As EventArgs) Handles btnContacto.Click
         Try
             ContactoCRUB.recibview = Me
             ContactoCRUB.ShowDialog()
@@ -118,18 +126,22 @@
         End Try
     End Sub
 
+    Private Sub btnFroma_Click(sender As Object, e As EventArgs) Handles btnFroma.Click
+        FpagoCRUB.ShowDialog()
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
-        CpagoCRUB.ShowDialog()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        FpagoCRUB.ShowDialog()
+    Private Sub btnCondicion_Click(sender As Object, e As EventArgs) Handles btnCondicion.Click
+        CpagoCRUB.ShowDialog()
+
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
         Me.Dispose()
+    End Sub
+
+    Private Sub comboForma_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comboForma.SelectedIndexChanged
+
     End Sub
 End Class

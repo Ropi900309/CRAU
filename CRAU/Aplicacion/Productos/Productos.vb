@@ -24,7 +24,7 @@
             'DEFINICION DE COLUMNAS 
             .Columns(0).HeaderText = "#"
             .Columns(1).HeaderText = "Parte"
-            .Columns(2).HeaderText = "Descripcion"
+            .Columns(2).HeaderText = "Descripción"
             .Columns(3).HeaderText = "Precio.Comp"
             .Columns(4).HeaderText = "Precio.Vent"
             .Columns(5).HeaderText = "Cost.Prome"
@@ -33,11 +33,11 @@
             .Columns(8).HeaderText = "idMarca"
             .Columns(9).HeaderText = "idFamilia"
             .Columns(10).HeaderText = "eliminado"
-            .Columns(11).HeaderText = "unidad"
-            .Columns(12).HeaderText = "categoria"
-            .Columns(13).HeaderText = "marca"
-            .Columns(14).HeaderText = "familia"
-            .Columns(15).HeaderText = "stock"
+            .Columns(11).HeaderText = "Unidad Medida"
+            .Columns(12).HeaderText = "Categoria"
+            .Columns(13).HeaderText = "Marca"
+            .Columns(14).HeaderText = "Familia"
+            .Columns(15).HeaderText = "Stock"
             .Columns(16).HeaderText = "alert_min"
             .Columns(17).HeaderText = "alert_max"
 
@@ -194,4 +194,9 @@
             MsgBox(ex.Message, vbCritical, "Error")
         End Try
     End Sub
+
+    Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+        RptProductos.ShowDialog()
+    End Sub
+
 End Class

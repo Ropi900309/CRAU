@@ -199,16 +199,16 @@
         textPPromedio.Text = SoloNumeros.formatoMoneda(textPPromedio.Text)
     End Sub
     'EL EVENTO SE COLOCA AL PERDER EL FOCO, VALIDO QUE NO ESTE VACIO Y QUE SEA UNICO
-    Private Sub textParte_LostFocus(sender As Object, e As EventArgs) Handles textParte.LostFocus
-        DataMap()
-        Metodos.ValidarUnico(dao, textParte)
-        Metodos.ValidarSolocaja(textParte)
-    End Sub
-    Private Sub textParte_KeyDown(sender As Object, e As KeyEventArgs) Handles textParte.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            SendKeys.Send("{TAB}")
-        End If
-    End Sub
+    'Private Sub textParte_LostFocus(sender As Object, e As EventArgs) Handles textParte.LostFocus
+    '    DataMap()
+    '    Metodos.ValidarUnico(dao, textParte)
+    '    Metodos.ValidarSolocaja(textParte)
+    'End Sub
+    'Private Sub textParte_KeyDown(sender As Object, e As KeyEventArgs) Handles textParte.KeyDown
+    '    If e.KeyCode = Keys.Enter Then
+    '        SendKeys.Send("{TAB}")
+    '    End If
+    'End Sub
 
     Private Sub textDescripcion_TextChanged(sender As Object, e As EventArgs) Handles textDescripcion.TextChanged
         Metodos.ContadorLabel(lblContador, textDescripcion)
