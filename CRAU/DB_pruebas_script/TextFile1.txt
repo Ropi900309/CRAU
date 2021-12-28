@@ -1,0 +1,37 @@
+﻿create view movimientos_almacen as 
+SELECT am.id,am.almacen,tm.movimiento,concat(em.nombre,' ',em.paterno,' ',em.materno) as empleado,am.fecha_creacion from almacen_movimientos am 
+INNER JOIN almacen_tip_mov tm on tm.id=am.tipo_movimiento
+INNER JOIN empleados em on em.id = am.empleado
+
+DROP TRIGGER [dbo].[existencia_producto]
+GO
+CREATE TRIGGER [dbo].[existencia_producto]
+ON [dbo].[alm_mov_det]
+AFTER INSERT
+AS
+BEGIN
+		DECLARE @producto INT
+    DECLARE @entradas INT
+		DECLARE @salidas INT
+		DECLARE @resultado INT
+		
+		
+		SET @producto = (SELECT producto from Inserted)
+
+		SET @entradas = (select SUM(md.cantidad) from alm_mov_det md 
+			INNER JOIN almacen_movimientos mv on mv.id=md.movimiento_almacen
+			where md.producto = @producto and (mv.tipo_movimiento=1 or mv.tipo_movimiento=2)
+		)
+
+		SET @salidas = (select SUM(md.cantidad) from alm_mov_det md 
+			INNER JOIN almacen_movimientos mv on mv.id=md.movimiento_almacen
+			where md.producto = @producto and (mv.tipo_movimiento=3 or mv.tipo_movimiento=4)
+		)
+		
+		SET @resultado= @entradas-@salidas
+
+		UPDATE productos_inventario set stock=@resultado where producto=@producto
+   
+END
+
+GO

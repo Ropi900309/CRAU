@@ -65,10 +65,14 @@ Public Class Menu
     End Sub
 
     Private Sub RecepciónDeMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecepciónDeMaterialToolStripMenuItem.Click
-
+        ListadoMovimientos.opc = "Entrada por recepcion de material"
+        If currentChildForm IsNot Nothing Then
+            currentChildForm.Close()
+        End If
+        OpenChildForm(ListadoMovimientos)
     End Sub
 
-    Private Sub GarantiaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GarantiaToolStripMenuItem.Click
+    Private Sub GarantiaToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -77,7 +81,7 @@ Public Class Menu
     End Sub
 
     Private Sub OrdenDeCompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenDeCompraToolStripMenuItem.Click
-        OpenChildForm(OCompra)
+
     End Sub
 
     Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
@@ -92,16 +96,27 @@ Public Class Menu
         lblFecha.Text = TimeOfDay
     End Sub
 
-    Private Sub OrdenServicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenServicioToolStripMenuItem.Click
-        OpenChildForm(OServicio)
-
+    Private Sub AjusteInventarioEntradaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AjusteInventarioEntradaToolStripMenuItem.Click
+        ListadoMovimientos.opc = "Entrada por ajuste de inventario"
+        If currentChildForm IsNot Nothing Then
+            currentChildForm.Close()
+        End If
+        OpenChildForm(ListadoMovimientos)
     End Sub
 
-    Private Sub RequisicionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RequisicionesToolStripMenuItem.Click
-        OpenChildForm(Requisicion)
+    Private Sub SalidaDeMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalidaDeMaterialToolStripMenuItem.Click
+        ListadoMovimientos.opc = "Salida de material"
+        If currentChildForm IsNot Nothing Then
+            currentChildForm.Close()
+        End If
+        OpenChildForm(ListadoMovimientos)
     End Sub
 
-    Private Sub OrdenDeVentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrdenDeVentaToolStripMenuItem.Click
-        OpenChildForm(OVenta)
+    Private Sub AjusteInventarioSalidaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AjusteInventarioSalidaToolStripMenuItem.Click
+        ListadoMovimientos.opc = "Salida por ajuste de inventario"
+        If currentChildForm IsNot Nothing Then
+            currentChildForm.Close()
+        End If
+        OpenChildForm(ListadoMovimientos)
     End Sub
 End Class

@@ -36,8 +36,6 @@ Partial Class Menu
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalidaDeMaterialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AjusteInventarioSalidaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GarantiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InventarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResguardoDeHerramientaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -136,7 +134,7 @@ Partial Class Menu
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalidaDeMaterialToolStripMenuItem, Me.AjusteInventarioSalidaToolStripMenuItem, Me.VentaToolStripMenuItem, Me.GarantiaToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalidaDeMaterialToolStripMenuItem, Me.AjusteInventarioSalidaToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(272, 24)
         Me.ReportesToolStripMenuItem.Text = "Salidas"
@@ -152,18 +150,6 @@ Partial Class Menu
         Me.AjusteInventarioSalidaToolStripMenuItem.Name = "AjusteInventarioSalidaToolStripMenuItem"
         Me.AjusteInventarioSalidaToolStripMenuItem.Size = New System.Drawing.Size(249, 24)
         Me.AjusteInventarioSalidaToolStripMenuItem.Text = "Ajuste Inventario Salida"
-        '
-        'VentaToolStripMenuItem
-        '
-        Me.VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
-        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(249, 24)
-        Me.VentaToolStripMenuItem.Text = "Venta"
-        '
-        'GarantiaToolStripMenuItem
-        '
-        Me.GarantiaToolStripMenuItem.Name = "GarantiaToolStripMenuItem"
-        Me.GarantiaToolStripMenuItem.Size = New System.Drawing.Size(249, 24)
-        Me.GarantiaToolStripMenuItem.Text = "Garantia"
         '
         'InventarioToolStripMenuItem
         '
@@ -357,8 +343,6 @@ Partial Class Menu
     Friend WithEvents Panel As Panel
     Friend WithEvents RecepciónDeMaterialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AjusteInventarioEntradaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents VentaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents GarantiaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AjusteInventarioSalidaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InventarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResguardoDeHerramientaToolStripMenuItem As ToolStripMenuItem

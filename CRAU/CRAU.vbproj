@@ -14,21 +14,6 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -88,7 +73,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -110,6 +94,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aplicacion\Almacen\BuscarProductos.Designer.vb">
+      <DependentUpon>BuscarProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Almacen\BuscarProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Almacen\CRUBMovimiento.Designer.vb">
+      <DependentUpon>CRUBMovimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Almacen\CRUBMovimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Almacen\ListadoMovimientos.Designer.vb">
+      <DependentUpon>ListadoMovimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Almacen\ListadoMovimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Aplicacion\Clientes\ClienteCRUB.Designer.vb">
       <DependentUpon>ClienteCRUB.vb</DependentUpon>
     </Compile>
@@ -144,36 +146,6 @@
       <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
     <Compile Include="Aplicacion\Menu.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Aplicacion\OrdenCompras\CompraCRUB.Designer.vb">
-      <DependentUpon>CompraCRUB.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Aplicacion\OrdenCompras\CompraCRUB.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Aplicacion\OrdenCompras\OCompra.Designer.vb">
-      <DependentUpon>OCompra.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Aplicacion\OrdenCompras\OCompra.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Aplicacion\OrdenServicios\OServicio.Designer.vb">
-      <DependentUpon>OServicio.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Aplicacion\OrdenServicios\OServicio.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Aplicacion\OrdenServicios\ServicioCRUB.Designer.vb">
-      <DependentUpon>ServicioCRUB.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Aplicacion\OrdenServicios\ServicioCRUB.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Aplicacion\OrdenVentas\OVenta.Designer.vb">
-      <DependentUpon>OVenta.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Aplicacion\OrdenVentas\OVenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aplicacion\Productos\CategoriaCRUB.designer.vb">
@@ -228,12 +200,6 @@
       <DependentUpon>PtipoCRUB.vb</DependentUpon>
     </Compile>
     <Compile Include="Aplicacion\Proveedores\PtipoCRUB.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Aplicacion\Requisiciones\Requisicion.Designer.vb">
-      <DependentUpon>Requisicion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Aplicacion\Requisiciones\Requisicion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Aplicacion\Usuarios\DepartamentosCRUB.Designer.vb">
@@ -315,6 +281,7 @@
     <Compile Include="DAO\Clientes\DAOContacto.vb" />
     <Compile Include="DAO\Clientes\DAOCtipo.vb" />
     <Compile Include="DAO\Clientes\DAOFpago.vb" />
+    <Compile Include="DAO\MovimientosAlmacen\DAOMovimientos.vb" />
     <Compile Include="DAO\Proveedores\DAOProveedor.vb" />
     <Compile Include="DAO\Proveedores\DAOPtipo.vb" />
     <Compile Include="DAO\Usuarios\DAODepartamento.vb" />
@@ -370,23 +337,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Reportes\DtsDatos.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DtsDatos.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\RptProductos.Designer.vb">
-      <DependentUpon>RptProductos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\RptProductos.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Utilerias\ConversionFecha.vb" />
     <Compile Include="Utilerias\Metodos.vb" />
     <Compile Include="Utilerias\SoloNumeros.vb" />
     <Compile Include="Utilerias\Stylo.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Aplicacion\Almacen\BuscarProductos.resx">
+      <DependentUpon>BuscarProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Almacen\CRUBMovimiento.resx">
+      <DependentUpon>CRUBMovimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Almacen\ListadoMovimientos.resx">
+      <DependentUpon>ListadoMovimientos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Clientes\ClienteCRUB.resx">
       <DependentUpon>ClienteCRUB.vb</DependentUpon>
     </EmbeddedResource>
@@ -407,15 +372,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Aplicacion\OrdenCompras\OCompra.resx">
-      <DependentUpon>OCompra.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Aplicacion\OrdenServicios\OServicio.resx">
-      <DependentUpon>OServicio.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Aplicacion\OrdenVentas\OVenta.resx">
-      <DependentUpon>OVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Productos\CategoriaCRUB.resx">
       <DependentUpon>CategoriaCRUB.vb</DependentUpon>
@@ -443,9 +399,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Proveedores\PtipoCRUB.resx">
       <DependentUpon>PtipoCRUB.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Aplicacion\Requisiciones\Requisicion.resx">
-      <DependentUpon>Requisicion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Usuarios\DepartamentosCRUB.resx">
       <DependentUpon>DepartamentosCRUB.vb</DependentUpon>
@@ -492,10 +445,6 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\RptProductos.rdlc" />
-    <EmbeddedResource Include="Reportes\RptProductos.resx">
-      <DependentUpon>RptProductos.vb</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -512,19 +461,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB_pruebas_script\crau.sql" />
-    <None Include="Reportes\DtsDatos.xsc">
-      <DependentUpon>DtsDatos.xsd</DependentUpon>
-    </None>
-    <None Include="Reportes\DtsDatos.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DtsDatos.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="Reportes\DtsDatos.xss">
-      <DependentUpon>DtsDatos.xsd</DependentUpon>
-    </None>
     <None Include="Resources\bgtxt.png" />
-    <None Include="Resources\bgtxt1.png" />
+    <Content Include="DB_pruebas_script\TextFile1.txt" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
@@ -541,27 +479,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\OrdenCompras\" />
-    <Folder Include="DAO\OrdenServicios\" />
-    <Folder Include="DAO\OrdenVentas\" />
-    <Folder Include="DAO\Requisiciones\" />
     <Folder Include="Iconos\" />
-    <Folder Include="Modelos\OrdenCompras\" />
-    <Folder Include="Modelos\OrdenServicios\" />
-    <Folder Include="Modelos\OrdenVentas\" />
-    <Folder Include="Modelos\Requisiciones\" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <Folder Include="Reportes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

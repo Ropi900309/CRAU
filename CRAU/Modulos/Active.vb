@@ -2,6 +2,8 @@
 
     Public usuario As Usuario
     Public empleado As Empleado
+    Public almacen As Integer = 1
+
 
 
     Function GetUserName() As String
