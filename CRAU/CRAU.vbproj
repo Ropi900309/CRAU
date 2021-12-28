@@ -94,6 +94,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aplicacion\Almacen\BuscarProductos.Designer.vb">
+      <DependentUpon>BuscarProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Almacen\BuscarProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Almacen\CRUBMovimiento.Designer.vb">
+      <DependentUpon>CRUBMovimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Almacen\CRUBMovimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aplicacion\Almacen\ListadoMovimientos.Designer.vb">
+      <DependentUpon>ListadoMovimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aplicacion\Almacen\ListadoMovimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Aplicacion\Clientes\ClienteCRUB.Designer.vb">
       <DependentUpon>ClienteCRUB.vb</DependentUpon>
     </Compile>
@@ -263,6 +281,7 @@
     <Compile Include="DAO\Clientes\DAOContacto.vb" />
     <Compile Include="DAO\Clientes\DAOCtipo.vb" />
     <Compile Include="DAO\Clientes\DAOFpago.vb" />
+    <Compile Include="DAO\MovimientosAlmacen\DAOMovimientos.vb" />
     <Compile Include="DAO\Proveedores\DAOProveedor.vb" />
     <Compile Include="DAO\Proveedores\DAOPtipo.vb" />
     <Compile Include="DAO\Usuarios\DAODepartamento.vb" />
@@ -324,6 +343,15 @@
     <Compile Include="Utilerias\Stylo.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Aplicacion\Almacen\BuscarProductos.resx">
+      <DependentUpon>BuscarProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Almacen\CRUBMovimiento.resx">
+      <DependentUpon>CRUBMovimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aplicacion\Almacen\ListadoMovimientos.resx">
+      <DependentUpon>ListadoMovimientos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Aplicacion\Clientes\ClienteCRUB.resx">
       <DependentUpon>ClienteCRUB.vb</DependentUpon>
     </EmbeddedResource>
@@ -434,6 +462,7 @@
   <ItemGroup>
     <Content Include="DB_pruebas_script\crau.sql" />
     <None Include="Resources\bgtxt.png" />
+    <Content Include="DB_pruebas_script\TextFile1.txt" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

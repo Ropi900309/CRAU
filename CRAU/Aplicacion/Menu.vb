@@ -65,10 +65,14 @@ Public Class Menu
     End Sub
 
     Private Sub RecepciónDeMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecepciónDeMaterialToolStripMenuItem.Click
-
+        ListadoMovimientos.opc = "Entrada por recepcion de material"
+        If currentChildForm IsNot Nothing Then
+            currentChildForm.Close()
+        End If
+        OpenChildForm(ListadoMovimientos)
     End Sub
 
-    Private Sub GarantiaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GarantiaToolStripMenuItem.Click
+    Private Sub GarantiaToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -90,5 +94,29 @@ Public Class Menu
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblFecha.Text = TimeOfDay
+    End Sub
+
+    Private Sub AjusteInventarioEntradaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AjusteInventarioEntradaToolStripMenuItem.Click
+        ListadoMovimientos.opc = "Entrada por ajuste de inventario"
+        If currentChildForm IsNot Nothing Then
+            currentChildForm.Close()
+        End If
+        OpenChildForm(ListadoMovimientos)
+    End Sub
+
+    Private Sub SalidaDeMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalidaDeMaterialToolStripMenuItem.Click
+        ListadoMovimientos.opc = "Salida de material"
+        If currentChildForm IsNot Nothing Then
+            currentChildForm.Close()
+        End If
+        OpenChildForm(ListadoMovimientos)
+    End Sub
+
+    Private Sub AjusteInventarioSalidaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AjusteInventarioSalidaToolStripMenuItem.Click
+        ListadoMovimientos.opc = "Salida por ajuste de inventario"
+        If currentChildForm IsNot Nothing Then
+            currentChildForm.Close()
+        End If
+        OpenChildForm(ListadoMovimientos)
     End Sub
 End Class

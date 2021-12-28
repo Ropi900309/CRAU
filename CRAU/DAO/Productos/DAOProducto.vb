@@ -69,7 +69,7 @@ Public Class DAOProducto
                 familia.Id = r.GetValue((r.GetOrdinal("familia")))
                 familia.Familia = r.GetValue((r.GetOrdinal("des_familia")))
 
-                stock.Id = r.GetValue((r.GetOrdinal("stock")))
+                stock.Stock = r.GetValue((r.GetOrdinal("stock")))
                 stock.Alerta_max_stock = r.GetValue((r.GetOrdinal("stock")))
                 stock.ALerta_min_stock = r.GetValue((r.GetOrdinal("stock")))
 

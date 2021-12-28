@@ -47,6 +47,7 @@ Public Class DAOUsuario
             consulta.Usuario = r.GetValue((r.GetOrdinal("usuario")))
             consulta.Contraseña = r.GetValue((r.GetOrdinal("contraseña")))
             consulta.Rol.Rol = r.GetValue((r.GetOrdinal("usuarios_rol")))
+            consulta.Empleado.Id = r.GetValue((r.GetOrdinal("empleado")))
             consulta.Empleado.Nombre = r.GetValue((r.GetOrdinal("nombre_empleado")))
             consulta.Empleado.Departamento.Id = r.GetValue((r.GetOrdinal("depId")))
             consulta.Empleado.Departamento.Departamento = r.GetValue((r.GetOrdinal("departamento")))
