@@ -37,10 +37,7 @@
         End Try
     End Sub
 
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        Me.Close()
-        Me.Dispose()
-    End Sub
+
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
@@ -59,5 +56,8 @@
         End Try
     End Sub
 
-
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Close()
+        Me.Dispose()
+    End Sub
 End Class

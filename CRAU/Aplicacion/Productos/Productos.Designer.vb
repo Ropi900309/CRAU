@@ -27,10 +27,11 @@ Partial Class Productos
         Me.textBuscar = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnEditar = New FontAwesome.Sharp.IconButton()
-        Me.btnNuevo = New FontAwesome.Sharp.IconButton()
         Me.lblTotEntidades = New System.Windows.Forms.Label()
         Me.ListProductos = New System.Windows.Forms.DataGridView()
+        Me.btnNuevo = New FontAwesome.Sharp.IconButton()
+        Me.btnEditar = New FontAwesome.Sharp.IconButton()
+        Me.btnReporte = New FontAwesome.Sharp.IconButton()
         CType(Me.ListProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,32 +66,6 @@ Partial Class Productos
         Me.Label1.Size = New System.Drawing.Size(135, 18)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Buscar Producto"
-        '
-        'btnEditar
-        '
-        Me.btnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit
-        Me.btnEditar.IconColor = System.Drawing.Color.Black
-        Me.btnEditar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnEditar.IconSize = 25
-        Me.btnEditar.Location = New System.Drawing.Point(1266, 587)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(54, 35)
-        Me.btnEditar.TabIndex = 291
-        Me.btnEditar.UseVisualStyleBackColor = True
-        '
-        'btnNuevo
-        '
-        Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Box
-        Me.btnNuevo.IconColor = System.Drawing.Color.Black
-        Me.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnNuevo.IconSize = 25
-        Me.btnNuevo.Location = New System.Drawing.Point(1213, 587)
-        Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(47, 35)
-        Me.btnNuevo.TabIndex = 292
-        Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'lblTotEntidades
         '
@@ -140,16 +115,71 @@ Partial Class Productos
         Me.ListProductos.Size = New System.Drawing.Size(1308, 524)
         Me.ListProductos.TabIndex = 298
         '
+        'btnNuevo
+        '
+        Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevo.ForeColor = System.Drawing.SystemColors.Window
+        Me.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Box
+        Me.btnNuevo.IconColor = System.Drawing.Color.White
+        Me.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnNuevo.IconSize = 25
+        Me.btnNuevo.Location = New System.Drawing.Point(1098, 590)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(102, 35)
+        Me.btnNuevo.TabIndex = 301
+        Me.btnNuevo.Text = "Agregar"
+        Me.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnNuevo.UseVisualStyleBackColor = False
+        '
+        'btnEditar
+        '
+        Me.btnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditar.ForeColor = System.Drawing.Color.White
+        Me.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit
+        Me.btnEditar.IconColor = System.Drawing.Color.White
+        Me.btnEditar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnEditar.IconSize = 25
+        Me.btnEditar.Location = New System.Drawing.Point(1206, 590)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(114, 35)
+        Me.btnEditar.TabIndex = 300
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnEditar.UseVisualStyleBackColor = False
+        '
+        'btnReporte
+        '
+        Me.btnReporte.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnReporte.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer))
+        Me.btnReporte.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReporte.ForeColor = System.Drawing.Color.White
+        Me.btnReporte.IconChar = FontAwesome.Sharp.IconChar.Egg
+        Me.btnReporte.IconColor = System.Drawing.Color.White
+        Me.btnReporte.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnReporte.IconSize = 25
+        Me.btnReporte.Location = New System.Drawing.Point(978, 590)
+        Me.btnReporte.Name = "btnReporte"
+        Me.btnReporte.Size = New System.Drawing.Size(114, 35)
+        Me.btnReporte.TabIndex = 302
+        Me.btnReporte.Text = "Reporte"
+        Me.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnReporte.UseVisualStyleBackColor = False
+        '
         'Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1332, 634)
-        Me.Controls.Add(Me.ListProductos)
-        Me.Controls.Add(Me.lblTotEntidades)
+        Me.Controls.Add(Me.btnReporte)
         Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.btnEditar)
+        Me.Controls.Add(Me.ListProductos)
+        Me.Controls.Add(Me.lblTotEntidades)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.textBuscar)
@@ -164,8 +194,9 @@ Partial Class Productos
     Friend WithEvents textBuscar As TextBox
     Friend WithEvents btnBuscar As FontAwesome.Sharp.IconButton
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnEditar As FontAwesome.Sharp.IconButton
-    Friend WithEvents btnNuevo As FontAwesome.Sharp.IconButton
     Friend WithEvents lblTotEntidades As Label
     Friend WithEvents ListProductos As DataGridView
+    Friend WithEvents btnNuevo As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnEditar As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnReporte As FontAwesome.Sharp.IconButton
 End Class

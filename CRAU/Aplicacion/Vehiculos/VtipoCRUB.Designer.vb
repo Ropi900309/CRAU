@@ -83,6 +83,7 @@ Partial Class VtipoCRUB
         '
         Me.textNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.textNombre.Location = New System.Drawing.Point(80, 16)
+        Me.textNombre.MaxLength = 255
         Me.textNombre.Name = "textNombre"
         Me.textNombre.Size = New System.Drawing.Size(378, 24)
         Me.textNombre.TabIndex = 318

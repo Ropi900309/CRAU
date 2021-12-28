@@ -1,10 +1,7 @@
 ﻿Public Class VehiculoCRUB
-
     Public Shared Property veh As Vehiculo
     Public Shared Property recibView As Vehiculos
     Private dao As New DAOVehiculo
-
-
     Private Sub VehiculoCRUB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             llenarMarcas()
@@ -53,33 +50,6 @@
         txtDescripcion.Text = ""
     End Sub
 
-    'Private Function Validar()
-
-
-    'If (txtRegistro.Text = String.Empty) Then
-    '    MessageBox.Show("Debe introducir el Registro")
-    '    Return False
-    'ElseIf (txtPlaca.Text = String.Empty) Then
-    '    MessageBox.Show("Debe introducir la Placa")
-    '    Return False
-    'ElseIf (txtModelo.Text = String.Empty) Then
-    '    MessageBox.Show("Debe introducir el Modelo")
-    '    Return False
-    'ElseIf (comboMarca.SelectedValue = 0) Then
-    '    MessageBox.Show("Debe seleccionar la Marca")
-    '    Return False
-    'ElseIf (comboTipo.SelectedValue = 0) Then
-    '    MessageBox.Show("Debe seleccionar el Tipo")
-    '    Return False
-    'ElseIf (txtSerie.Text = String.Empty) Then
-    '    MessageBox.Show("Debe introducir el VIN")
-    '    Return False
-    'End If
-
-    'Return True 'Si nunca entra en if llegara al final y retornara True es decir paso la validacion
-
-    'End Function
-
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
@@ -87,6 +57,12 @@
             If veh.Id > 0 Then
                 dao.Actualizar()
             Else
+                Metodos.ValidarSolocaja(txtRegistro)
+                Metodos.ValidarSolocaja(txtPlaca)
+                Metodos.ValidarSolocaja(txtModelo)
+                Metodos.ValidarSolocaja(txtSerie)
+                Metodos.ValidarCombo(comboMarca)
+                Metodos.ValidarCombo(comboTipo)
                 dao.Guardar()
             End If
             recibView.LlenarGrid()
@@ -144,18 +120,7 @@
     End Sub
 
     Private Sub txtDescripcion_TextChanged(sender As Object, e As EventArgs) Handles txtDescripcion.TextChanged
-        Try
-
-            Me.lblContador.Text = Me.txtDescripcion.Text.Length
-            If Me.lblContador.Text = 255 Then
-                MessageBox.Show("Campo Descripción Solo Permite un Máximo 255 Caracteres", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            End If
-
-        Catch ex As Exception
-            MsgBox(ex.Message, vbCritical, "Error")
-
-        End Try
-
+        Metodos.ContadorLabel(lblContador, txtDescripcion)
     End Sub
 
 
@@ -170,8 +135,7 @@
         VtipoCRUB.ShowDialog()
     End Sub
 
-
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+    Private Sub btnSalir_Click_1(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
         Me.Dispose()
     End Sub

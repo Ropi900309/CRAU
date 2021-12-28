@@ -24,7 +24,7 @@
             'DEFINICION DE COLUMNAS 
             .Columns(0).HeaderText = "#"
             .Columns(1).HeaderText = "Parte"
-            .Columns(2).HeaderText = "Descripcion"
+            .Columns(2).HeaderText = "Descripción"
             .Columns(3).HeaderText = "Precio.Comp"
             .Columns(4).HeaderText = "Precio.Vent"
             .Columns(5).HeaderText = "Cost.Prome"
@@ -33,11 +33,11 @@
             .Columns(8).HeaderText = "idMarca"
             .Columns(9).HeaderText = "idFamilia"
             .Columns(10).HeaderText = "eliminado"
-            .Columns(11).HeaderText = "unidad"
-            .Columns(12).HeaderText = "categoria"
-            .Columns(13).HeaderText = "marca"
-            .Columns(14).HeaderText = "familia"
-            .Columns(15).HeaderText = "stock"
+            .Columns(11).HeaderText = "Unidad Medida"
+            .Columns(12).HeaderText = "Categoria"
+            .Columns(13).HeaderText = "Marca"
+            .Columns(14).HeaderText = "Familia"
+            .Columns(15).HeaderText = "Stock"
             .Columns(16).HeaderText = "alert_min"
             .Columns(17).HeaderText = "alert_max"
 
@@ -136,6 +136,34 @@
         End With
     End Sub
 
+    Private Sub Productos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CrearGrid()
+        LlenarGrid()
+
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Metodos.Buscar(textBuscar.Text, ListProductos, 1, 2)
+    End Sub
+
+    Private Function BuscarProductoLista(id As Integer) As Integer
+        Dim indice As Integer = 0
+
+        For Each item As Producto In listaProducttos
+            indice += 1
+            If (item.Id = id) Then
+                If (indice = 1) Then
+                    indice = 0
+                Else
+                    indice = indice - 1
+                End If
+                Exit For
+            End If
+        Next
+
+        Return indice
+    End Function
+
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Try
             Dim pro As New Producto
@@ -167,32 +195,8 @@
         End Try
     End Sub
 
-    Private Sub Productos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CrearGrid()
-        LlenarGrid()
-
+    Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+        RptProductos.ShowDialog()
     End Sub
-
-    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        Metodos.Buscar(textBuscar.Text, ListProductos, 1, 2)
-    End Sub
-
-    Private Function BuscarProductoLista(id As Integer) As Integer
-        Dim indice As Integer = 0
-
-        For Each item As Producto In listaProducttos
-            indice += 1
-            If (item.Id = id) Then
-                If (indice = 1) Then
-                    indice = 0
-                Else
-                    indice = indice - 1
-                End If
-                Exit For
-            End If
-        Next
-
-        Return indice
-    End Function
 
 End Class

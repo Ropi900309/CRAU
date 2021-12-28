@@ -34,7 +34,7 @@ Partial Class Login
         '
         'textUser
         '
-        Me.textUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.textUser.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.textUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.textUser.Location = New System.Drawing.Point(152, 139)
         Me.textUser.Margin = New System.Windows.Forms.Padding(2)
@@ -45,9 +45,9 @@ Partial Class Login
         '
         'textPasswprd
         '
-        Me.textPasswprd.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
+        Me.textPasswprd.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(252, Byte), Integer))
         Me.textPasswprd.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textPasswprd.Location = New System.Drawing.Point(152, 192)
+        Me.textPasswprd.Location = New System.Drawing.Point(152, 199)
         Me.textPasswprd.Margin = New System.Windows.Forms.Padding(2)
         Me.textPasswprd.MaxLength = 25
         Me.textPasswprd.Name = "textPasswprd"
@@ -81,7 +81,7 @@ Partial Class Login
         Me.btnPassword.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnPassword.IconSize = 25
         Me.btnPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPassword.Location = New System.Drawing.Point(26, 195)
+        Me.btnPassword.Location = New System.Drawing.Point(-1, 195)
         Me.btnPassword.Name = "btnPassword"
         Me.btnPassword.Size = New System.Drawing.Size(148, 28)
         Me.btnPassword.TabIndex = 1848944
@@ -100,9 +100,9 @@ Partial Class Login
         Me.btnUser.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.btnUser.IconSize = 25
         Me.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUser.Location = New System.Drawing.Point(26, 138)
+        Me.btnUser.Location = New System.Drawing.Point(12, 138)
         Me.btnUser.Name = "btnUser"
-        Me.btnUser.Size = New System.Drawing.Size(121, 32)
+        Me.btnUser.Size = New System.Drawing.Size(135, 32)
         Me.btnUser.TabIndex = 995656
         Me.btnUser.Text = "Usuario"
         Me.btnUser.UseVisualStyleBackColor = False
